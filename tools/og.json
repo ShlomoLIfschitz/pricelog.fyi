@@ -1,0 +1,16 @@
+{
+  "images": [
+    {
+      "out": "og.png",
+      "rtl": false,
+      "claim": "A discount is only a discount if the price was ever higher.",
+      "sub": "Daily price history · AliExpress"
+    },
+    {
+      "out": "og-he.png",
+      "rtl": true,
+      "claim": "הנחה היא הנחה רק אם המחיר באמת היה גבוה יותר.",
+      "sub": "היסטוריית מחירים יומית · עליאקספרס"
+    }
+  ]
+}

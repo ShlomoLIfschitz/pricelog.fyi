@@ -1,0 +1,7 @@
+# Local agent/editor state — contains machine-specific paths, never publish it.
+.claude/
+
+# OS cruft
+Thumbs.db
+.DS_Store
+desktop.ini

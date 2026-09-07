@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="pricelog">
+  <rect width="32" height="32" rx="7" fill="#16181a"/>
+  <path d="M5 9h7v7h7v7h6" fill="none" stroke="#5fd0a0" stroke-width="3.4"
+        stroke-linecap="square" stroke-linejoin="miter"/>
+</svg>

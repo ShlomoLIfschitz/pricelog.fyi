@@ -1,0 +1,420 @@
+/* ============================================================================
+   pricelog.fyi
+   One stylesheet, both writing directions. Logical properties only —
+   no physical left/right anywhere, so the Hebrew pages need no override sheet.
+   No web fonts: the site declares that it makes zero third-party requests,
+   and a font CDN would be one.
+   ========================================================================= */
+
+/* ---------- tokens ---------- */
+
+:root {
+  color-scheme: light dark;
+
+  --bg:              #f7f7f5;
+  --surface:         #ffffff;
+  --ink:             #16181a;
+  --muted:           #5b6167;
+  --border:          #e4e4e1;
+  --border-strong:   #878d93;
+  --accent:          #0e6e4e;
+  --accent-hover:    #0b5a40;
+  --on-accent:       #ffffff;
+  --warn:            #b45309;
+  --focus:           #0e6e4e;
+
+  /* the dark readout block — the one place the page looks like an instrument */
+  --readout-bg:      #16181a;
+  --readout-ink:     #e8e9ea;
+  --readout-muted:   #8a9096;
+  --readout-accent:  #5fd0a0;
+  /* In light mode the block contrasts on its own; the border only earns its
+     keep once the page around it is dark too. */
+  --readout-border:  transparent;
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "Cascadia Mono", "Segoe UI Mono", Consolas,
+               "Liberation Mono", monospace;
+
+  --step--1: 0.9rem;
+  --step-0:  1.0625rem;
+  --step-1:  1.1875rem;
+  --step-2:  clamp(1.35rem, 1.1rem + 1.1vw, 1.6rem);
+  --step-3:  clamp(1.75rem, 1.3rem + 2.1vw, 2.0625rem);
+  --step-4:  clamp(2.1rem, 1.3rem + 3.6vw, 3.25rem);
+
+  --leading:       1.6;
+  --leading-tight: 1.15;
+
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
+  --s-5: 20px; --s-6: 24px; --s-8: 32px; --s-10: 40px;
+  --s-12: 48px; --s-16: 64px; --s-22: 88px;
+
+  --radius: 8px;
+  --radius-sm: 6px;
+
+  --duration-functional: 150ms;
+  --ease-out: cubic-bezier(0, 0, .2, 1);
+}
+
+/* Hebrew: a Hebrew-capable system stack, and a little more leading.
+   Never monospace — no system mono face carries a usable Hebrew design. */
+html[lang="he"] {
+  --font-sans: system-ui, -apple-system, "Segoe UI", "Noto Sans Hebrew", "Arial Hebrew",
+               Arial, sans-serif;
+  --leading: 1.7;
+  --leading-tight: 1.28;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:             #121314;
+    --surface:        #1a1c1e;
+    --ink:            #f1f2f4;
+    --muted:          #a8adb8;
+    --border:         #2c2f33;
+    --border-strong:  #6b7280;
+    --accent:         #4fbf8b;
+    --accent-hover:   #6ad3a1;
+    --on-accent:      #0f172a;
+    --warn:           #d98324;
+    --focus:          #4fbf8b;
+
+    /* elevation by lightening the surface, not by deepening a shadow */
+    --readout-bg:     #26282b;
+    --readout-ink:    #f1f2f4;
+    --readout-muted:  #9ba1a8;
+    --readout-accent: #6ad3a1;
+    /* Lightening alone only reaches ~1.2:1 against the page here, which is not
+       enough to read as a distinct block — the border does the separating. */
+    --readout-border: #3f434a;
+  }
+}
+
+/* ---------- base ---------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  line-height: var(--leading);
+  text-underline-offset: 0.18em;
+}
+
+h1, h2, h3 { line-height: var(--leading-tight); margin: 0; text-wrap: balance; }
+h1 { font-size: var(--step-4); letter-spacing: -0.022em; font-weight: 650; }
+h2 { font-size: var(--step-3); letter-spacing: -0.016em; font-weight: 650; }
+h3 { font-size: var(--step-1); letter-spacing: -0.004em; font-weight: 650; }
+p  { margin: 0; }
+
+/* Hebrew headings need far less negative tracking than Latin ones */
+html[lang="he"] h1 { letter-spacing: -0.012em; }
+html[lang="he"] h2 { letter-spacing: -0.010em; }
+html[lang="he"] h3 { letter-spacing: normal; }
+
+a { color: inherit; }
+a:hover { text-decoration-thickness: 2px; }
+
+:where(a[href], button, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Numbers stay Latin and monospaced in both directions. `dir="ltr"` on the
+   element keeps prices and percentages from reordering inside Hebrew text. */
+.num, code, kbd, samp {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.94em;
+}
+
+.skip {
+  position: absolute;
+  inset-inline-start: -9999px;
+  inset-block-start: 0;
+  padding: var(--s-3) var(--s-5);
+  background: var(--surface);
+  color: var(--ink);
+  z-index: 10;
+}
+.skip:focus { inset-inline-start: 0; }
+
+/* ---------- layout ---------- */
+
+.wrap {
+  max-inline-size: 1080px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 64px);
+}
+
+/* The reading column hugs the inline start of the wrapper rather than
+   centring — the page is meant to read as a document, not a brochure. */
+.col { max-inline-size: 760px; }
+
+section { padding-block: clamp(var(--s-12), 7vw, var(--s-22)); }
+.section--surface { background: var(--surface); }
+.section--bg      { background: var(--bg); }
+
+.stack > * + * { margin-block-start: var(--s-4); }
+.stack-lg > * + * { margin-block-start: var(--s-6); }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-block-end: var(--s-5);
+}
+/* Uppercase and wide tracking are Latin devices; Hebrew has no case and the
+   tracking only loosens the word. */
+html[lang="he"] .eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.lede { font-size: var(--step-1); color: var(--muted); }
+.body { color: var(--muted); }
+
+/* ---------- header ---------- */
+
+.site-header {
+  background: var(--surface);
+  border-block-end: 1px solid var(--border);
+}
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding-block: var(--s-5);
+  max-inline-size: 1080px;
+}
+.wordmark {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+.site-nav { display: flex; align-items: center; gap: var(--s-6); }
+.site-nav a { font-size: var(--step--1); color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--ink); text-decoration: underline; }
+.site-nav a[hreflang] { color: var(--ink); font-weight: 500; }
+
+/* ---------- hero ---------- */
+
+.hero { background: var(--surface); padding-block: clamp(var(--s-12), 8vw, 104px) clamp(var(--s-12), 6vw, var(--s-22)); }
+.hero h1 { margin-block-end: var(--s-6); }
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-5);
+  margin-block-start: var(--s-10);
+}
+.cta {
+  display: inline-block;
+  padding: var(--s-4) var(--s-6);
+  background: var(--accent);
+  color: var(--on-accent);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  text-decoration: none;
+  min-block-size: 44px;
+  transition: background-color var(--duration-functional) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover { background: var(--accent-hover); }
+}
+.cta-meta { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); }
+
+/* ---------- notices ---------- */
+
+.notice {
+  background: var(--bg);
+  border-inline-start: 3px solid var(--warn);
+  border-radius: var(--radius-sm);
+  padding: var(--s-4) var(--s-5);
+  margin-block-start: var(--s-8);
+}
+.section--bg .notice { background: var(--surface); }
+.notice strong { display: block; font-weight: 600; }
+.notice span { color: var(--muted); }
+
+.keypoint {
+  background: var(--bg);
+  border-inline-start: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: var(--s-5) var(--s-6);
+}
+.section--bg .keypoint { background: var(--surface); }
+.keypoint p:first-child { font-weight: 600; font-size: var(--step-1); color: var(--ink); }
+.keypoint p + p { margin-block-start: var(--s-2); color: var(--muted); }
+
+.disclosure-line {
+  margin-block-start: var(--s-5);
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+
+/* ---------- two-column contrast ---------- */
+
+.contrast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-block-start: var(--s-8);
+}
+.section--surface .contrast { background: var(--bg); }
+.contrast > div { padding: var(--s-5) var(--s-6); }
+/* The divider sits on the inline START of every cell except the first, so it
+   lands between the cells in both directions. Putting it on the first cell's
+   inline start would push it to the outer edge when the page flips. */
+.contrast > div + div { border-inline-start: 1px solid var(--border); }
+@media (max-width: 620px) {
+  .contrast > div + div {
+    border-inline-start: 0;
+    border-block-start: 1px solid var(--border);
+  }
+}
+.contrast dt {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  color: var(--muted);
+  margin-block-end: var(--s-2);
+}
+html[lang="he"] .contrast dt {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+.contrast dd { margin: 0; }
+
+/* ---------- numbered steps ---------- */
+
+.steps { list-style: none; margin: var(--s-8) 0 0; padding: 0; counter-reset: step; }
+.steps > li {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: var(--s-5);
+  padding-block: var(--s-5);
+}
+.steps > li + li { border-block-start: 1px solid var(--border); }
+.steps > li::before {
+  counter-increment: step;
+  content: "0" counter(step);
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--step--1);
+  color: var(--accent);
+}
+.steps h3 + p { margin-block-start: var(--s-1); color: var(--muted); }
+
+/* ---------- marker lists ---------- */
+
+.marked { list-style: none; margin: var(--s-4) 0 0; padding: 0; }
+.marked > li {
+  display: grid;
+  grid-template-columns: 1.2rem 1fr;
+  gap: var(--s-3);
+  color: var(--muted);
+}
+.marked > li + li { margin-block-start: var(--s-3); }
+.marked > li::before {
+  content: "\00d7";                 /* paired with the text, never the only signal */
+  font-family: var(--font-mono);
+  color: var(--warn);
+  line-height: inherit;
+}
+
+.plain { list-style: none; margin: var(--s-8) 0 0; padding: 0; }
+.plain > li { padding-block: var(--s-5); }
+.plain > li + li { border-block-start: 1px solid var(--border); }
+.plain h3 + p { margin-block-start: var(--s-1); color: var(--muted); }
+
+/* ---------- post format readout ---------- */
+
+.readout {
+  background: var(--readout-bg);
+  color: var(--readout-ink);
+  border: 1px solid var(--readout-border);
+  border-radius: var(--radius);
+  padding: var(--s-6) var(--s-8);
+  margin-block-start: var(--s-8);
+  overflow-x: auto;
+}
+.readout-title { font-family: var(--font-mono); font-weight: 500; margin-block-end: var(--s-5); }
+html[lang="he"] .readout-title { font-family: var(--font-sans); font-weight: 600; }
+.readout dl { display: grid; grid-template-columns: auto auto 1fr; gap: var(--s-4) var(--s-5); margin: 0; }
+.readout dt { color: var(--readout-muted); font-size: var(--step--1); white-space: nowrap; }
+.readout dd { margin: 0; font-size: var(--step--1); white-space: nowrap; }
+.readout .val { font-weight: 500; }
+.readout .val--accent { color: var(--readout-accent); }
+.readout .hint { color: var(--readout-muted); white-space: normal; }
+@media (max-width: 560px) {
+  .readout dl { grid-template-columns: auto 1fr; }
+  .readout .hint { grid-column: 1 / -1; }
+}
+.caption { margin-block-start: var(--s-4); font-size: var(--step--1); color: var(--muted); }
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  background: #16181a;
+  color: #e8e9ea;
+  padding-block: var(--s-12);
+}
+.site-footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+}
+.site-footer .wordmark { color: #e8e9ea; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: var(--s-6); }
+.site-footer a { color: #a8adb8; font-size: var(--step--1); }
+.site-footer a:hover { color: #e8e9ea; }
+.site-footer hr { border: 0; border-block-start: 1px solid #2c2f33; margin-block: var(--s-6); }
+.site-footer p { color: #a8adb8; font-size: var(--step--1); }
+.site-footer p + p { margin-block-start: var(--s-3); }
+.site-footer :focus-visible { outline-color: #6ad3a1; }
+
+/* ---------- legal / privacy pages ---------- */
+
+.doc { background: var(--surface); }
+.doc h2 { font-size: var(--step-2); margin-block-start: var(--s-10); }
+.doc h2:first-of-type { margin-block-start: var(--s-8); }
+.doc p, .doc li { color: var(--muted); }
+.doc ul { padding-inline-start: 1.3em; margin-block: var(--s-3) 0; }
+.doc li + li { margin-block-start: var(--s-2); }
+.doc .updated { font-family: var(--font-mono); font-size: var(--step--1); }
+html[lang="he"] .doc .updated { font-family: var(--font-sans); }
+
+/* ---------- motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
