@@ -72,5 +72,19 @@ mailbox. There is no mail server in this repository.
 
 ## Before committing
 
-Nothing in this repository should contain a local filesystem path, a Windows user name, or
-a personal email address. The only address that belongs here is `contact@pricelog.fyi`.
+Nothing in this repository should contain a local filesystem path, a machine user name, or
+a personal email address. The only addresses that belong here are `contact@pricelog.fyi`
+and the GitHub noreply address below.
+
+Commits are authored with a GitHub noreply identity so a personal address is never written
+into the public history:
+
+```
+git config user.name  "ShlomoLIfschitz"
+git config user.email "98921504+ShlomoLIfschitz@users.noreply.github.com"
+```
+
+That setting lives in `.git/config`, which is **not** part of the tree and therefore does
+not travel with a clone. **Run those two lines again after cloning this repository onto a
+new machine**, before the first commit there — otherwise git falls back to the global
+identity and stamps whatever address that is into a public repository, permanently.
