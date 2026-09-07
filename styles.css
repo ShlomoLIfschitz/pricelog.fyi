@@ -119,7 +119,12 @@ html[lang="he"] h2 { letter-spacing: -0.010em; }
 html[lang="he"] h3 { letter-spacing: normal; }
 
 a { color: inherit; }
-a:hover { text-decoration-thickness: 2px; }
+
+/* All hover styling is gated: on touch devices an ungated :hover sticks after
+   a tap and reads as a selected state that never clears. */
+@media (hover: hover) and (pointer: fine) {
+  a:hover { text-decoration-thickness: 2px; }
+}
 
 :where(a[href], button, [tabindex]:not([tabindex="-1"])):focus-visible {
   outline: 2px solid var(--focus);
@@ -208,8 +213,17 @@ html[lang="he"] .eyebrow {
 }
 .site-nav { display: flex; align-items: center; gap: var(--s-6); }
 .site-nav a { font-size: var(--step--1); color: var(--muted); text-decoration: none; }
-.site-nav a:hover { color: var(--ink); text-decoration: underline; }
+/* Standalone controls, so the 2.5.8 inline-target exception does not cover
+   them — the text box alone comes out a pixel under the minimum. */
+.site-nav a, .site-footer nav a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+}
 .site-nav a[hreflang] { color: var(--ink); font-weight: 500; }
+@media (hover: hover) and (pointer: fine) {
+  .site-nav a:hover { color: var(--ink); text-decoration: underline; }
+}
 
 /* ---------- hero ---------- */
 
@@ -391,7 +405,9 @@ html[lang="he"] .readout-title { font-family: var(--font-sans); font-weight: 600
 .site-footer .wordmark { color: #e8e9ea; }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: var(--s-6); }
 .site-footer a { color: #a8adb8; font-size: var(--step--1); }
-.site-footer a:hover { color: #e8e9ea; }
+@media (hover: hover) and (pointer: fine) {
+  .site-footer a:hover { color: #e8e9ea; }
+}
 .site-footer hr { border: 0; border-block-start: 1px solid #2c2f33; margin-block: var(--s-6); }
 .site-footer p { color: #a8adb8; font-size: var(--step--1); }
 .site-footer p + p { margin-block-start: var(--s-3); }
