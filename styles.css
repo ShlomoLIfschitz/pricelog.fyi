@@ -334,6 +334,7 @@ html[lang="he"] .contrast dt {
 .steps > li::before {
   counter-increment: step;
   content: "0" counter(step);
+  content: "0" counter(step) / "";  /* decorative: the <ol> already announces the order */
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
   font-size: var(--step--1);
@@ -353,6 +354,7 @@ html[lang="he"] .contrast dt {
 .marked > li + li { margin-block-start: var(--s-3); }
 .marked > li::before {
   content: "\00d7";                 /* paired with the text, never the only signal */
+  content: "\00d7" / "";            /* alt text "" so a screen reader does not read "times"; the line above is the fallback for browsers without alt-text syntax */
   font-family: var(--font-mono);
   color: var(--warn);
   line-height: inherit;
