@@ -467,6 +467,16 @@ html[lang="he"] .doc .updated { font-family: var(--font-sans); }
 }
 .cta-note { font-size: var(--step--1); color: var(--muted); }
 
+/* Read by screen readers, not shown. */
+.sr-only {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .deal-chart-intro { margin-block-start: var(--s-4); }
 .deal-chart {
   margin: var(--s-6) 0 0;
@@ -482,10 +492,16 @@ html[lang="he"] .doc .updated { font-family: var(--font-sans); }
 .chart-tick { stroke: var(--border-strong); stroke-width: 1; }
 .chart-label { fill: var(--muted); font-family: var(--font-sans); font-size: 11px; }
 .chart-year { font-size: 10px; }
-.chart-dots { fill: none; stroke: var(--muted); stroke-width: 3; stroke-linecap: round; stroke-opacity: 0.35; }
+/* 0.7 is the lowest opacity that keeps a lone dot at 3:1 against the surface
+   (WCAG 1.4.11): 3.2:1 light, 4.4:1 dark. At 0.35 an isolated price was all but
+   invisible, and the dots are the data. */
+.chart-dots { fill: none; stroke: var(--muted); stroke-width: 3; stroke-linecap: round; stroke-opacity: 0.7; }
 .chart-median { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 5 4; }
 .chart-deal { fill: var(--accent); stroke: var(--surface); stroke-width: 2.5; }
 .chart-deal-label { fill: var(--accent); font-family: var(--font-sans); font-size: 13px; font-weight: 600; }
+/* A halo in the surface colour, so the label stays legible where it lands on
+   a cluster of dots. */
+.chart-deal-label { paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
 /* SVG text is sized in viewBox units and shrinks with the chart. On a phone
    column the chart is drawn at about 0.8 scale, so the labels are set larger
    here to land near the same on-screen size as on a desktop. */
@@ -494,6 +510,25 @@ html[lang="he"] .doc .updated { font-family: var(--font-sans); }
   .chart-label { font-size: 15px; }
   .chart-year { font-size: 13px; }
   .chart-deal-label { font-size: 16px; }
+}
+/* At 320px the chart is drawn at about 0.65 scale; one more step keeps the
+   labels near 11px on screen. */
+@media (max-width: 400px) {
+  .chart-label { font-size: 18px; }
+  .chart-year { font-size: 16px; }
+  .chart-deal-label { font-size: 19px; }
+}
+/* High-contrast mode replaces the page colours; without system colours the
+   dots, the median and the deal would all collapse into one ink. */
+@media (forced-colors: active) {
+  .chart-dots { stroke: GrayText; stroke-opacity: 1; }
+  .chart-median { stroke: CanvasText; }
+  .chart-deal { fill: Highlight; stroke: Canvas; }
+  .chart-deal-label { fill: Highlight; stroke: Canvas; }
+  .chart-label { fill: CanvasText; }
+  .key--dots { background: GrayText; opacity: 1; forced-color-adjust: none; }
+  .key--median { border-block-start-color: CanvasText; }
+  .key--deal { background: Highlight; forced-color-adjust: none; }
 }
 
 .chart-legend {
@@ -509,7 +544,7 @@ html[lang="he"] .doc .updated { font-family: var(--font-sans); }
 .chart-legend li { display: inline-flex; align-items: center; gap: var(--s-2); }
 .deal-chart figcaption > p { margin-block-start: var(--s-3); font-size: var(--step--1); color: var(--muted); }
 .key { display: inline-block; flex: none; }
-.key--dots { inline-size: 8px; block-size: 8px; border-radius: 50%; background: var(--muted); opacity: 0.5; }
+.key--dots { inline-size: 6px; block-size: 6px; border-radius: 50%; background: var(--muted); opacity: 0.7; }
 .key--median { inline-size: 20px; border-block-start: 2px dashed var(--ink); }
 .key--deal { inline-size: 12px; block-size: 12px; border-radius: 50%; background: var(--accent); }
 
