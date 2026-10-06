@@ -345,16 +345,20 @@ html[lang="he"] .contrast dt {
 /* ---------- marker lists ---------- */
 
 .marked { list-style: none; margin: var(--s-4) 0 0; padding: 0; }
+/* Not a grid: in a grid every inline child of the <li> (a <span class="num">, a
+   <strong>) becomes its own grid item, and the sentence breaks into one cell per
+   word run. The marker is positioned instead, so the text stays one inline flow. */
 .marked > li {
-  display: grid;
-  grid-template-columns: 1.2rem 1fr;
-  gap: var(--s-3);
+  position: relative;
+  padding-inline-start: calc(1.2rem + var(--s-3));
   color: var(--muted);
 }
 .marked > li + li { margin-block-start: var(--s-3); }
 .marked > li::before {
   content: "\00d7";                 /* paired with the text, never the only signal */
   content: "\00d7" / "";            /* alt text "" so a screen reader does not read "times"; the line above is the fallback for browsers without alt-text syntax */
+  position: absolute;
+  inset-inline-start: 0;
   font-family: var(--font-mono);
   color: var(--warn);
   line-height: inherit;
