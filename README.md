@@ -1,10 +1,17 @@
 # pricelog.fyi
 
-Landing page for [@pricelog_deals](https://t.me/pricelog_deals) — a Telegram channel that
-records AliExpress prices daily and publishes a drop only when it beats the median of its
-own observed history, rather than the seller-authored "was" price.
+Site for [@pricelog_deals](https://t.me/pricelog_deals) — a Telegram channel that records
+flight prices from Tel Aviv every six hours and publishes a fare only when it beats the
+median of its own observed history, rather than a "from" price in someone's sale.
 
-Two pages in two languages. English at `/`, Hebrew at `/he/`.
+Hebrew only, under `/he/`. The `/he/` prefix is kept so another language can be added
+later without moving URLs; the English pages that used to live at `/` and `/privacy` were
+removed and `_redirects` sends both to their Hebrew counterparts with a 301.
+
+The prices and the selection rules come from the `pricelog-scaner` service; this
+repository is only the site. The home page states the thresholds (40% below the median,
+at least 200 observations, 7 days to departure, 48 hours since the fare was found), so
+**a change to the selection rules there is also a change to `he/index.html` here.**
 
 ## Stack
 
@@ -13,23 +20,38 @@ Hand-written HTML and CSS. No build step, no dependencies, no `package.json`.
 The site ships **zero JavaScript and makes zero third-party requests** — no analytics, no
 tag manager, no web fonts. This is a stated commitment on the privacy page, not an
 optimisation, so keep it that way: adding a font CDN or an analytics snippet would make
-that page untrue. Language switching is a plain link for the same reason; automatic
-detection would require script.
+that page untrue.
 
 ## Layout
 
 ```
-index.html          /              en, ltr
-privacy.html        /privacy       en, ltr
-he/index.html       /he/           he, rtl
-he/privacy.html     /he/privacy    he, rtl
-styles.css          one stylesheet for both directions
-og.png, og-he.png   1200x630 social preview images
-tools/              build-time only, not served
+he/index.html           /he/                he, rtl
+he/privacy.html         /he/privacy         he, rtl
+he/accessibility.html   /he/accessibility   he, rtl — the accessibility statement
+he/deals/               /he/deals/          generated, see below
+_redirects              / and /privacy → /he/..., 301
+styles.css              one stylesheet, written direction-agnostic
+og-he.png               1200x630 social preview image
+tools/                  build-time only, not served
 ```
 
-Cloudflare Pages resolves clean URLs, so `privacy.html` is served at `/privacy` with no
-configuration.
+Cloudflare Pages resolves clean URLs, so `he/privacy.html` is served at `/he/privacy` with
+no configuration.
+
+### `he/deals/` is generated — do not edit it by hand
+
+Deal pages, the deals index and `he/deals/manifest.json` are written and pushed by the
+`publish` job in `pricelog-scaner`. The manifest is the record of what was published and
+when, and the job reads it to decide what not to publish again, so a hand edit there
+changes what gets posted. Everything outside `he/deals/` is hand-written and the job never
+touches it.
+
+### Naming
+
+The booking partner is not named anywhere on the site, in file names or in URLs, and the
+booking button reads "לחיפוש והזמנה". The affiliate network's terms forbid using the
+partner's trademark without permission, including in transliteration; this stays until
+that permission is confirmed.
 
 ## Working on the CSS
 
@@ -50,14 +72,14 @@ Hebrew body text uses a Hebrew system stack and slightly looser leading, set on
 `html[lang="he"]`. Monospace is applied to numerals only — no system mono face carries a
 usable Hebrew design, so forcing it on Hebrew text produces an arbitrary fallback.
 
-## Regenerating the preview images
+## Regenerating the preview image
 
 ```
 powershell -NoProfile -ExecutionPolicy Bypass -File tools/make-og.ps1
 ```
 
-Text lives in `tools/og.json`. The script writes `og.png` and `og-he.png` into the repo
-root; commit the results.
+Text lives in `tools/og.json`. The script writes `og-he.png` into the repo root; commit
+the result. It still supports an LTR image, should an English page come back.
 
 ## Deploying
 
