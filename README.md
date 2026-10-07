@@ -28,7 +28,7 @@ that page untrue.
 he/index.html           /he/                he, rtl
 he/privacy.html         /he/privacy         he, rtl
 he/accessibility.html   /he/accessibility   he, rtl — the accessibility statement
-he/deals/               /he/deals/          generated, see below
+he/flights/             /he/flights/        generated, see below
 _redirects              / and /privacy → /he/..., 301
 styles.css              one stylesheet, written direction-agnostic
 og-he.png               1200x630 social preview image
@@ -38,13 +38,19 @@ tools/                  build-time only, not served
 Cloudflare Pages resolves clean URLs, so `he/privacy.html` is served at `/he/privacy` with
 no configuration.
 
-### `he/deals/` is generated — do not edit it by hand
+### `he/flights/` is generated — do not edit it by hand
 
-Deal pages, the deals index and `he/deals/manifest.json` are written and pushed by the
+Deal pages, the deals index and `he/flights/manifest.json` are written and pushed by the
 `publish` job in `pricelog-scaner`. The manifest is the record of what was published and
 when, and the job reads it to decide what not to publish again, so a hand edit there
-changes what gets posted. Everything outside `he/deals/` is hand-written and the job never
-touches it.
+changes what gets posted. Everything outside `he/flights/` is hand-written and the job
+never touches it.
+
+The generated pages use the classes in the "deal pages" and "deals index" sections at the
+end of `styles.css`. Those class names are a contract with `pages.py` and `chart.py` in
+`pricelog-scaner`: rename one here and the generated pages lose their styling without
+any error. The chart's dot opacity (0.7) is the lowest that keeps a single point at 3:1
+contrast; do not lower it for looks.
 
 ### Naming
 
