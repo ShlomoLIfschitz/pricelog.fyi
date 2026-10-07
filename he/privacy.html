@@ -7,7 +7,9 @@
 <meta name="description" content="מה pricelog.fyi אוסף (כלום), מה המארח רואה, ומה קורה כשלוחצים על כפתור לחיפוש והזמנה.">
 <link rel="canonical" href="https://pricelog.fyi/he/privacy">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/styles.css">
+<link rel="preload" href="/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/heebo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/site.css">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="pricelog">
 <meta property="og:locale" content="he">
@@ -20,28 +22,48 @@
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21.5 3.5 2.8 10.7c-.9.4-.9 1.6 0 1.9l4.7 1.6 1.8 5.6c.2.7 1.1.9 1.6.4l2.7-2.6 4.8 3.5c.6.4 1.4.1 1.6-.6L22.9 4.9c.2-.9-.6-1.7-1.4-1.4z" fill="currentColor"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 28 28"><rect width="28" height="28" rx="9" fill="#CF4A23"/><path d="M6 17.5 10.5 13l3.5 3 7.5-7.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21.5" cy="8.5" r="2" fill="#fff"/></symbol>
+</svg>
 
 <a class="skip" href="#main">דילוג לתוכן</a>
 
-<header class="site-header">
-  <div class="wrap">
-    <a class="wordmark" href="/he/" dir="ltr">pricelog</a>
-    <nav class="site-nav" aria-label="ניווט">
-      <a href="/he/privacy" aria-current="page">פרטיות</a>
+<header class="nav-wrap">
+  <nav class="nav" aria-label="ניווט">
+    <a class="logo" href="/he/" aria-label="pricelog, לדף הבית"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+    <div class="nav-links">
+      <a href="/he/flights/">מציאות</a>
+      <a href="/he/#destinations">יעדים</a>
+      <a href="/he/#how">איך זה עובד</a>
       <a href="/he/accessibility">נגישות</a>
-    </nav>
-  </div>
+    </div>
+    <a class="btn btn--primary btn--sm" href="https://t.me/pricelog_deals"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>לערוץ בטלגרם</a>
+    <details class="nav-menu">
+      <summary aria-label="תפריט"><svg aria-hidden="true"><use href="#i-menu"/></svg></summary>
+      <div>
+        <a href="/he/flights/">מציאות</a>
+        <a href="/he/#destinations">יעדים</a>
+        <a href="/he/#how">איך זה עובד</a>
+        <a href="https://t.me/pricelog_deals">ערוץ הטלגרם</a>
+        <a href="/he/privacy" aria-current="page">פרטיות</a>
+        <a href="/he/accessibility">נגישות</a>
+      </div>
+    </details>
+  </nav>
 </header>
 
 <main id="main">
-  <section class="doc">
-    <div class="wrap"><div class="col">
-      <p class="eyebrow">פרטיות</p>
-      <h1>מדיניות פרטיות</h1>
-      <p class="lede" style="margin-block-start: var(--s-6)">העמוד הזה מתאר מה
+  <header class="doc-head">
+    <p class="eyebrow">פרטיות</p>
+    <h1>מדיניות פרטיות</h1>
+    <p>העמוד הזה מתאר מה
       <span class="num" dir="ltr">pricelog.fyi</span> עושה עם מידע עליכם. הוא קצר כי האתר עושה
       מעט מאוד.</p>
-
+  </header>
+  <div class="doc"><div>
       <h2>מי מפעיל את האתר</h2>
       <p>האתר והערוץ בטלגרם מופעלים על ידי שלמה, אדם פרטי בישראל. לכל שאלה או בקשה בנושא פרטיות:
       <a href="mailto:contact@pricelog.fyi" dir="ltr">contact@pricelog.fyi</a>.</p>
@@ -65,7 +87,7 @@
       <p>הכפתור בעמוד מציאה הוא <strong>קישור שותפים</strong>. כשלוחצים עליו, הדפדפן עובר קודם דרך
       <span dir="ltr">Travelpayouts</span>, רשת השותפים שדרכה אני עובד, ומשם לאתר חיפוש והזמנה של
       טיסות. בדרך:</p>
-      <ul class="marked" role="list">
+      <ul>
         <li><span dir="ltr">Travelpayouts</span> ואתר ההזמנות מקבלים את כתובת
         ה־<span dir="ltr">IP</span> שלכם ואת פרטי הדפדפן, כמו כל אתר שנכנסים אליו.</li>
         <li>הקישור נושא מזהה של <strong>המציאה</strong> — למשל
@@ -74,7 +96,7 @@
         <li>אתר ההזמנות מציב קוקי בדפדפן שלכם, לרוב
         ל־<span class="num" dir="ltr">30</span> יום, כדי לשייך אליי עמלה אם תזמינו.</li>
       </ul>
-      <p style="margin-block-start: var(--s-4)">מה שאני מקבל בחזרה הוא דוח מצטבר: כמה לחיצות וכמה
+      <p>מה שאני מקבל בחזרה הוא דוח מצטבר: כמה לחיצות וכמה
       הזמנות היו לכל מציאה, וסכומי ההזמנות. אני לא מקבל את שמכם, את פרטי הקשר שלכם או את פרטי
       התשלום. מרגע שעזבתם את האתר הזה, מדיניות הפרטיות של <span dir="ltr">Travelpayouts</span> ושל
       אתר ההזמנות היא שחלה, לא זו.</p>
@@ -107,28 +129,23 @@
       <p>אם האתר הזה יתחיל אי פעם לאסוף משהו — אנליטיקס, למשל — העמוד הזה יאמר זאת לפני שזה יקרה,
       והתאריך למטה ישתנה. זה לא מסמך שבכוונתי להרחיב בשקט.</p>
 
-      <p class="updated" style="margin-block-start: var(--s-10)">עודכן לאחרונה:
+      <p class="updated">עודכן לאחרונה:
       <span dir="ltr">6</span> באוקטובר <span dir="ltr">2026</span></p>
-    </div></div>
-  </section>
+  </div></div>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap"><div class="col">
-    <div class="row">
-      <span class="wordmark" dir="ltr">pricelog.fyi</span>
-      <nav aria-label="ניווט תחתון">
-        <a href="/he/privacy" aria-current="page">פרטיות</a>
-        <a href="/he/accessibility">נגישות</a>
-        <a href="mailto:contact@pricelog.fyi" dir="ltr">contact@pricelog.fyi</a>
-      </nav>
-    </div>
-    <hr>
-    <p>כפתורי ההזמנה באתר הם קישורי שותפים. אם תזמינו דרך אחד מהם, אתר ההזמנות משלם עמלה ללא עלות
-    נוספת עבורכם. לגובה העמלה אין שום חלק בבחירת מה שמתפרסם.</p>
-    <p><span dir="ltr">pricelog</span> הוא פרויקט עצמאי. הוא אינו מסונף לחברות תעופה או לאתרי
-    הזמנות, אינו מאושר על ידן ואינו ממומן על ידן.</p>
-  </div></div>
+<footer class="foot">
+  <a class="logo" href="/he/" aria-label="pricelog, לדף הבית"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+  <nav aria-label="ניווט תחתון">
+    <a href="/he/flights/">מציאות</a>
+    <a href="/he/privacy">פרטיות</a>
+    <a href="/he/accessibility">נגישות</a>
+    <a href="/he/credits">קרדיט לתמונות</a>
+    <a href="mailto:contact@pricelog.fyi" dir="ltr">contact@pricelog.fyi</a>
+  </nav>
+  <p>כפתורי ההזמנה באתר הם קישורי שותפים. אם תזמינו דרך אחד מהם, אתר ההזמנות משלם עמלה ללא עלות
+  נוספת עבורכם. לגובה העמלה אין שום חלק בבחירת מה שמתפרסם. <span dir="ltr">pricelog</span> הוא
+  פרויקט עצמאי. הוא אינו מסונף לחברות תעופה או לאתרי הזמנות, אינו מאושר על ידן ואינו ממומן על ידן.</p>
 </footer>
 
 </body>
