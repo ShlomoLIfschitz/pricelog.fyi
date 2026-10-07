@@ -46,6 +46,10 @@ when, and the job reads it to decide what not to publish again, so a hand edit t
 changes what gets posted. Everything outside `he/flights/` is hand-written and the job
 never touches it.
 
+The one exception is the first manifest, created by hand once as `{"deals": []}`. The job
+refuses to run without one rather than treating a missing manifest as empty: that would
+make every flight look new, so a wrong clone or a deleted file would republish everything.
+
 The generated pages use the classes in the "deal pages" and "deals index" sections at the
 end of `styles.css`. Those class names are a contract with `pages.py` and `chart.py` in
 `pricelog-scaner`: rename one here and the generated pages lose their styling without
