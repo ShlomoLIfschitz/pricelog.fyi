@@ -7,7 +7,9 @@
 <meta name="description" content="לאיזה תקן נגישות האתר נבנה, מה נבדק ומה עוד לא, ואיך לפנות בנושא נגישות.">
 <link rel="canonical" href="https://pricelog.fyi/he/accessibility">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/styles.css">
+<link rel="preload" href="/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/heebo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/site.css">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="pricelog">
 <meta property="og:locale" content="he">
@@ -20,43 +22,63 @@
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21.5 3.5 2.8 10.7c-.9.4-.9 1.6 0 1.9l4.7 1.6 1.8 5.6c.2.7 1.1.9 1.6.4l2.7-2.6 4.8 3.5c.6.4 1.4.1 1.6-.6L22.9 4.9c.2-.9-.6-1.7-1.4-1.4z" fill="currentColor"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 28 28"><rect width="28" height="28" rx="9" fill="#CF4A23"/><path d="M6 17.5 10.5 13l3.5 3 7.5-7.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21.5" cy="8.5" r="2" fill="#fff"/></symbol>
+</svg>
 
 <a class="skip" href="#main">דילוג לתוכן</a>
 
-<header class="site-header">
-  <div class="wrap">
-    <a class="wordmark" href="/he/" dir="ltr">pricelog</a>
-    <nav class="site-nav" aria-label="ניווט">
-      <a href="/he/privacy">פרטיות</a>
+<header class="nav-wrap">
+  <nav class="nav" aria-label="ניווט">
+    <a class="logo" href="/he/" aria-label="pricelog, לדף הבית"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+    <div class="nav-links">
+      <a href="/he/flights/">מציאות</a>
+      <a href="/he/#destinations">יעדים</a>
+      <a href="/he/#how">איך זה עובד</a>
       <a href="/he/accessibility" aria-current="page">נגישות</a>
-    </nav>
-  </div>
+    </div>
+    <a class="btn btn--primary btn--sm" href="https://t.me/pricelog_deals"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>לערוץ בטלגרם</a>
+    <details class="nav-menu">
+      <summary aria-label="תפריט"><svg aria-hidden="true"><use href="#i-menu"/></svg></summary>
+      <div>
+        <a href="/he/flights/">מציאות</a>
+        <a href="/he/#destinations">יעדים</a>
+        <a href="/he/#how">איך זה עובד</a>
+        <a href="https://t.me/pricelog_deals">ערוץ הטלגרם</a>
+        <a href="/he/privacy">פרטיות</a>
+        <a href="/he/accessibility" aria-current="page">נגישות</a>
+      </div>
+    </details>
+  </nav>
 </header>
 
 <main id="main">
-  <section class="doc">
-    <div class="wrap"><div class="col">
-      <p class="eyebrow">נגישות</p>
-      <h1>הצהרת נגישות</h1>
-      <p class="lede" style="margin-block-start: var(--s-6)">האתר נבנה כך שאפשר יהיה לקרוא ולהשתמש
+  <header class="doc-head">
+    <p class="eyebrow">נגישות</p>
+    <h1>הצהרת נגישות</h1>
+    <p>האתר נבנה כך שאפשר יהיה לקרוא ולהשתמש
       בו עם קורא מסך, עם מקלדת בלבד, ובהגדלה. העמוד הזה מפרט מה נעשה, מה נבדק, ומה עוד לא.</p>
-
+  </header>
+  <div class="doc"><div>
       <h2>התקן</h2>
       <p>האתר נבנה לפי הנחיות <span dir="ltr">WCAG 2.2</span> ברמה <span dir="ltr">AA</span>, שכוללות
       את הדרישות של התקן הישראלי ת״י <span class="num" dir="ltr">5568</span>.</p>
 
       <h2>מה נעשה באתר</h2>
-      <ul class="plain" role="list">
-        <li><p>העמודים מסומנים כעברית ומימין לשמאל, כך שקורא מסך מקריא אותם בקול העברי.
-        מספרים, מחירים וכתובות בתוך טקסט עברי מסומנים בנפרד, כדי שלא יתהפכו.</p></li>
-        <li><p>כל הפעולות זמינות מהמקלדת, עם מסגרת מיקוד גלויה. קישור ״דילוג לתוכן״ הוא הדבר הראשון
-        בכל עמוד.</p></li>
-        <li><p>מבנה כותרות רציף, ואזורים מסומנים לכותרת, לניווט, לתוכן ולתחתית העמוד.</p></li>
-        <li><p>ניגודיות של לפחות <span class="num" dir="ltr">4.5:1</span> בכל הטקסט, גם במצב בהיר
-        וגם במצב כהה.</p></li>
-        <li><p>הגדלה עד <span class="num" dir="ltr">200%</span> ותצוגה ברוחב צר בלי גלילה
-        לרוחב. קישורים וכפתורים בגובה של לפחות <span class="num" dir="ltr">44</span> פיקסלים.</p></li>
-        <li><p>אין באתר ג׳אווהסקריפט, אנימציות שרצות מעצמן, חלונות קופצים או טפסים.</p></li>
+      <ul>
+        <li>העמודים מסומנים כעברית ומימין לשמאל, כך שקורא מסך מקריא אותם בקול העברי.
+        מספרים, מחירים וכתובות בתוך טקסט עברי מסומנים בנפרד, כדי שלא יתהפכו.</li>
+        <li>כל הפעולות זמינות מהמקלדת, עם מסגרת מיקוד גלויה. קישור ״דילוג לתוכן״ הוא הדבר הראשון
+        בכל עמוד.</li>
+        <li>מבנה כותרות רציף, ואזורים מסומנים לכותרת, לניווט, לתוכן ולתחתית העמוד.</li>
+        <li>ניגודיות של לפחות <span class="num" dir="ltr">4.5:1</span> בכל הטקסט הרגיל, ושל לפחות
+        <span class="num" dir="ltr">3:1</span> בטקסט גדול ובסימונים בגרף.</li>
+        <li>הגדלה עד <span class="num" dir="ltr">200%</span> ותצוגה ברוחב צר בלי גלילה
+        לרוחב. קישורים וכפתורים בגובה של לפחות <span class="num" dir="ltr">44</span> פיקסלים.</li>
+        <li>אין באתר ג׳אווהסקריפט, אנימציות שרצות מעצמן, חלונות קופצים או טפסים.</li>
       </ul>
 
       <h2>מה נבדק, ומתי</h2>
@@ -65,7 +87,7 @@
       תוקנו.</p>
 
       <h2>מגבלות ידועות</h2>
-      <ul class="marked" role="list">
+      <ul>
         <li>עדיין לא נעשתה בדיקה ידנית עם קורא מסך בקול עברי. היא מתוכננת לפני פרסום המציאה הראשונה.</li>
         <li>עמודי המציאות, כשיתפרסמו, יכללו גרף של מחירים. כל מה שהגרף מראה — המחיר, החציון וכמה
         מחירים בנו אותו — יופיע גם בטקסט.</li>
@@ -81,28 +103,22 @@
       מה ניסיתם לעשות, ובאיזה דפדפן או טכנולוגיה מסייעת השתמשתם. אענה
       תוך <span class="num" dir="ltr">14</span> יום.</p>
 
-      <p class="updated" style="margin-block-start: var(--s-10)">עודכן לאחרונה:
+      <p class="updated">עודכן לאחרונה:
       <span dir="ltr">6</span> באוקטובר <span dir="ltr">2026</span></p>
-    </div></div>
-  </section>
+  </div></div>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap"><div class="col">
-    <div class="row">
-      <span class="wordmark" dir="ltr">pricelog.fyi</span>
-      <nav aria-label="ניווט תחתון">
-        <a href="/he/privacy">פרטיות</a>
-        <a href="/he/accessibility" aria-current="page">נגישות</a>
-        <a href="mailto:contact@pricelog.fyi" dir="ltr">contact@pricelog.fyi</a>
-      </nav>
-    </div>
-    <hr>
-    <p>כפתורי ההזמנה באתר הם קישורי שותפים. אם תזמינו דרך אחד מהם, אתר ההזמנות משלם עמלה ללא עלות
-    נוספת עבורכם. לגובה העמלה אין שום חלק בבחירת מה שמתפרסם.</p>
-    <p><span dir="ltr">pricelog</span> הוא פרויקט עצמאי. הוא אינו מסונף לחברות תעופה או לאתרי
-    הזמנות, אינו מאושר על ידן ואינו ממומן על ידן.</p>
-  </div></div>
+<footer class="foot">
+  <a class="logo" href="/he/" aria-label="pricelog, לדף הבית"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+  <nav aria-label="ניווט תחתון">
+    <a href="/he/flights/">מציאות</a>
+    <a href="/he/privacy">פרטיות</a>
+    <a href="/he/accessibility">נגישות</a>
+    <a href="mailto:contact@pricelog.fyi" dir="ltr">contact@pricelog.fyi</a>
+  </nav>
+  <p>כפתורי ההזמנה באתר הם קישורי שותפים. אם תזמינו דרך אחד מהם, אתר ההזמנות משלם עמלה ללא עלות
+  נוספת עבורכם. לגובה העמלה אין שום חלק בבחירת מה שמתפרסם. <span dir="ltr">pricelog</span> הוא
+  פרויקט עצמאי. הוא אינו מסונף לחברות תעופה או לאתרי הזמנות, אינו מאושר על ידן ואינו ממומן על ידן.</p>
 </footer>
 
 </body>
