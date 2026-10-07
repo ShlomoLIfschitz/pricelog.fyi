@@ -31,7 +31,7 @@ he/accessibility.html   /he/accessibility   he, rtl — the accessibility statem
 he/flights/             /he/flights/        generated, see below
 _redirects              / and /privacy → /he/..., 301
 styles.css              one stylesheet, written direction-agnostic
-og-he.png               1200x630 social preview image
+og-he.jpg               1200x630 social preview image
 tools/                  build-time only, not served
 ```
 
@@ -78,14 +78,20 @@ Hebrew body text uses a Hebrew system stack and slightly looser leading, set on
 `html[lang="he"]`. Monospace is applied to numerals only — no system mono face carries a
 usable Hebrew design, so forcing it on Hebrew text produces an arbitrary fallback.
 
-## Regenerating the preview image
+## The preview image
 
-```
-powershell -NoProfile -ExecutionPolicy Bypass -File tools/make-og.ps1
-```
+`og-he.jpg` is `tools/og-source.png` (1731x909) scaled to 1200x630 and saved as JPEG at
+quality 90, about 66KB. The same image as PNG was about 1MB, and WhatsApp tends to drop
+the preview of a heavy image; it is a main way links get shared here. Keep it a `.jpg`:
+Cloudflare serves the type by extension, so JPEG bytes in a `.png` would go out as
+`image/png`.
 
-Text lives in `tools/og.json`. The script writes `og-he.png` into the repo root; commit
-the result. It still supports an LTR image, should an English page come back.
+The file name is also written into the generated pages, by `pages.py` in
+`pricelog-scaner`. Renaming it here without changing it there leaves every deal page
+pointing at a missing image.
+
+It replaced a preview drawn by `tools/make-og.ps1` from text in `tools/og.json`; both were
+removed so that running the script could not quietly bring the old image back.
 
 ## Deploying
 
