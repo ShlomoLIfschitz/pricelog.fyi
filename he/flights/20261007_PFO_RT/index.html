@@ -7,7 +7,9 @@
 <meta name="description" content="$90 לטיסה הלוך־חזור מתל אביב לפאפוס, 60% מתחת לחציון של 758 מחירים שנרשמו. נכון ל־7.10.2026, 01:47.">
 <link rel="canonical" href="https://pricelog.fyi/he/flights/20261007_PFO_RT/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/styles.css">
+<link rel="preload" href="/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/heebo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/site.css">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="pricelog">
 <meta property="og:locale" content="he">
@@ -20,114 +22,200 @@
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21.5 3.5 2.8 10.7c-.9.4-.9 1.6 0 1.9l4.7 1.6 1.8 5.6c.2.7 1.1.9 1.6.4l2.7-2.6 4.8 3.5c.6.4 1.4.1 1.6-.6L22.9 4.9c.2-.9-.6-1.7-1.4-1.4z" fill="currentColor"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-log" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-cmp" viewBox="0 0 24 24"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-ok" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h4"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M9 2h6"/></g></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M2.5 13.5 21 6l-3.5 13-5.5-4-3 3v-4.5L2.5 13.5z" fill="currentColor"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+  <symbol id="i-col" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M9.5 21V10M14.5 21V10M19 21V10M2 10l10-6 10 6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".15"/><path d="m8 12 3 3 5-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M4 6l6 6 4-4 6 7M15 15h5v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 19h16M7 16v-3M12 16V6M17 16V9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 28 28"><rect width="28" height="28" rx="9" fill="#CF4A23"/><path d="M6 17.5 10.5 13l3.5 3 7.5-7.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21.5" cy="8.5" r="2" fill="#fff"/></symbol>
+</svg>
 
 <a class="skip" href="#main">דילוג לתוכן</a>
 
-<header class="site-header">
-  <div class="wrap">
-    <a class="wordmark" href="/he/" dir="ltr">pricelog</a>
-    <nav class="site-nav" aria-label="ניווט">
-      <a href="/he/flights/">מציאות</a>
-      <a href="/he/privacy">פרטיות</a>
+<header class="nav-wrap">
+  <nav class="nav" aria-label="ניווט">
+    <a class="logo" href="/he/" aria-label="pricelog, לדף הבית"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+    <div class="nav-links">
+      <a href="/he/flights/" aria-current="page">מציאות</a>
+      <a href="/he/#destinations">יעדים</a>
+      <a href="/he/#how">איך זה עובד</a>
       <a href="/he/accessibility">נגישות</a>
-    </nav>
-  </div>
+    </div>
+    <a class="btn btn--primary btn--sm" href="https://t.me/pricelog_deals"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>לערוץ בטלגרם</a>
+    <details class="nav-menu">
+      <summary aria-label="תפריט"><svg class="" aria-hidden="true"><use href="#i-menu"/></svg></summary>
+      <div>
+        <a href="/he/flights/" aria-current="page">מציאות</a>
+        <a href="/he/#destinations">יעדים</a>
+        <a href="/he/#how">איך זה עובד</a>
+        <a href="https://t.me/pricelog_deals">ערוץ הטלגרם</a>
+        <a href="/he/privacy">פרטיות</a>
+        <a href="/he/accessibility">נגישות</a>
+      </div>
+    </details>
+  </nav>
 </header>
 
 <main id="main">
 
-  <section class="hero deal">
-    <div class="wrap"><div class="col">
-      <p class="eyebrow">מציאה · פורסמה ב־<time datetime="2026-10-07T12:28:06.020218+00:00"><span class="num" dir="ltr">7.10.2026, 15:28</span></time></p>
-      <h1>פאפוס, הלוך־חזור</h1>
-      <p class="lede">מתל אביב · <time datetime="2026-10-27"><span class="num" dir="ltr">27.10.2026</span></time> – <time datetime="2026-11-06"><span class="num" dir="ltr">6.11.2026</span></time> · ישירה</p>
+<section class="hero deal-hero">
+  <img class="hero-img" src="/img/dest/pfo-1920.webp" srcset="/img/dest/pfo-800.webp 800w, /img/dest/pfo-1280.webp 1280w, /img/dest/pfo-1920.webp 1920w" sizes="100vw" alt="סלע אפרודיטה, פטרה טו רומיו, ליד פאפוס" fetchpriority="high">
+  <div class="hero-copy">
+    <nav class="crumbs" aria-label="פירורי לחם"><a href="/he/flights/">מציאות</a><span aria-current="page">פאפוס</span></nav>
+    <span class="badge"><b dir="ltr">60%</b>מתחת לחציון</span>
+    <h1>פאפוס, הלוך־חזור</h1>
+    <ul class="deal-meta">
+      <li><svg class="icon" aria-hidden="true"><use href="#i-plane"/></svg>מתל אביב</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><time datetime="2026-10-27"><span class="num" dir="ltr">27.10.2026</span></time> – <time datetime="2026-11-06"><span class="num" dir="ltr">6.11.2026</span></time></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-plane"/></svg>ישירה</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg><span class="num" dir="ltr">10</span> לילות</li>
+    </ul>
+    <p class="deal-published">פורסמה ב־<time datetime="2026-10-07T12:28:06.020218+00:00"><span class="num" dir="ltr">7.10.2026, 15:28</span></time></p>
+  </div>
+  <p class="credit">תמונה להמחשה · <a href="/he/credits#pfo"><span dir="ltr">Diego Delso, CC BY-SA 4.0</span></a></p>
+</section>
 
-      <div class="deal-status deal-status--seen_again">
-        <p><strong>נצפה שוב במחיר דומה ב־<time datetime="2026-10-07"><span class="num" dir="ltr">7.10.2026</span></time>.</strong> המחיר שנרשם אז: <span class="num" dir="ltr">$98</span>.</p>
-        <p class="deal-status-checked">הסטטוס נבדק ב־<time datetime="2026-10-07T18:37:31.872664+00:00"><span class="num" dir="ltr">7.10.2026, 21:37</span></time>.</p>
-      </div>
+<div class="deal-body">
+  <div class="deal-main">
+    <div class="status status--seen_again">
+      <svg class="" aria-hidden="true"><use href="#i-check"/></svg>
+      <div><p><strong>נצפה שוב במחיר דומה ב־<time datetime="2026-10-07"><span class="num" dir="ltr">7.10.2026</span></time>.</strong> המחיר שנרשם אז: <span class="num" dir="ltr">$98</span>.</p>
+      <p class="status-checked">הסטטוס נבדק ב־<time datetime="2026-10-07T18:57:27.088067+00:00"><span class="num" dir="ltr">7.10.2026, 21:57</span></time>.</p></div>
+    </div>
 
-      <div class="readout">
-        <p class="readout-title">פאפוס · הלוך־חזור</p>
-        <dl>
-          <dt>מחיר</dt>
-          <dd class="val num" dir="ltr">$90</dd>
-          <dd class="hint">נכון ל־<time datetime="2026-10-06T22:47:53+00:00"><span class="num" dir="ltr">7.10.2026, 01:47</span></time></dd>
+    <section class="panel about" aria-labelledby="about-h">
+      <p class="eyebrow">על היעד</p>
+      <h2 id="about-h">פאפוס, קפריסין</h2>
+      <p>עיר נמל בדרום־מערב קפריסין. האתרים הארכאולוגיים בקאטו פאפוס, ובהם הפסיפסים הרומיים, וקוקליה, שבה מקדש אפרודיטה, הם יחד אתר מורשת עולמית. סלע אפרודיטה, פטרה טו רומיו, נמצא על החוף בין פאפוס ללימסול.</p>
+      <ul>
+        <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-plane"/></svg>כשעה ורבע טיסה ישירה</li>
+        <li class="chip"><svg class="icon" aria-hidden="true"><use href="#i-col"/></svg>אתר מורשת עולמית של אונסק״ו</li>
+      </ul>
+      <small>טקסט קבוע שנכתב ידנית לכל יעד, בנפרד מהנתונים שבעמוד.</small>
+    </section>
 
-          <dt>חציון</dt>
-          <dd class="val num" dir="ltr">$227</dd>
-          <dd class="hint"><span class="num" dir="ltr">758</span> מחירים שנרשמו</dd>
-
-          <dt>מתחת לחציון</dt>
-          <dd class="val val--accent num" dir="ltr">60%</dd>
-          <dd class="hint">המספר שמכריע</dd>
-        </dl>
-      </div>
-
-      <div class="cta-row">
-        <a class="cta" href="https://tp.media/r?campaign_id=100&amp;marker=775295&amp;p=4114&amp;sub_id=20261007_PFO_RT&amp;trs=581757&amp;u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2710PFO06111" rel="sponsored noopener" aria-describedby="disclosure">לחיפוש והזמנה<span class="sr-only"> (באתר חיצוני)</span></a>
-      </div>
-      <p class="disclosure-line" id="disclosure">קישור שותפים: אם תזמינו
-        דרכו, אתר ההזמנות משלם עמלה. המחיר שלכם לא משתנה. המחיר בחיפוש יכול להיות
-        שונה מהמחיר שבעמוד.</p>
-    </div></div>
-  </section>
-
-  <section class="section--bg">
-    <div class="wrap"><div class="col">
-      <h2>כל המחירים שנרשמו</h2>
-      <p class="body deal-chart-intro">כל נקודה היא מחיר שנרשם לטיסה הלוך־חזור לפאפוס, לפי
-      תאריך ההמראה, עד רגע הפרסום. כך אפשר לראות אם המציאה זולה באמת, או רק נמצאת בעונה זולה.</p>
-      <figure class="deal-chart">
+    <section class="panel chart-panel" aria-labelledby="chart-h">
+      <p class="eyebrow">ההיסטוריה</p>
+      <h2 id="chart-h">כל המחירים שנרשמו לפאפוס</h2>
+      <p>כל נקודה היא מחיר שנרשם לטיסה הלוך־חזור לפאפוס, לפי תאריך ההמראה, עד רגע
+      הפרסום. כך אפשר לראות אם המציאה זולה באמת, או רק נמצאת בעונה זולה.</p>
+      <figure>
         <svg class="chart" viewBox="0 0 400 250" role="img" aria-labelledby="chart-title chart-desc" xmlns="http://www.w3.org/2000/svg"><title id="chart-title">המחירים שנרשמו לפאפוס, הלוך־חזור</title><desc id="chart-desc">758 מחירים לפי תאריך ההמראה. הקו המקווקו הוא החציון, $227. העיגול הוא המציאה, $90, להמראה ב־27.10.2026.</desc><line class="chart-grid" x1="10" x2="354" y1="210" y2="210"/><text class="chart-label" x="396" y="210" text-anchor="end" dominant-baseline="middle">$0</text><line class="chart-grid" x1="10" x2="354" y1="161" y2="161"/><text class="chart-label" x="396" y="161" text-anchor="end" dominant-baseline="middle">$200</text><line class="chart-grid" x1="10" x2="354" y1="112" y2="112"/><text class="chart-label" x="396" y="112" text-anchor="end" dominant-baseline="middle">$400</text><line class="chart-grid" x1="10" x2="354" y1="63" y2="63"/><text class="chart-label" x="396" y="63" text-anchor="end" dominant-baseline="middle">$600</text><line class="chart-grid" x1="10" x2="354" y1="14" y2="14"/><text class="chart-label" x="396" y="14" text-anchor="end" dominant-baseline="middle">$800</text><line class="chart-tick" x1="27.8" x2="27.8" y1="210" y2="214"/><text class="chart-label" x="27.8" y="227" text-anchor="middle">אוק׳</text><text class="chart-label chart-year" x="27.8" y="245" text-anchor="middle">2026</text><line class="chart-tick" x1="85" x2="85" y1="210" y2="214"/><text class="chart-label" x="85" y="227" text-anchor="middle">דצמ׳</text><line class="chart-tick" x1="143.1" x2="143.1" y1="210" y2="214"/><text class="chart-label" x="143.1" y="227" text-anchor="middle">פבר׳</text><text class="chart-label chart-year" x="143.1" y="245" text-anchor="middle">2027</text><line class="chart-tick" x1="198.4" x2="198.4" y1="210" y2="214"/><text class="chart-label" x="198.4" y="227" text-anchor="middle">אפר׳</text><line class="chart-tick" x1="255.6" x2="255.6" y1="210" y2="214"/><text class="chart-label" x="255.6" y="227" text-anchor="middle">יוני</text><line class="chart-tick" x1="312.8" x2="312.8" y1="210" y2="214"/><text class="chart-label" x="312.8" y="227" text-anchor="middle">אוג׳</text><path class="chart-dots" d="M10.9 184.8h0M85 184.5h0M176.8 183.3h0M111.2 183.3h0M41.9 180.6h0M12.8 180.1h0M41.9 180.1h0M43.7 180.1h0M150.6 179.6h0M37.2 178.9h0M10.9 178.9h0M150.6 178.6h0M85 176.2h0M17.5 175.2h0M35.3 175h0M10 174.7h0M10.9 174.7h0M27.8 174h0M35.3 174h0M11.9 172.8h0M25.9 172h0M41.9 170.8h0M87.8 170.6h0M10 170.1h0M26.9 169.6h0M36.2 168.6h0M13.7 168.3h0M43.7 167.9h0M81.2 167.4h0M11.9 166.9h0M16.6 166.9h0M10.9 166.4h0M28.7 165.4h0M42.8 165.2h0M40.9 164.9h0M12.8 164.2h0M10.9 163h0M14.7 162.5h0M29.7 161h0M14.7 160h0M31.6 159.8h0M11.9 158.3h0M35.3 158.3h0M47.5 158.1h0M17.5 157.8h0M19.4 155.9h0M17.5 155.6h0M29.7 154.6h0M19.4 152.9h0M40.9 152.4h0M107.5 151.7h0M28.7 151.4h0M36.2 151.2h0M20.3 149h0M111.2 149h0M30.6 148.3h0M22.2 148.3h0M34.4 147.3h0M80.3 146.3h0M28.7 146.1h0M34.4 144.8h0M10.9 144.3h0M28.7 143.8h0M27.8 143.1h0M27.8 142.6h0M21.2 142.4h0M70.9 142.4h0M106.5 141.2h0M38.1 141.2h0M33.4 141.2h0M25 138h0M34.4 137.7h0M60.6 137.5h0M73.7 136.7h0M12.8 135.5h0M22.2 133.3h0M16.6 132.8h0M89.7 131.6h0M26.9 130.4h0M27.8 130.4h0M14.7 130.1h0M15.6 129.6h0M22.2 127.9h0M11.9 127.4h0M22.2 126.2h0M21.2 124h0M110.3 122.3h0M23.1 121.8h0M26.9 121.8h0M25.9 120.6h0M85.9 119.8h0M25.9 116.9h0M25 115.7h0M19.4 114.9h0M60.6 114h0M149.7 108.8h0M26.9 107.3h0M54.1 107.1h0M24.1 106.9h0M24.1 105.6h0M15.6 105.1h0M112.2 97.1h0M24.1 96.6h0M15.6 95.8h0M15.6 95.3h0M24.1 94.6h0M90.6 89.9h0M55.9 87.3h0M111.2 85.5h0M25 83.1h0M59.7 77.2h0M10.9 190.2h0M41.9 170.1h0M28.7 151.2h0M22.2 117.6h0M10.9 181.6h0M65.3 179.4h0M10.9 177.2h0M10.9 176.4h0M10 171.8h0M14.7 162.2h0M21.2 160.5h0M19.4 149.7h0M14.7 149.2h0M106.5 134.8h0M113.1 133.1h0M14.7 127.4h0M14.7 126.5h0M18.4 104.2h0M112.2 24h0M85 172.3h0M87.8 169.6h0M155.3 162h0M27.8 146.5h0M60.6 121.3h0M15.6 92.6h0M85 174h0M26.9 172.3h0M17.5 165.2h0M85 175.9h0M20.3 177.2h0M14.7 153.9h0M31.6 151.4h0M23.1 120.6h0M22.2 118.1h0M21.2 116.2h0M20.3 102.4h0M22.2 95.8h0M15.6 89h0M17.5 170.6h0M32.5 167.1h0M16.6 163h0M21.2 159.8h0M35.3 157.8h0M14.7 153.4h0M13.7 148.8h0M13.7 146.8h0M17.5 136.5h0M56.9 136h0M22.2 106.6h0M23.1 96.3h0M13.7 182.6h0M38.1 176.7h0M30.6 155.6h0M19.4 150h0M22.2 128.7h0M23.1 127.2h0M23.1 122h0M13.7 185.3h0M43.7 177.7h0M37.2 173h0M87.8 169.8h0M27.8 163.9h0M17.5 163.2h0M36.2 160.8h0M19.4 158.6h0M37.2 148h0M89.7 131.4h0M72.8 130.1h0M25 122.8h0M16.6 119.6h0M24.1 100.5h0M25 99.8h0M113.1 97.1h0M12.8 185.3h0M36.2 183.1h0M85 173.7h0M50.3 164.2h0M17.5 163.9h0M37.2 145.8h0M12.8 124h0M18.4 101h0M15.6 77h0M38.1 176.2h0M27.8 166.9h0M46.6 163.2h0M42.8 146.1h0M38.1 145.8h0M93.4 130.6h0M44.7 126.2h0M40.9 126h0M51.2 124.5h0M44.7 123.3h0M53.1 80.6h0M48.4 32.1h0M38.1 171.8h0M26.9 152.7h0M106.5 147.8h0M20.3 144.8h0M23.1 118.6h0M89.7 115.7h0M23.1 111.8h0M21.2 107.1h0M24.1 100.7h0M13.7 182.8h0M26.9 167.6h0M29.7 167.4h0M20.3 160.3h0M16.6 158.3h0M17.5 156.1h0M27.8 153.2h0M33.4 147.5h0M15.6 131.6h0M16.6 178.4h0M16.6 159.5h0M17.5 158.8h0M25 154.6h0M27.8 152.4h0M21.2 150.7h0M16.6 139.2h0M15.6 138.5h0M53.1 128.7h0M19.4 153.9h0M111.2 184.3h0M16.6 175.9h0M85 175.5h0M31.6 155.9h0M257.5 102.2h0M28.7 166.9h0M14.7 165.4h0M27.8 164.7h0M43.7 158.1h0M30.6 146.1h0M37.2 144.6h0M50.3 125.2h0M25.9 122.8h0M24.1 114.2h0M23.1 109.3h0M21.2 94.6h0M22.2 85.1h0M23.1 77.2h0M33.4 161.2h0M27.8 149h0M25.9 123.5h0M36.2 184.8h0M48.4 177.7h0M37.2 177.7h0M33.4 173h0M37.2 171.8h0M40 170.3h0M43.7 166.9h0M37.2 166.6h0M37.2 165.4h0M42.8 164.7h0M33.4 162.7h0M29.7 162.7h0M34.4 160.3h0M36.2 157.3h0M37.2 156.1h0M37.2 152.9h0M107.5 150.5h0M37.2 140.9h0M36.2 138.9h0M21.2 106.1h0M45.6 59.1h0M41.9 183.5h0M43.7 181.8h0M44.7 151.7h0M17.5 140.7h0M85.9 71.8h0M14.7 43.9h0M21.2 158.3h0M37.2 151.7h0M38.1 151.7h0M17.5 158.3h0M15.6 103.2h0M58.7 181.8h0M36.2 148.3h0M17.5 137.2h0M27.8 134.8h0M24.1 102.9h0M16.6 162.5h0M31.6 157.3h0M24.1 130.1h0M15.6 38.3h0M41.9 180.8h0M88.7 95.6h0M21.2 154.9h0M18.4 124.5h0M18.4 107.1h0M18.4 102h0M24.1 89.7h0M18.4 84.8h0M30.6 175.9h0M85 174.5h0M16.6 165.2h0M36.2 154.6h0M17.5 101h0M112.2 77.7h0M144 183.3h0M132.8 159h0M27.8 138.2h0M53.1 129.6h0M26.9 113.2h0M25.9 103.7h0M44.7 149.5h0M85 172.5h0M36.2 185h0M43.7 170.6h0M107.5 150h0M31.6 149h0M48.4 144.6h0M23.1 116.2h0M319.3 34.3h0M186.2 189.2h0M37.2 175.7h0M37.2 163.2h0M185.3 154.9h0M37.2 152.4h0M185.3 135.5h0M29.7 176.2h0M27.8 139.9h0M21.2 136.5h0M35.3 177.2h0M80.3 161h0M31.6 151.9h0M27.8 116.2h0M27.8 178.6h0M35.3 177.4h0M27.8 171.3h0M48.4 148h0M106.5 135h0M24.1 93.6h0M35.3 169.1h0M40 167.9h0M33.4 167.9h0M28.7 160h0M37.2 157.6h0M27.8 154.6h0M30.6 146.8h0M27.8 139.4h0M27.8 119.6h0M26.9 119.1h0M30.6 140.9h0M186.2 185h0M38.1 174.7h0M43.7 173h0M40.9 172h0M40 170.8h0M39.1 170.6h0M42.8 170.6h0M41.9 156.1h0M34.4 155.6h0M40 145.8h0M40.9 144.6h0M47.5 140.4h0M40.9 132.6h0M106.5 131.4h0M19.4 129.4h0M28.7 124h0M29.7 119.6h0M44.7 119.3h0M27.8 108.1h0M112.2 92.9h0M36.2 151h0M24.1 87.7h0M19.4 32.1h0M33.4 160.5h0M21.2 138.7h0M186.2 185.5h0M85 174.7h0M87.8 159.3h0M46.6 158.6h0M47.5 158.6h0M111.2 150h0M85 142.6h0M86.9 120.1h0M47.5 58.8h0M263.1 51h0M43.7 165.7h0M28.7 162.5h0M107.5 147.3h0M106.5 131.6h0M40 169.3h0M35.3 163.2h0M41.9 154.6h0M30.6 153.7h0M29.7 153.2h0M48.4 145.8h0M40.9 141.9h0M24.1 118.9h0M26.9 110.8h0M22.2 88.7h0M22.2 133.6h0M185.3 73.3h0M24.1 102.4h0M36.2 183.3h0M43.7 167.4h0M107.5 145.6h0M27.8 142.4h0M24.1 100h0M25.9 78.9h0M111.2 184.5h0M40 171h0M28.7 168.3h0M27.8 159.5h0M41.9 155.6h0M40.9 143.4h0M112.2 49.8h0M111.2 184h0M40.9 147h0M34.4 131.4h0M22.2 118.9h0M54.1 74.5h0M36.2 182.3h0M35.3 181.1h0M27.8 166.1h0M80.3 154.4h0M36.2 151.7h0M113.1 137h0M24.1 48.3h0M25.9 97.5h0M94.4 182.1h0M48.4 167.6h0M46.6 159.3h0M48.4 144.1h0M23.1 139.7h0M36.2 182.6h0M24.1 94.1h0M94.4 184.8h0M186.2 184h0M85 178.6h0M32.5 177.9h0M32.5 170.6h0M85 169.1h0M23.1 168.8h0M31.6 168.3h0M34.4 158.8h0M36.2 151.9h0M106.5 130.4h0M169.3 129.6h0M23.1 129.2h0M27.8 102.2h0M56.9 94.4h0M24.1 65.2h0M255.6 54.4h0M283.7 27h0M198.4 25h0M94.4 185.5h0M85 168.1h0M35.3 163.4h0M51.2 135.5h0M25.9 181.3h0M153.4 176.2h0M30.6 173h0M36.2 170.8h0M27.8 165.9h0M48.4 156.8h0M26.9 152.4h0M47.5 151.9h0M34.4 143.1h0M48.4 140.9h0M54.1 126.9h0M24.1 126h0M24.1 109.8h0M25.9 177.9h0M35.3 176.2h0M26.9 149.5h0M43.7 165.9h0M107.5 145.8h0M27.8 144.8h0M100 81.1h0M85 169.6h0M38.1 159.3h0M30.6 149.2h0M226.5 47.6h0M28.7 177.9h0M25.9 176.7h0M35.3 175.9h0M25 135.3h0M94.4 185h0M61.6 184.8h0M40 154.4h0M40.9 149h0M107.5 145.1h0M82.2 111.8h0M61.6 186.2h0M41.9 177.9h0M36.2 174.7h0M28.7 174.2h0M27.8 168.6h0M109.4 139.4h0M70 78.7h0M215.3 51.5h0M61.6 185.7h0M30.6 175.5h0M35.3 173.2h0M85 168.3h0M60.6 166.1h0M63.4 159.5h0M33.4 148.3h0M62.5 139.7h0M66.2 137.7h0M53.1 118.4h0M25.9 111h0M25.9 104.7h0M25.9 65.4h0M27.8 141.4h0M71.9 184.3h0M85 169.3h0M40 168.8h0M27.8 167.4h0M36.2 150.7h0M61.6 185.3h0M71.9 184.5h0M183.4 178.4h0M29.7 169.1h0M25.9 159.5h0M47.5 146.5h0M103.7 143.1h0M207.8 66.7h0M61.6 186h0M31.6 177.7h0M30.6 177.7h0M29.7 172.5h0M27.8 167.9h0M30.6 161.2h0M31.6 153.7h0M34.4 153.2h0M27.8 140.9h0M72.8 139.4h0M27.8 118.6h0M85 170.1h0M29.7 136.3h0M27.8 141.9h0M89.7 135.8h0M69.1 123.5h0M41.9 178.2h0M35.3 177.7h0M29.7 158.8h0M37.2 150.2h0M28.7 150h0M89.7 137.7h0M214.3 126h0M217.1 65.9h0M41.9 170.3h0M60.6 150.2h0M70.9 148.8h0M69.1 146.5h0M30.6 139.4h0M27.8 165.2h0M85 171.3h0M107.5 146.5h0M50.3 145.6h0M27.8 141.2h0M86.9 140.7h0M89.7 136.3h0M33.4 135.3h0M40 176.2h0M28.7 171.5h0M61.6 185h0M60.6 165.4h0M37.2 150h0M32.5 149.7h0M36.2 145.8h0M33.4 130.4h0M89.7 129.6h0M35.3 129.2h0M33.4 123.5h0M106.5 103.4h0M38.1 139.7h0M31.6 132.8h0M29.7 169.3h0M56.9 156.8h0M52.2 182.1h0M30.6 174.5h0M107.5 148.3h0M52.2 122h0M52.2 99.8h0M85 185.3h0M40 174h0M35.3 173.5h0M37.2 172.8h0M94.4 152.4h0M36.2 181.8h0M34.4 179.1h0M85 185h0M34.4 171.3h0M41.9 166.1h0M34.4 146.8h0M34.4 141.4h0M52.2 184.3h0M85 183.8h0M36.2 179.6h0M37.2 176.7h0M61.6 165.2h0M60.6 112.2h0M52.2 183.5h0M40 168.3h0M46.6 161.7h0M38.1 150.5h0M43.7 143.4h0M41.9 139.2h0M40.9 109.3h0M34.4 174.7h0M41.9 167.1h0M36.2 142.1h0M41.9 178.6h0M43.7 167.6h0M47.5 160h0M106.5 138.7h0M325.9 102.7h0M219 83.3h0M321.2 58.1h0M36.2 179.1h0M34.4 177.2h0M47.5 139.2h0M79.4 106.9h0M55 157.6h0M54.1 154.1h0M54.1 145.8h0M52.2 187h0M52.2 184h0M39.1 171h0M107.5 155.1h0M89.7 139.7h0M89.7 99.8h0M107.5 185h0M35.3 180.8h0M35.3 175.7h0M41.9 166.9h0M45.6 164.9h0M67.2 152.7h0M46.6 151h0M110.3 134.8h0M60.6 125.7h0M112.2 111.8h0M64.4 97.5h0M111.2 97.3h0M108.4 80.9h0M52.2 187.9h0M41.9 161h0M41.9 158.3h0M52.2 187.5h0M52.2 185.5h0M52.2 185h0M52.2 184.8h0M36.2 180.1h0M43.7 172.8h0M34.4 170.3h0M107.5 152.2h0M89.7 141.6h0"/><line class="chart-median" x1="10" x2="354" y1="154.4" y2="154.4"/><circle class="chart-deal" cx="52.2" cy="187.9" r="6"/><text class="chart-deal-label" x="60.2" y="176.9" text-anchor="start">$90</text></svg>
         <figcaption>
           <ul class="chart-legend">
             <li><span class="key key--dots" aria-hidden="true"></span>מחיר שנרשם</li>
-            <li><span class="key key--median" aria-hidden="true"></span>חציון,
-              <span class="num" dir="ltr">$227</span></li>
-            <li><span class="key key--deal" aria-hidden="true"></span>המציאה,
-              <span class="num" dir="ltr">$90</span></li>
+            <li><span class="key key--median" aria-hidden="true"></span>חציון, <span class="num" dir="ltr">$227</span></li>
+            <li><span class="key key--deal" aria-hidden="true"></span>המציאה, <span class="num" dir="ltr">$90</span></li>
           </ul>
-          <p><span class="num" dir="ltr">6</span> מחירים מעל <span class="num" dir="ltr">$800</span> לא מוצגים בגרף, כדי שהשאר לא יידחסו לתחתיתו. הם כן נספרים בחציון.</p>
         </figcaption>
       </figure>
-      <dl class="deal-facts">
+      <dl class="mini-stats">
         <div><dt>מחירים שנרשמו</dt><dd><span class="num" dir="ltr">758</span></dd></div>
         <div><dt>חציון</dt><dd><span class="num" dir="ltr">$227</span></dd></div>
         <div><dt>העשירון התחתון</dt><dd><span class="num" dir="ltr">$112</span></dd></div>
-        <div><dt>המציאה</dt><dd><span class="num" dir="ltr">$90</span></dd></div>
+        <div class="is-deal"><dt>המציאה</dt><dd><span class="num" dir="ltr">$90</span></dd></div>
       </dl>
-    </div></div>
-  </section>
+      <p class="chart-note"><span class="num" dir="ltr">6</span> מחירים מעל <span class="num" dir="ltr">$800</span> לא מוצגים בגרף, כדי שהשאר לא יידחסו לתחתיתו. הם כן נספרים בחציון.</p>
+    </section>
 
-  <section class="section--surface">
-    <div class="wrap"><div class="col">
-      <h2>למה זו מציאה</h2>
-      <p class="body" style="margin-block-start: var(--s-6)">המחיר נמצא ב־<time datetime="2026-10-07T01:47:53+03:00"><span class="num" dir="ltr">7.10.2026, 01:47</span></time>, ופורסם
-      פחות מ־48 שעות אחרי זה. הוא בעשירון התחתון של המחירים שנרשמו לפאפוס (הלוך־חזור), ונמוך
-      ב־<span class="num" dir="ltr">60%</span> מהחציון שלהם. אלה הכללים הקבועים שמפורטים
-      <a href="/he/">בדף הבית</a>, והם אותם כללים לכל טיסה.</p>
-    </div></div>
-  </section>
+    <section class="panel" aria-labelledby="why-h">
+      <h2 id="why-h">למה זו מציאה</h2>
+      <div class="why-grid">
+        <div><i aria-hidden="true"><svg class="" aria-hidden="true"><use href="#i-clock"/></svg></i><h3>פחות מ־<span class="num" dir="ltr">48</span> שעות</h3><p>המחיר נמצא ב־<time datetime="2026-10-07T01:47:53+03:00"><span class="num" dir="ltr">7.10.2026, 01:47</span></time>, ופורסם ב־<span class="num" dir="ltr">15:28</span>.</p></div>
+        <div><i aria-hidden="true"><svg class="" aria-hidden="true"><use href="#i-bars"/></svg></i><h3>בעשירון התחתון</h3><p>בין <span class="num" dir="ltr">10%</span> המחירים הנמוכים שנרשמו לפאפוס (הלוך־חזור).</p></div>
+        <div><i aria-hidden="true"><svg class="" aria-hidden="true"><use href="#i-down"/></svg></i><h3><span class="num" dir="ltr">60%</span> מתחת לחציון</h3><p><span class="num" dir="ltr">$90</span> מול חציון של <span class="num" dir="ltr">$227</span>. הסף לפרסום הוא <span class="num" dir="ltr">40%</span>.</p></div>
+      </div>
+      <p class="why-rule">אלה <a href="/he/#how">הכללים הקבועים שמפורטים בדף הבית</a>, והם אותם כללים לכל טיסה.</p>
+    </section>
+  </div>
+
+  <aside class="deal-side" aria-label="המחיר וההזמנה">
+    <div class="panel price-panel">
+      <p class="eyebrow">המחיר שנמצא</p>
+      <p class="price-line"><strong><span class="sr-only">$90</span><span aria-hidden="true" dir="ltr">$<span class="count" style="--to:90"></span></span></strong><span>הלוך־חזור לאדם</span></p>
+      <p class="price-asof">נכון ל־<time datetime="2026-10-06T22:47:53+00:00"><span class="num" dir="ltr">7.10.2026, 01:47</span></time> · לא מחיר חי</p>
+      <div class="gauge" aria-hidden="true">
+        <div class="gauge-track"></div>
+        <span class="gauge-mark" style="--at:57.14%"><span>חציון $227</span></span>
+        <span class="gauge-mark gauge-mark--low" style="--at:28.19%"><span>עשירון תחתון $112</span></span>
+        <span class="gauge-mark gauge-mark--deal" style="--at:22.66%"><span>המציאה $90</span></span>
+      </div>
+      <dl class="facts">
+        <div class="is-key"><dt>מתחת לחציון<small>המספר שמכריע</small></dt><dd><span class="num" dir="ltr">60%</span></dd></div>
+        <div><dt>חציון<small><span class="num" dir="ltr">758</span> מחירים שנרשמו</small></dt><dd><span class="num" dir="ltr">$227</span></dd></div>
+        <div><dt>העשירון התחתון<small><span class="num" dir="ltr">10%</span> מהמחירים נמוכים ממנו</small></dt><dd><span class="num" dir="ltr">$112</span></dd></div>
+      </dl>
+      <a class="btn btn--primary btn--block book" href="https://tp.media/r?campaign_id=100&amp;marker=775295&amp;p=4114&amp;sub_id=20261007_PFO_RT&amp;trs=581757&amp;u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2710PFO06111" rel="sponsored noopener" aria-describedby="disclosure"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לחיפוש והזמנה<span class="sr-only"> (באתר חיצוני)</span></a>
+      <p class="disclosure" id="disclosure">קישור שותפים: אם תזמינו דרכו, אתר
+      ההזמנות משלם עמלה. המחיר שלכם לא משתנה. המחיר בחיפוש יכול להיות שונה מהמחיר
+      שבעמוד.</p>
+    </div>
+  </aside>
+</div>
+
+<section class="more" aria-labelledby="more-h">
+  <h2 id="more-h">עוד מציאות</h2>
+  <ul class="cards cards--three">
+    <li class="card" data-trip="RT">
+      <div class="card-media"><img src="/img/dest/mad-800.webp" srcset="/img/dest/mad-800.webp 800w, /img/dest/mad-1280.webp 1280w, /img/dest/mad-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">50%</b>מתחת לחציון</span><span class="pill">נכון לשעת הבדיקה</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/he/flights/20261007_MAD_RT/">מדריד</a></h3><p class="card-country">ספרד · הלוך־חזור</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">עצירה אחת</span><span aria-hidden="true">·</span><span class="num" dir="ltr">18.2 – 25.2.2027</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$138</strong><small>חציון <span class="num" dir="ltr">$275</span> · <span class="num" dir="ltr">675</span> מחירים</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לפרטים</span></div>
+      </div>
+    </li>
+    <li class="card" data-trip="RT">
+      <div class="card-media"><img src="/img/dest/lca-800.webp" srcset="/img/dest/lca-800.webp 800w, /img/dest/lca-1280.webp 1280w, /img/dest/lca-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">51%</b>מתחת לחציון</span><span class="pill pill--rose">המחיר עלה מאז</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/he/flights/20261007_LCA_RT/">לרנקה</a></h3><p class="card-country">קפריסין · הלוך־חזור</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">ישירה</span><span aria-hidden="true">·</span><span class="num" dir="ltr">8.11 – 23.11.2026</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$56</strong><small>חציון <span class="num" dir="ltr">$114</span> · <span class="num" dir="ltr">2,861</span> מחירים</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לפרטים</span></div>
+      </div>
+    </li>
+    <li class="card" data-trip="RT">
+      <div class="card-media"><img src="/img/dest/ist-800.webp" srcset="/img/dest/ist-800.webp 800w, /img/dest/ist-1280.webp 1280w, /img/dest/ist-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">50%</b>מתחת לחציון</span><span class="pill">נכון לשעת הבדיקה</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/he/flights/20261007_IST_RT/">איסטנבול</a></h3><p class="card-country">טורקיה · הלוך־חזור</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">עצירה אחת</span><span aria-hidden="true">·</span><span class="num" dir="ltr">10.1 – 16.1.2027</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$159</strong><small>חציון <span class="num" dir="ltr">$316</span> · <span class="num" dir="ltr">857</span> מחירים</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לפרטים</span></div>
+      </div>
+    </li>
+  </ul>
+</section>
 
 </main>
-
-<footer class="site-footer">
-  <div class="wrap"><div class="col">
-    <div class="row">
-      <span class="wordmark" dir="ltr">pricelog.fyi</span>
-      <nav aria-label="ניווט תחתון">
-        <a href="/he/privacy">פרטיות</a>
-        <a href="/he/accessibility">נגישות</a>
-        <a href="mailto:contact@pricelog.fyi" dir="ltr">contact@pricelog.fyi</a>
-      </nav>
-    </div>
-    <hr>
-    <p>כפתורי ההזמנה באתר הם קישורי שותפים. אם תזמינו דרך אחד מהם, אתר ההזמנות משלם עמלה ללא עלות
-    נוספת עבורכם. לגובה העמלה אין שום חלק בבחירת מה שמתפרסם.</p>
-    <p><span dir="ltr">pricelog</span> הוא פרויקט עצמאי. הוא אינו מסונף לחברות תעופה או לאתרי
-    הזמנות, אינו מאושר על ידן ואינו ממומן על ידן.</p>
-  </div></div>
+<div class="sticky-cta" aria-hidden="true">
+  <a class="btn btn--primary book" href="https://tp.media/r?campaign_id=100&amp;marker=775295&amp;p=4114&amp;sub_id=20261007_PFO_RT&amp;trs=581757&amp;u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2710PFO06111" rel="sponsored noopener" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לחיפוש והזמנה</a>
+  <div><strong class="num" dir="ltr">$90</strong><small>הלוך־חזור · <span class="num" dir="ltr">60%</span> מתחת לחציון</small></div>
+</div>
+<footer class="foot">
+  <a class="logo" href="/he/" aria-label="pricelog, לדף הבית"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+  <nav aria-label="ניווט תחתון">
+    <a href="/he/flights/">מציאות</a>
+    <a href="/he/privacy">פרטיות</a>
+    <a href="/he/accessibility">נגישות</a>
+    <a href="/he/credits">קרדיט לתמונות</a>
+    <a href="mailto:contact@pricelog.fyi" dir="ltr">contact@pricelog.fyi</a>
+  </nav>
+  <p>כפתורי ההזמנה באתר הם קישורי שותפים. אם תזמינו דרך אחד מהם, אתר ההזמנות משלם עמלה ללא עלות
+  נוספת עבורכם. לגובה העמלה אין שום חלק בבחירת מה שמתפרסם. <span dir="ltr">pricelog</span> הוא
+  פרויקט עצמאי. הוא אינו מסונף לחברות תעופה או לאתרי הזמנות, אינו מאושר על ידן ואינו ממומן על ידן.</p>
 </footer>
 
 </body>

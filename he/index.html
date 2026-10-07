@@ -4,276 +4,271 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>pricelog — מחירי טיסות מתל אביב, מול היסטוריית מחירים אמיתית</title>
-<meta name="description" content="מחירי טיסות מתל אביב ל־25 יעדים, נרשמים כל 6 שעות. טיסה מתפרסמת רק כשהמחיר שלה לפחות 40% מתחת לחציון של המחירים שנאספו ליעד.">
+<meta name="description" content="מחירי טיסות מתל אביב, נרשמים כל 6 שעות. טיסה מתפרסמת רק כשהמחיר שלה לפחות 40% מתחת לחציון של המחירים שנרשמו ליעד.">
 <link rel="canonical" href="https://pricelog.fyi/he/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/styles.css">
+<link rel="preload" href="/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/heebo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/site.css">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="pricelog">
 <meta property="og:locale" content="he">
 <meta property="og:url" content="https://pricelog.fyi/he/">
-<meta property="og:title" content="pricelog — מחירי טיסות מול היסטוריית מחירים אמיתית">
-<meta property="og:description" content="מחירים נרשמים כל 6 שעות. טיסה מתפרסמת רק כשהיא נמוכה משמעותית מהחציון של מה שנרשם בפועל.">
+<meta property="og:title" content="pricelog — מחירי טיסות מתל אביב, מול היסטוריית מחירים אמיתית">
+<meta property="og:description" content="מחירי טיסות מתל אביב, נרשמים כל 6 שעות. טיסה מתפרסמת רק כשהמחיר שלה לפחות 40% מתחת לחציון של המחירים שנרשמו ליעד.">
 <meta property="og:image" content="https://pricelog.fyi/og-he.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21.5 3.5 2.8 10.7c-.9.4-.9 1.6 0 1.9l4.7 1.6 1.8 5.6c.2.7 1.1.9 1.6.4l2.7-2.6 4.8 3.5c.6.4 1.4.1 1.6-.6L22.9 4.9c.2-.9-.6-1.7-1.4-1.4z" fill="currentColor"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-log" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-cmp" viewBox="0 0 24 24"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-ok" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h4"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M9 2h6"/></g></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M2.5 13.5 21 6l-3.5 13-5.5-4-3 3v-4.5L2.5 13.5z" fill="currentColor"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+  <symbol id="i-col" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M9.5 21V10M14.5 21V10M19 21V10M2 10l10-6 10 6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".15"/><path d="m8 12 3 3 5-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M4 6l6 6 4-4 6 7M15 15h5v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 19h16M7 16v-3M12 16V6M17 16V9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 28 28"><rect width="28" height="28" rx="9" fill="#CF4A23"/><path d="M6 17.5 10.5 13l3.5 3 7.5-7.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21.5" cy="8.5" r="2" fill="#fff"/></symbol>
+</svg>
 
 <a class="skip" href="#main">דילוג לתוכן</a>
 
-<header class="site-header">
-  <div class="wrap">
-    <a class="wordmark" href="/he/" dir="ltr">pricelog</a>
-    <nav class="site-nav" aria-label="ניווט">
-      <a href="/he/privacy">פרטיות</a>
+<header class="nav-wrap">
+  <nav class="nav" aria-label="ניווט">
+    <a class="logo" href="/he/" aria-label="pricelog, לדף הבית"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+    <div class="nav-links">
+      <a href="/he/flights/">מציאות</a>
+      <a href="/he/#destinations">יעדים</a>
+      <a href="/he/#how">איך זה עובד</a>
       <a href="/he/accessibility">נגישות</a>
-    </nav>
-  </div>
+    </div>
+    <a class="btn btn--primary btn--sm" href="https://t.me/pricelog_deals"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>לערוץ בטלגרם</a>
+    <details class="nav-menu">
+      <summary aria-label="תפריט"><svg class="" aria-hidden="true"><use href="#i-menu"/></svg></summary>
+      <div>
+        <a href="/he/flights/">מציאות</a>
+        <a href="/he/#destinations">יעדים</a>
+        <a href="/he/#how">איך זה עובד</a>
+        <a href="https://t.me/pricelog_deals">ערוץ הטלגרם</a>
+        <a href="/he/privacy">פרטיות</a>
+        <a href="/he/accessibility">נגישות</a>
+      </div>
+    </details>
+  </nav>
 </header>
 
 <main id="main">
 
-  <section class="hero">
-    <div class="wrap"><div class="col">
-      <p class="eyebrow">היסטוריית מחירי טיסות · מתל אביב</p>
-      <h1>טיסה זולה היא זולה רק ביחס למה שהיא עלתה קודם.</h1>
-      <p class="lede">אני רושם מחירי טיסות מתל אביב ל־<span class="num" dir="ltr">25</span> יעדים,
-      כל <span class="num" dir="ltr">6</span> שעות, ושומר את ההיסטוריה אצלי. טיסה מתפרסמת רק כשהמחיר
-      שלה נמוך משמעותית מהחציון של כל המחירים שנרשמו לאותו יעד — ולא מול מחיר ״החל מ־״ של מבצע.</p>
-
-      <div class="cta-row">
-        <a class="cta" href="https://t.me/pricelog_deals">הצטרפו לערוץ בטלגרם</a>
-        <span class="cta-meta" dir="ltr">@pricelog_deals</span>
+<section class="hero">
+  <img class="hero-img" src="/img/dest/pfo-1920.webp" srcset="/img/dest/pfo-800.webp 800w, /img/dest/pfo-1280.webp 1280w, /img/dest/pfo-1920.webp 1920w" sizes="100vw" alt="" fetchpriority="high">
+  <div class="hero-row">
+    <div class="hero-copy">
+      <p class="hero-tag">היסטוריית מחירי טיסות מתל אביב</p>
+      <h1><span class="w" style="--i:0">טיסה</span> <span class="w" style="--i:1">זולה</span> <span class="w" style="--i:2">היא</span> <span class="w" style="--i:3">זולה</span> <em class="w u" style="--i:4">רק</em> <span class="w" style="--i:5">ביחס</span> <span class="w" style="--i:6">למה</span> <span class="w" style="--i:7">שהיא</span> <em class="w" style="--i:8">עלתה</em> <em class="w" style="--i:9">קודם.</em></h1>
+      <p class="hero-lede"><span class="l">אני רושם מחירים כל <span class="num" dir="ltr">6</span> שעות ושומר את ההיסטוריה. טיסה מתפרסמת רק כשהמחיר שלה נמוך משמעותית מהחציון של כל מה שנרשם ליעד, ולא מול מחיר ״החל מ־״ של מבצע.</span><span class="s">מחירים נרשמים כל <span class="num" dir="ltr">6</span> שעות. טיסה מתפרסמת רק כשהיא נמוכה משמעותית מהחציון של כל מה שנרשם ליעד.</span></p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/he/flights/"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>למציאות של היום</a>
+        <a class="btn btn--ghost" href="https://t.me/pricelog_deals"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>הצטרפו לערוץ בטלגרם</a>
       </div>
-
-      <p class="notice">
-        <strong>עדיין לא פורסמה אף מציאה.</strong>
-        <span>המחירים כבר נאספים. המציאות הראשונות יתפרסמו כאן ובערוץ אחרי תקופת בדיקה.</span>
-      </p>
-
-      <p class="disclosure-line">כפתורי ההזמנה בעמודי המציאות הם קישורי שותפים. אתר ההזמנות משלם
-      את העמלה — המחיר שלכם לא משתנה.</p>
-    </div></div>
-  </section>
-
-  <section class="section--bg">
-    <div class="wrap"><div class="col">
-      <p class="eyebrow">01 — הבעיה</p>
-      <h2>מחיר בלי היסטוריה לא אומר אם הוא טוב.</h2>
-      <div class="stack-lg" style="margin-block-start: var(--s-6)">
-        <p class="body">כשמחפשים טיסה רואים מחיר אחד, ברגע אחד. אין דרך לדעת ממנו אם אותה טיסה עלתה
-        בשבוע שעבר חצי, או כפליים. מבצעים מציגים מחיר ״החל מ־״, שהוא המחיר הנמוך ביותר בתאריך אחד
-        מסוים — לא מדד לשאלה אם המחיר שמולכם נמוך.</p>
-        <p class="body">הדרך היחידה לענות על השאלה היא לרשום מחירים לאורך זמן, ולהשוות כל מחיר חדש
-        למה שנרשם לפניו.</p>
+    </div>
+    <div class="hero-card" aria-hidden="true"><ul class="cards"><li class="card" data-trip="RT">
+      <div class="card-media"><img src="/img/dest/pfo-800.webp" srcset="/img/dest/pfo-800.webp 800w, /img/dest/pfo-1280.webp 1280w, /img/dest/pfo-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">60%</b>מתחת לחציון</span><span class="pill">נצפה שוב</span></div>
+        <div><p class="card-city">פאפוס</p><p class="card-country">קפריסין · הלוך־חזור</p></div>
       </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">ישירה</span><span aria-hidden="true">·</span><span class="num" dir="ltr">27.10 – 6.11.2026</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$90</strong><small>חציון <span class="num" dir="ltr">$227</span> · <span class="num" dir="ltr">758</span> מחירים</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לפרטים</span></div>
+      </div>
+    </li></ul></div>
+  </div>
+  <dl class="stats">
+    <div><dt><span class="l">שעות לכל היותר, מגילוי המחיר ועד הפרסום</span><span class="s">שעות עד פרסום</span></dt><dd class="num" dir="ltr">48</dd></div>
+    <div><dt><span class="l">סריקות ביום, כל <span class="num" dir="ltr">6</span> שעות</span><span class="s">סריקות ביום</span></dt><dd class="num" dir="ltr">4×</dd></div>
+    <div><dt><span class="l">לפחות מתחת לחציון כדי להתפרסם</span><span class="s">סף פרסום</span></dt><dd class="num" dir="ltr">40%+</dd></div>
+  </dl>
+  <p class="credit">תמונה להמחשה · <a href="/he/credits#pfo"><span dir="ltr">Diego Delso, CC BY-SA 4.0</span></a></p>
+</section>
 
-      <dl class="contrast">
-        <div>
-          <dt>מבצע משווה מול</dt>
-          <dd>מחיר ״החל מ־״ שהמוכר בחר להציג, בלי שום מידע על מה שהטיסה עלתה קודם.</dd>
-        </div>
-        <div>
-          <dt>הערוץ הזה משווה מול</dt>
-          <dd>החציון של מחירים שנרשמו באופן עצמאי, כל <span class="num" dir="ltr">6</span> שעות,
-          לפני שהמחיר ירד.</dd>
-        </div>
-      </dl>
-    </div></div>
-  </section>
+<section class="sec wrap" aria-labelledby="today-h">
+  <div class="sec-head">
+    <div>
+      <p class="eyebrow">היום · <time datetime="2026-10-07"><span class="num" dir="ltr">7.10.2026</span></time></p>
+      <h2 class="sec-title" id="today-h">המציאות של היום</h2>
+      <p class="sec-sub">כל מחיר נכון לשעה שבה נמצא. 4 טיסות עברו היום את כל הכללים.</p>
+    </div>
+    <a class="sec-link" href="/he/flights/">לכל המציאות<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+  <ul class="cards cards--row">
+    <li class="card" data-trip="RT">
+      <div class="card-media"><img src="/img/dest/pfo-800.webp" srcset="/img/dest/pfo-800.webp 800w, /img/dest/pfo-1280.webp 1280w, /img/dest/pfo-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">60%</b>מתחת לחציון</span><span class="pill">נצפה שוב</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/he/flights/20261007_PFO_RT/">פאפוס</a></h3><p class="card-country">קפריסין · הלוך־חזור</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">ישירה</span><span aria-hidden="true">·</span><span class="num" dir="ltr">27.10 – 6.11.2026</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$90</strong><small>חציון <span class="num" dir="ltr">$227</span> · <span class="num" dir="ltr">758</span> מחירים</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לפרטים</span></div>
+      </div>
+    </li>
+    <li class="card" data-trip="RT">
+      <div class="card-media"><img src="/img/dest/var-800.webp" srcset="/img/dest/var-800.webp 800w, /img/dest/var-1280.webp 1280w, /img/dest/var-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">56%</b>מתחת לחציון</span><span class="pill">נכון לשעת הבדיקה</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/he/flights/20261007_VAR_RT/">ורנה</a></h3><p class="card-country">בולגריה · הלוך־חזור</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">ישירה</span><span aria-hidden="true">·</span><span class="num" dir="ltr">16.10 – 19.10.2026</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$107</strong><small>חציון <span class="num" dir="ltr">$244</span> · <span class="num" dir="ltr">416</span> מחירים</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לפרטים</span></div>
+      </div>
+    </li>
+    <li class="card" data-trip="RT">
+      <div class="card-media"><img src="/img/dest/bus-800.webp" srcset="/img/dest/bus-800.webp 800w, /img/dest/bus-1280.webp 1280w, /img/dest/bus-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">54%</b>מתחת לחציון</span><span class="pill">נצפה שוב</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/he/flights/20261007_BUS_RT/">בטומי</a></h3><p class="card-country">גאורגיה · הלוך־חזור</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">ישירה</span><span aria-hidden="true">·</span><span class="num" dir="ltr">11.11 – 25.11.2026</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$159</strong><small>חציון <span class="num" dir="ltr">$348</span> · <span class="num" dir="ltr">2,945</span> מחירים</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לפרטים</span></div>
+      </div>
+    </li>
+    <li class="card" data-trip="OW">
+      <div class="card-media"><img src="/img/dest/var-800.webp" srcset="/img/dest/var-800.webp 800w, /img/dest/var-1280.webp 1280w, /img/dest/var-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">53%</b>מתחת לחציון</span><span class="pill">נצפה שוב</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/he/flights/20261007_VAR_OW/">ורנה</a></h3><p class="card-country">בולגריה · הלוך בלבד</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">ישירה</span><span aria-hidden="true">·</span><span class="num" dir="ltr">23.10.2026</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$54</strong><small>חציון <span class="num" dir="ltr">$115</span> · <span class="num" dir="ltr">308</span> מחירים</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לפרטים</span></div>
+      </div>
+    </li>
+  </ul>
+</section>
 
-  <section class="section--surface">
-    <div class="wrap"><div class="col">
-      <p class="eyebrow">02 — הכללים</p>
-      <h2>כללים קבועים, מוצהרים מראש.</h2>
-      <p class="body" style="margin-block-start: var(--s-6)">הכללים לא משתנים ממציאה למציאה, והם
-      אותם כללים בלי קשר לגובה העמלה על טיסה מסוימת.</p>
-
-      <ol class="steps" role="list">
-        <li>
-          <div>
-            <h3>רישום</h3>
-            <p>כל <span class="num" dir="ltr">6</span> שעות נרשמים מחירים לכל אחד מ־<span class="num" dir="ltr">25</span>
-            היעדים, הלוך בלבד והלוך־חזור. כל מחיר נשמר כמו שנמצא, ולא משתנה אחר כך.</p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>השוואה</h3>
-            <p>מחיר חדש נמדד מול החציון של כל המחירים שנרשמו לאותו יעד ולאותו סוג טיסה. יעד שנרשמו
-            לו פחות מ־<span class="num" dir="ltr">200</span> מחירים לא נמדד בכלל.</p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>כשירות</h3>
-            <p>טיסה מתפרסמת רק אם המחיר שלה לפחות <span class="num" dir="ltr">40%</span> מתחת לאותו
-            חציון, וגם בין המחירים הנמוכים ביותר שנרשמו אי פעם ליעד.</p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>הצהרה</h3>
-            <p>כל מציאה מציינת את החציון שמולו נמדדה, כמה מחירים בנו אותו, ומתי נמצא המחיר.</p>
-          </div>
-        </li>
-      </ol>
-
-      <h3 style="margin-block-start: var(--s-10)">מה פוסל טיסה</h3>
-      <ul class="marked" role="list">
-        <li>מחיר שנמצא לפני יותר מ־<span class="num" dir="ltr">48</span> שעות.</li>
-        <li>טיסה שממריאה בעוד פחות מ־<span class="num" dir="ltr">7</span> ימים — שם המחירים משתנים
-        הכי מהר.</li>
-        <li>טיסה שכבר פורסמה בשבוע האחרון.</li>
-        <li>יותר ממציאה אחת ביום לאותו יעד ולאותו סוג טיסה.</li>
+<section class="sec how on-dark" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">איך זה עובד</p>
+        <h2 class="sec-title" id="how-h">כללים קבועים, מוצהרים מראש.</h2>
+        <p class="sec-sub">הכללים לא משתנים ממציאה למציאה, והם אותם כללים בלי קשר לגובה העמלה על טיסה מסוימת.</p>
+      </div>
+    </div>
+    <ol class="how-steps">
+      <li class="how-step"><header><i><svg class="" aria-hidden="true"><use href="#i-log"/></svg></i><span aria-hidden="true">01</span></header><h3>רישום</h3><p>כל <span class="num" dir="ltr">6</span> שעות נרשמים מחירים לכל יעד, הלוך בלבד והלוך־חזור. כל מחיר נשמר כמו שנמצא, ולא משתנה אחר כך.</p></li>
+      <li class="how-step"><header><i><svg class="" aria-hidden="true"><use href="#i-cmp"/></svg></i><span aria-hidden="true">02</span></header><h3>השוואה</h3><p>מחיר חדש נמדד מול החציון של כל מה שנרשם לאותו יעד ולאותו סוג טיסה. יעד שנרשמו לו פחות מ־<span class="num" dir="ltr">200</span> מחירים לא נמדד בכלל.</p></li>
+      <li class="how-step"><header><i><svg class="" aria-hidden="true"><use href="#i-ok"/></svg></i><span aria-hidden="true">03</span></header><h3>כשירות</h3><p>טיסה מתפרסמת רק אם המחיר שלה לפחות <span class="num" dir="ltr">40%</span> מתחת לחציון, וגם בין המחירים הנמוכים ביותר שנרשמו אי פעם ליעד.</p></li>
+      <li class="how-step"><header><i><svg class="" aria-hidden="true"><use href="#i-doc"/></svg></i><span aria-hidden="true">04</span></header><h3>הצהרה</h3><p>כל מציאה מציינת את החציון שמולו נמדדה, כמה מחירים בנו אותו, ומתי נמצא המחיר.</p></li>
+    </ol>
+    <svg class="how-path" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M1190 30 C 900 -6, 300 -6, 10 30" fill="none" stroke="currentColor" stroke-opacity=".55" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round" vector-effect="non-scaling-stroke"/><circle cx="1190" cy="30" r="5" fill="currentColor"/><circle cx="10" cy="30" r="5" fill="currentColor"/></svg>
+    <div class="how-out"><b>מה פוסל טיסה:</b>
+      <ul>
+        <li>מחיר שנמצא לפני יותר מ־<span class="num" dir="ltr">48</span> שעות</li>
+        <li>טיסה שממריאה בעוד פחות מ־<span class="num" dir="ltr">7</span> ימים</li>
+        <li>טיסה שכבר פורסמה בשבוע האחרון</li>
+        <li>יותר ממציאה אחת ביום לאותו יעד ולאותו סוג טיסה</li>
       </ul>
+    </div>
+    <p class="how-note">הסתייגות: החציון מחושב היום על כל תאריכי ההמראה יחד, כך שטיסה בעונה זולה נמדדת גם מול מחירים של עונה יקרה. כשיצטברו מספיק נתונים, ההשוואה תעבור לחציון לפי עונה.</p>
+  </div>
+</section>
 
-      <p class="caption">הסתייגות: החציון מחושב היום על כל תאריכי ההמראה יחד, כך שטיסה בעונה זולה
-      נמדדת גם מול מחירים של עונה יקרה. כשיצטברו מספיק נתונים, ההשוואה תעבור לחציון לפי עונה.</p>
-    </div></div>
-  </section>
+<section class="sec wrap" aria-labelledby="cmp-h">
+  <div class="sec-head">
+    <div>
+      <p class="eyebrow">הבעיה</p>
+      <h2 class="sec-title" id="cmp-h">מחיר בלי היסטוריה לא אומר אם הוא טוב.</h2>
+      <p class="sec-sub">כשמחפשים טיסה רואים מחיר אחד, ברגע אחד. הדרך היחידה לדעת אם הוא נמוך היא להשוות אותו למה שנרשם לפניו.</p>
+    </div>
+  </div>
+  <dl class="compare">
+    <div><dt>מבצע משווה מול</dt><dd>מחיר ״החל מ־״ שהמוכר בחר להציג, בלי שום מידע על מה שהטיסה עלתה קודם.</dd>
+      <svg viewBox="0 0 400 70" aria-hidden="true"><circle cx="390" cy="40" r="7" fill="#5E6B75"/></svg></div>
+    <div class="is-us"><dt>pricelog משווה מול</dt><dd>החציון של מחירים שנרשמו באופן עצמאי, כל <span class="num" dir="ltr">6</span> שעות, לפני שהמחיר ירד.</dd>
+      <svg viewBox="0 0 400 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 L40 22 L80 35 L120 18 L160 28 L200 20 L240 33 L280 24 L320 30 L360 26 L400 60" fill="none" stroke="#0E6F8A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 27 H400" stroke="#0E6F8A" stroke-opacity=".35" stroke-dasharray="6 6"/><circle cx="393" cy="60" r="7" fill="#F2643A"/></svg></div>
+  </dl>
+</section>
 
-  <section class="section--bg">
-    <div class="wrap"><div class="col">
-      <p class="eyebrow">03 — נכון לשעת הבדיקה</p>
-      <h2>המחיר הוא המחיר שנמצא, לא מחיר חי.</h2>
-      <div class="stack-lg" style="margin-block-start: var(--s-6)">
-        <p class="body">המחירים מגיעים מחיפושים שכבר נעשו, ולא מחיפוש חי. לכן כל מציאה מציינת מתי
-        נמצא המחיר, ואף פעם לא כתוב בה ״עכשיו״. מושבים נמכרים, ומחיר יכול לעלות.</p>
-      </div>
-    </div></div>
-  </section>
+<section class="sec sec--tight-top wrap" id="destinations" aria-labelledby="dest-h">
+  <div class="sec-head">
+    <div>
+      <p class="eyebrow">היעדים</p>
+      <h2 class="sec-title" id="dest-h">היעדים שנמדדים כל 6 שעות.</h2>
+      <p class="sec-sub">כל יעד צובר היסטוריה משלו. יעד שעוד לא נרשמו לו <span class="num" dir="ltr">200</span> מחירים לא נמדד בכלל.</p>
+    </div>
+  </div>
+  <ul class="tiles" tabindex="0" aria-label="היעדים, גלילה לרוחב">
+    <li class="tile"><img src="/img/dest/lca-800.webp" srcset="/img/dest/lca-800.webp 800w, /img/dest/lca-1280.webp 1280w, /img/dest/lca-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>לרנקה</b><span>קפריסין</span></li>
+    <li class="tile"><img src="/img/dest/pfo-800.webp" srcset="/img/dest/pfo-800.webp 800w, /img/dest/pfo-1280.webp 1280w, /img/dest/pfo-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>פאפוס</b><span>קפריסין</span></li>
+    <li class="tile"><img src="/img/dest/ath-800.webp" srcset="/img/dest/ath-800.webp 800w, /img/dest/ath-1280.webp 1280w, /img/dest/ath-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>אתונה</b><span>יוון</span></li>
+    <li class="tile"><img src="/img/dest/skg-800.webp" srcset="/img/dest/skg-800.webp 800w, /img/dest/skg-1280.webp 1280w, /img/dest/skg-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>סלוניקי</b><span>יוון</span></li>
+    <li class="tile"><img src="/img/dest/rho-800.webp" srcset="/img/dest/rho-800.webp 800w, /img/dest/rho-1280.webp 1280w, /img/dest/rho-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>רודוס</b><span>יוון</span></li>
+    <li class="tile"><img src="/img/dest/her-800.webp" srcset="/img/dest/her-800.webp 800w, /img/dest/her-1280.webp 1280w, /img/dest/her-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>הרקליון</b><span>כרתים, יוון</span></li>
+    <li class="tile"><img src="/img/dest/ayt-800.webp" srcset="/img/dest/ayt-800.webp 800w, /img/dest/ayt-1280.webp 1280w, /img/dest/ayt-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>אנטליה</b><span>טורקיה</span></li>
+    <li class="tile"><img src="/img/dest/ist-800.webp" srcset="/img/dest/ist-800.webp 800w, /img/dest/ist-1280.webp 1280w, /img/dest/ist-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>איסטנבול</b><span>טורקיה</span></li>
+    <li class="tile"><img src="/img/dest/tbs-800.webp" srcset="/img/dest/tbs-800.webp 800w, /img/dest/tbs-1280.webp 1280w, /img/dest/tbs-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>טביליסי</b><span>גאורגיה</span></li>
+    <li class="tile"><img src="/img/dest/bus-800.webp" srcset="/img/dest/bus-800.webp 800w, /img/dest/bus-1280.webp 1280w, /img/dest/bus-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>בטומי</b><span>גאורגיה</span></li>
+    <li class="tile"><img src="/img/dest/evn-800.webp" srcset="/img/dest/evn-800.webp 800w, /img/dest/evn-1280.webp 1280w, /img/dest/evn-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>ירוואן</b><span>ארמניה</span></li>
+    <li class="tile"><img src="/img/dest/fco-800.webp" srcset="/img/dest/fco-800.webp 800w, /img/dest/fco-1280.webp 1280w, /img/dest/fco-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>רומא</b><span>איטליה</span></li>
+    <li class="tile"><img src="/img/dest/mxp-800.webp" srcset="/img/dest/mxp-800.webp 800w, /img/dest/mxp-1280.webp 1280w, /img/dest/mxp-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>מילאנו</b><span>איטליה</span></li>
+    <li class="tile"><img src="/img/dest/nap-800.webp" srcset="/img/dest/nap-800.webp 800w, /img/dest/nap-1280.webp 1280w, /img/dest/nap-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>נאפולי</b><span>איטליה</span></li>
+    <li class="tile"><img src="/img/dest/vce-800.webp" srcset="/img/dest/vce-800.webp 800w, /img/dest/vce-1280.webp 1280w, /img/dest/vce-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>ונציה</b><span>איטליה</span></li>
+    <li class="tile"><img src="/img/dest/cta-800.webp" srcset="/img/dest/cta-800.webp 800w, /img/dest/cta-1280.webp 1280w, /img/dest/cta-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>קטניה</b><span>סיציליה, איטליה</span></li>
+    <li class="tile"><img src="/img/dest/bcn-800.webp" srcset="/img/dest/bcn-800.webp 800w, /img/dest/bcn-1280.webp 1280w, /img/dest/bcn-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>ברצלונה</b><span>ספרד</span></li>
+    <li class="tile"><img src="/img/dest/mad-800.webp" srcset="/img/dest/mad-800.webp 800w, /img/dest/mad-1280.webp 1280w, /img/dest/mad-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>מדריד</b><span>ספרד</span></li>
+    <li class="tile"><img src="/img/dest/cdg-800.webp" srcset="/img/dest/cdg-800.webp 800w, /img/dest/cdg-1280.webp 1280w, /img/dest/cdg-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>פריז</b><span>צרפת</span></li>
+    <li class="tile"><img src="/img/dest/lgw-800.webp" srcset="/img/dest/lgw-800.webp 800w, /img/dest/lgw-1280.webp 1280w, /img/dest/lgw-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>לונדון</b><span>בריטניה</span></li>
+    <li class="tile"><img src="/img/dest/ams-800.webp" srcset="/img/dest/ams-800.webp 800w, /img/dest/ams-1280.webp 1280w, /img/dest/ams-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>אמסטרדם</b><span>הולנד</span></li>
+    <li class="tile"><img src="/img/dest/ber-800.webp" srcset="/img/dest/ber-800.webp 800w, /img/dest/ber-1280.webp 1280w, /img/dest/ber-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>ברלין</b><span>גרמניה</span></li>
+    <li class="tile"><img src="/img/dest/prg-800.webp" srcset="/img/dest/prg-800.webp 800w, /img/dest/prg-1280.webp 1280w, /img/dest/prg-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>פראג</b><span>צ׳כיה</span></li>
+    <li class="tile"><img src="/img/dest/bud-800.webp" srcset="/img/dest/bud-800.webp 800w, /img/dest/bud-1280.webp 1280w, /img/dest/bud-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>בודפשט</b><span>הונגריה</span></li>
+    <li class="tile"><img src="/img/dest/var-800.webp" srcset="/img/dest/var-800.webp 800w, /img/dest/var-1280.webp 1280w, /img/dest/var-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b>ורנה</b><span>בולגריה</span></li>
+  </ul>
+</section>
 
-  <section class="section--surface">
-    <div class="wrap"><div class="col">
-      <p class="eyebrow">04 — מה יש בעמוד מציאה</p>
-      <h2>כל מציאה נושאת את הראיות שלה.</h2>
-      <p class="body" style="margin-block-start: var(--s-6)">הסיבה לפרסם את החציון ואת מספר המחירים
-      לצד המחיר היא שתוכלו לחלוק עליי. אם החציון נבנה מעט מחירים, תוכלו לשקלל את הטענה בהתאם במקום
-      לקבל אותה באמון.</p>
+<section class="sec sec--no-top wrap" aria-labelledby="live-h">
+  <div class="box">
+    <i class="box-icon" aria-hidden="true"><svg class="" aria-hidden="true"><use href="#i-clock"/></svg></i>
+    <div>
+      <p class="eyebrow">נכון לשעת הבדיקה</p>
+      <h2 id="live-h">המחיר הוא המחיר שנמצא, לא מחיר חי.</h2>
+      <p>המחירים מגיעים מחיפושים שכבר נעשו, לא מחיפוש חי. לכן כל מציאה מציינת מתי נמצא המחיר, ואף פעם לא כתוב בה ״עכשיו״. מושבים נמכרים, ומחיר יכול לעלות.</p>
+    </div>
+  </div>
+</section>
 
-      <div class="readout">
-        <p class="readout-title">יעד · הלוך־חזור</p>
-        <dl>
-          <dt>מחיר</dt>
-          <dd class="val num" dir="ltr">$XXX</dd>
-          <dd class="hint">נכון ל־‹תאריך ושעה›</dd>
-
-          <dt>חציון</dt>
-          <dd class="val num" dir="ltr">$XXX</dd>
-          <dd class="hint">‹N› מחירים שנרשמו</dd>
-
-          <dt>מתחת לחציון</dt>
-          <dd class="val val--accent num" dir="ltr">XX%</dd>
-          <dd class="hint">המספר שמכריע</dd>
-
-          <dt>הזמנה</dt>
-          <dd class="val">לחיפוש והזמנה</dd>
-          <dd class="hint">קישור שותפים, מוצהר בעמוד</dd>
-        </dl>
-      </div>
-      <p class="caption">זהו הפורמט של עמוד, לא עמוד. עדיין לא פורסמה מציאה, ולכן מצייני המקום
-      נשארים מצייני מקום. בעמוד עצמו יופיע גם גרף של המחירים שנרשמו ליעד, וסטטוס שמתעדכן אם המחיר
-      נצפה שוב או עלה מאז.</p>
-    </div></div>
-  </section>
-
-  <section class="section--bg">
-    <div class="wrap"><div class="col">
-      <p class="eyebrow">05 — איך הערוץ מרוויח</p>
-      <h2>קישורי שותפים, ומה הם לא קונים.</h2>
-      <p class="body" style="margin-block-start: var(--s-6); margin-block-end: var(--s-6)">בכל
-      עמוד מציאה יש כפתור לחיפוש והזמנה. זה קישור שותפים: אם תזמינו דרכו, אתר ההזמנות משלם לי עמלה.
-      אתם לא משלמים עליה, והמחיר זהה למחיר בלי הקישור. הפוסטים בערוץ מקשרים לעמוד המציאה באתר, לא
-      ישירות להזמנה.</p>
-
-      <div class="keypoint">
-        <p>לגובה העמלה אין שום חלק בבחירת מה שמתפרסם.</p>
-        <p>טיסה שמשלמת עמלה גבוהה כפופה בדיוק לאותם כללים כמו טיסה שלא משלמת כלום. אם היא לא עומדת
-        בכללים, היא לא מופיעה — ואם הכללים אי פעם יתכופפו בגלל עמלה, אין לערוץ סיבה להתקיים.</p>
-      </div>
-
-      <p class="body" style="margin-block-start: var(--s-6)">אני לא מקבל תשלום מחברות תעופה, לא
-      מקבל תשלום עבור מיקום, ואף אחד לא רואה מציאה לפני שהיא מתפרסמת.</p>
-    </div></div>
-  </section>
-
-  <section class="section--surface">
-    <div class="wrap"><div class="col">
-      <p class="eyebrow">06 — מה זה לא</p>
-      <h2>דברים שהערוץ הזה לא יעשה.</h2>
-      <ul class="plain" role="list">
-        <li>
-          <h3>לא סוכנות נסיעות.</h3>
-          <p>אני לא מוכר כרטיסים ולא מטפל בהזמנות. ההזמנה עצמה נעשית באתר ההזמנות, מול התנאים שלו.</p>
-        </li>
-        <li>
-          <h3>לא מחיר חי.</h3>
-          <p>כל מחיר הוא המחיר שנמצא בשעת הבדיקה. לפני שמזמינים, המחיר בחיפוש הוא הקובע.</p>
-        </li>
-        <li>
-          <h3>לא הצפה.</h3>
-          <p>שלושה מועדי פרסום ביום, עד <span class="num" dir="ltr">4</span> מציאות בכל אחד. מועד
-          שאין בו טיסה שעומדת בכללים — לא מתפרסם בו כלום.</p>
-        </li>
-        <li>
-          <h3>לא שכפול של מבצעים.</h3>
-          <p>מבצעים של חברות תעופה ואתרי הזמנות הם השיווק שלהם. לשכפל אותם זו פרסומת, לא מדידה.</p>
-        </li>
-      </ul>
-    </div></div>
-  </section>
-
-  <section class="section--bg">
-    <div class="wrap"><div class="col">
-      <p class="eyebrow">07 — מי מפעיל את זה</p>
-      <h2>מופעל על ידי שלמה. אדם אחד, היסטוריה אחת.</h2>
-      <div class="stack-lg" style="margin-block-start: var(--s-6)">
-        <p class="body">בניתי את מנגנון האיסוף כי רציתי תשובה שאתרי ההזמנות לא נותנים: האם הטיסה הזו
-        באמת זולה, או שהיא רק נראית זולה היום? הערוץ הוא התשובה הזו, מפורסמת בגלוי.</p>
-        <p class="body">היעדים הם אלה שישראלים טסים אליהם הכי הרבה, ושיש עליהם מספיק מחירים כדי שחציון
-        יהיה בעל משמעות. יעד שנרשמים לו מעט מחירים לא נכנס לרשימה, כי חציון של מעט מחירים זז עם כל
-        רעש.</p>
-      </div>
-    </div></div>
-  </section>
-
-  <section class="section--surface">
-    <div class="wrap"><div class="col">
-      <h2>הצטרפו לערוץ.</h2>
-      <p class="body" style="margin-block-start: var(--s-5)">הצטרפות עכשיו אומרת שתהיו שם כשהמציאה
-      הראשונה תתפרסם — ותוכלו להעמיד אותי מול הכללים שלמעלה כשזה יקרה.</p>
-
-      <div class="cta-row">
-        <a class="cta" href="https://t.me/pricelog_deals">הצטרפו לערוץ בטלגרם</a>
-        <span class="cta-meta" dir="ltr">@pricelog_deals</span>
-      </div>
-
-      <p class="disclosure-line" style="margin-block-start: var(--s-6)">שאלות:
-      <a href="mailto:contact@pricelog.fyi" dir="ltr">contact@pricelog.fyi</a></p>
-    </div></div>
-  </section>
+<section class="sec sec--no-top wrap" aria-labelledby="tg-h">
+  <div class="tg">
+    <div>
+      <h2 id="tg-h">המציאה הבאה, ישר לטלפון.</h2>
+      <p>בקרוב כל מציאה שעוברת את הכללים תישלח גם לערוץ בטלגרם, עם קישור לעמוד שלה כאן. אפשר כבר להצטרף.</p>
+    </div>
+    <a class="btn btn--dark" href="https://t.me/pricelog_deals"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>הצטרפו לערוץ</a>
+    <svg class="tg-deco" viewBox="0 0 420 220" aria-hidden="true"><path d="M10 200 C 120 40, 300 60, 410 20" fill="none" stroke="currentColor" stroke-opacity=".45" stroke-width="2.5" stroke-dasharray="3 12" stroke-linecap="round"/></svg>
+  </div>
+</section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="wrap"><div class="col">
-    <div class="row">
-      <span class="wordmark" dir="ltr">pricelog.fyi</span>
-      <nav aria-label="ניווט תחתון">
-        <a href="/he/privacy">פרטיות</a>
-        <a href="/he/accessibility">נגישות</a>
-        <a href="mailto:contact@pricelog.fyi" dir="ltr">contact@pricelog.fyi</a>
-      </nav>
-    </div>
-    <hr>
-    <p>כפתורי ההזמנה באתר הם קישורי שותפים. אם תזמינו דרך אחד מהם, אתר ההזמנות משלם עמלה ללא עלות
-    נוספת עבורכם. לגובה העמלה אין שום חלק בבחירת מה שמתפרסם.</p>
-    <p><span dir="ltr">pricelog</span> הוא פרויקט עצמאי. הוא אינו מסונף לחברות תעופה או לאתרי
-    הזמנות, אינו מאושר על ידן ואינו ממומן על ידן.</p>
-  </div></div>
+<footer class="foot">
+  <a class="logo" href="/he/" aria-label="pricelog, לדף הבית"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+  <nav aria-label="ניווט תחתון">
+    <a href="/he/flights/">מציאות</a>
+    <a href="/he/privacy">פרטיות</a>
+    <a href="/he/accessibility">נגישות</a>
+    <a href="/he/credits">קרדיט לתמונות</a>
+    <a href="mailto:contact@pricelog.fyi" dir="ltr">contact@pricelog.fyi</a>
+  </nav>
+  <p>כפתורי ההזמנה באתר הם קישורי שותפים. אם תזמינו דרך אחד מהם, אתר ההזמנות משלם עמלה ללא עלות
+  נוספת עבורכם. לגובה העמלה אין שום חלק בבחירת מה שמתפרסם. <span dir="ltr">pricelog</span> הוא
+  פרויקט עצמאי. הוא אינו מסונף לחברות תעופה או לאתרי הזמנות, אינו מאושר על ידן ואינו ממומן על ידן.</p>
 </footer>
 
 </body>
