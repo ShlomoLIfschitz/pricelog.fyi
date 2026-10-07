@@ -1,3 +1,76 @@
 {
-  "deals": []
+  "deals": [
+    {
+      "id": "20261007_PFO_RT",
+      "destination": "PFO",
+      "trip": "RT",
+      "depart_date": "2026-10-27",
+      "return_date": "2026-11-06",
+      "number_of_changes": 0,
+      "price": "90.00",
+      "currency": "usd",
+      "found_at": "2026-10-06T22:47:53+00:00",
+      "published_at": "2026-10-07T12:28:06.020218+00:00",
+      "median": "227",
+      "p10": "112",
+      "observations": 758,
+      "sub_id": "20261007_PFO_RT",
+      "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261007_PFO_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2710PFO06111",
+      "telegram_message_id": null
+    },
+    {
+      "id": "20261007_VAR_RT",
+      "destination": "VAR",
+      "trip": "RT",
+      "depart_date": "2026-10-16",
+      "return_date": "2026-10-19",
+      "number_of_changes": 0,
+      "price": "107.00",
+      "currency": "usd",
+      "found_at": "2026-10-07T07:04:05+00:00",
+      "published_at": "2026-10-07T12:28:06.020218+00:00",
+      "median": "244",
+      "p10": "120",
+      "observations": 416,
+      "sub_id": "20261007_VAR_RT",
+      "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261007_VAR_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1610VAR19101",
+      "telegram_message_id": null
+    },
+    {
+      "id": "20261007_BUS_RT",
+      "destination": "BUS",
+      "trip": "RT",
+      "depart_date": "2026-11-11",
+      "return_date": "2026-11-25",
+      "number_of_changes": 0,
+      "price": "159.00",
+      "currency": "usd",
+      "found_at": "2026-10-06T16:31:54+00:00",
+      "published_at": "2026-10-07T12:28:06.020218+00:00",
+      "median": "348",
+      "p10": "187",
+      "observations": 2945,
+      "sub_id": "20261007_BUS_RT",
+      "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261007_BUS_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1111BUS25111",
+      "telegram_message_id": null
+    },
+    {
+      "id": "20261007_VAR_OW",
+      "destination": "VAR",
+      "trip": "OW",
+      "depart_date": "2026-10-23",
+      "return_date": null,
+      "number_of_changes": 0,
+      "price": "54.00",
+      "currency": "usd",
+      "found_at": "2026-10-07T08:18:16+00:00",
+      "published_at": "2026-10-07T12:28:06.020218+00:00",
+      "median": "114.5",
+      "p10": "61",
+      "observations": 308,
+      "sub_id": "20261007_VAR_OW",
+      "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261007_VAR_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2310VAR1",
+      "telegram_message_id": null
+    }
+  ]
 }
