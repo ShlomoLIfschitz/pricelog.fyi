@@ -16,7 +16,9 @@
       "observations": 758,
       "sub_id": "20261007_PFO_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261007_PFO_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2710PFO06111",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261007_VAR_RT",
@@ -34,7 +36,9 @@
       "observations": 416,
       "sub_id": "20261007_VAR_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261007_VAR_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1610VAR19101",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261007_BUS_RT",
@@ -52,7 +56,9 @@
       "observations": 2945,
       "sub_id": "20261007_BUS_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261007_BUS_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1111BUS25111",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261007_VAR_OW",
@@ -70,7 +76,9 @@
       "observations": 308,
       "sub_id": "20261007_VAR_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261007_VAR_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2310VAR1",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261007_EVN_RT",
@@ -88,7 +96,9 @@
       "observations": 2570,
       "sub_id": "20261007_EVN_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261007_EVN_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2211EVN26111",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261007_LCA_RT",
@@ -106,7 +116,9 @@
       "observations": 2861,
       "sub_id": "20261007_LCA_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261007_LCA_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV0811LCA23111",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261007_MAD_RT",
@@ -124,7 +136,9 @@
       "observations": 675,
       "sub_id": "20261007_MAD_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261007_MAD_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1802MAD25021",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261007_IST_RT",
@@ -142,7 +156,9 @@
       "observations": 857,
       "sub_id": "20261007_IST_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261007_IST_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1001IST16011",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261008_PFO_RT",
@@ -160,7 +176,9 @@
       "observations": 766,
       "sub_id": "20261008_PFO_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261008_PFO_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2710PFO03111",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261008_BUS_RT",
@@ -178,7 +196,9 @@
       "observations": 2988,
       "sub_id": "20261008_BUS_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261008_BUS_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1101BUS25011",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261008_VAR_OW",
@@ -196,7 +216,9 @@
       "observations": 318,
       "sub_id": "20261008_VAR_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261008_VAR_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1910VAR1",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261008_LCA_RT",
@@ -214,7 +236,9 @@
       "observations": 2878,
       "sub_id": "20261008_LCA_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261008_LCA_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV0801LCA13011",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261008_IST_RT",
@@ -232,7 +256,9 @@
       "observations": 863,
       "sub_id": "20261008_IST_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261008_IST_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1103IST18031",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261008_CTA_RT",
@@ -250,7 +276,9 @@
       "observations": 413,
       "sub_id": "20261008_CTA_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261008_CTA_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1810CTA29101",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261008_PRG_RT",
@@ -268,7 +296,9 @@
       "observations": 3086,
       "sub_id": "20261008_PRG_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261008_PRG_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV0601PRG13011",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261008_IST_OW",
@@ -286,7 +316,9 @@
       "observations": 1003,
       "sub_id": "20261008_IST_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261008_IST_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2901IST1",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261008_CTA_OW",
@@ -304,7 +336,9 @@
       "observations": 303,
       "sub_id": "20261008_CTA_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261008_CTA_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV0811CTA1",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261008_NAP_RT",
@@ -322,7 +356,9 @@
       "observations": 585,
       "sub_id": "20261008_NAP_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261008_NAP_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2210NAP29101",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261008_TBS_OW",
@@ -340,7 +376,9 @@
       "observations": 3100,
       "sub_id": "20261008_TBS_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261008_TBS_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1604TBS1",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261008_VCE_RT",
@@ -358,7 +396,9 @@
       "observations": 877,
       "sub_id": "20261008_VCE_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261008_VCE_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2310VCE30101",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_LCA_RT",
@@ -376,7 +416,9 @@
       "observations": 2952,
       "sub_id": "20261009_LCA_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_LCA_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV0911LCA18111",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_PFO_RT",
@@ -394,7 +436,9 @@
       "observations": 782,
       "sub_id": "20261009_PFO_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_PFO_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2710PFO30101",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_BUS_RT",
@@ -412,7 +456,9 @@
       "observations": 3052,
       "sub_id": "20261009_BUS_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_BUS_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2201BUS25011",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_IST_RT",
@@ -430,7 +476,9 @@
       "observations": 893,
       "sub_id": "20261009_IST_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_IST_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1211IST21111",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_IST_OW",
@@ -448,7 +496,9 @@
       "observations": 1028,
       "sub_id": "20261009_IST_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_IST_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV0611IST1",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_BUS_OW",
@@ -466,7 +516,9 @@
       "observations": 1849,
       "sub_id": "20261009_BUS_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_BUS_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1710BUS1",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_PAR_RT",
@@ -484,7 +536,9 @@
       "observations": 3154,
       "sub_id": "20261009_PAR_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_PAR_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1803PAR25031",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_EVN_RT",
@@ -502,7 +556,9 @@
       "observations": 2654,
       "sub_id": "20261009_EVN_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_EVN_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2012EVN24121",
-      "telegram_message_id": null
+      "telegram_message_id": null,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_CTA_RT",
@@ -520,7 +576,9 @@
       "observations": 429,
       "sub_id": "20261009_CTA_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_CTA_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2211CTA26111",
-      "telegram_message_id": 6
+      "telegram_message_id": 6,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_PRG_RT",
@@ -538,7 +596,9 @@
       "observations": 3245,
       "sub_id": "20261009_PRG_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_PRG_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1112PRG16121",
-      "telegram_message_id": 7
+      "telegram_message_id": 7,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_VCE_RT",
@@ -556,7 +616,9 @@
       "observations": 901,
       "sub_id": "20261009_VCE_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_VCE_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1111VCE18111",
-      "telegram_message_id": 8
+      "telegram_message_id": 8,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_TBS_OW",
@@ -574,7 +636,9 @@
       "observations": 3231,
       "sub_id": "20261009_TBS_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_TBS_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2411TBS1",
-      "telegram_message_id": 9
+      "telegram_message_id": 9,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_MAD_RT",
@@ -592,7 +656,9 @@
       "observations": 714,
       "sub_id": "20261009_MAD_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_MAD_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1702MAD24021",
-      "telegram_message_id": 10
+      "telegram_message_id": 10,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_EVN_OW",
@@ -610,7 +676,9 @@
       "observations": 2351,
       "sub_id": "20261009_EVN_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_EVN_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1001EVN1",
-      "telegram_message_id": 11
+      "telegram_message_id": 11,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261009_LCA_OW",
@@ -628,7 +696,9 @@
       "observations": 1363,
       "sub_id": "20261009_LCA_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261009_LCA_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV0101LCA1",
-      "telegram_message_id": 12
+      "telegram_message_id": 12,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261010_BUS_RT",
@@ -646,7 +716,9 @@
       "observations": 3138,
       "sub_id": "20261010_BUS_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261010_BUS_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV0112BUS03121",
-      "telegram_message_id": 13
+      "telegram_message_id": 13,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261010_IST_OW",
@@ -664,7 +736,9 @@
       "observations": 1057,
       "sub_id": "20261010_IST_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261010_IST_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1103IST1",
-      "telegram_message_id": 14
+      "telegram_message_id": 14,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261010_PFO_RT",
@@ -682,7 +756,9 @@
       "observations": 793,
       "sub_id": "20261010_PFO_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261010_PFO_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV0112PFO04121",
-      "telegram_message_id": 15
+      "telegram_message_id": 15,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261010_IST_RT",
@@ -700,7 +776,9 @@
       "observations": 931,
       "sub_id": "20261010_IST_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261010_IST_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1711IST28111",
-      "telegram_message_id": 16
+      "telegram_message_id": 16,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261010_LCA_RT",
@@ -718,7 +796,9 @@
       "observations": 3052,
       "sub_id": "20261010_LCA_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261010_LCA_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1710LCA20101",
-      "telegram_message_id": 17
+      "telegram_message_id": 17,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261010_PRG_RT",
@@ -736,7 +816,9 @@
       "observations": 3338,
       "sub_id": "20261010_PRG_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261010_PRG_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1312PRG16121",
-      "telegram_message_id": 18
+      "telegram_message_id": 18,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261010_TBS_OW",
@@ -754,7 +836,9 @@
       "observations": 3345,
       "sub_id": "20261010_TBS_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261010_TBS_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV0702TBS1",
-      "telegram_message_id": 19
+      "telegram_message_id": 19,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261010_EVN_RT",
@@ -772,7 +856,9 @@
       "observations": 2754,
       "sub_id": "20261010_EVN_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261010_EVN_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2812EVN09011",
-      "telegram_message_id": 20
+      "telegram_message_id": 20,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261011_IST_OW",
@@ -790,7 +876,9 @@
       "observations": 1072,
       "sub_id": "20261011_IST_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261011_IST_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1002IST1",
-      "telegram_message_id": 21
+      "telegram_message_id": 21,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261011_BUS_RT",
@@ -808,7 +896,9 @@
       "observations": 3201,
       "sub_id": "20261011_BUS_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261011_BUS_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1202BUS17021",
-      "telegram_message_id": 22
+      "telegram_message_id": 22,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261011_PRG_RT",
@@ -826,7 +916,9 @@
       "observations": 3407,
       "sub_id": "20261011_PRG_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261011_PRG_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV0702PRG14021",
-      "telegram_message_id": 23
+      "telegram_message_id": 23,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261011_PFO_RT",
@@ -844,7 +936,9 @@
       "observations": 818,
       "sub_id": "20261011_PFO_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261011_PFO_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1711PFO20111",
-      "telegram_message_id": 24
+      "telegram_message_id": 24,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261011_LCA_RT",
@@ -862,7 +956,9 @@
       "observations": 3127,
       "sub_id": "20261011_LCA_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261011_LCA_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2310LCA30101",
-      "telegram_message_id": 25
+      "telegram_message_id": 25,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261011_IST_RT",
@@ -880,7 +976,9 @@
       "observations": 975,
       "sub_id": "20261011_IST_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261011_IST_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1312IST22121",
-      "telegram_message_id": 26
+      "telegram_message_id": 26,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261011_BUS_OW",
@@ -898,7 +996,9 @@
       "observations": 1959,
       "sub_id": "20261011_BUS_OW",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261011_BUS_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1001BUS1",
-      "telegram_message_id": 27
+      "telegram_message_id": 27,
+      "depart_at": null,
+      "return_at": null
     },
     {
       "id": "20261011_EVN_RT",
@@ -916,7 +1016,9 @@
       "observations": 2865,
       "sub_id": "20261011_EVN_RT",
       "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261011_EVN_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1112EVN16121",
-      "telegram_message_id": 28
+      "telegram_message_id": 28,
+      "depart_at": null,
+      "return_at": null
     }
   ]
 }
