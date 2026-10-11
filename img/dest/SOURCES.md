@@ -1,7 +1,8 @@
 # Destination photos
 
-One photo per destination, from Wikimedia Commons, chosen by hand on
-2026-10-07 from its Featured and Quality images. Each is served at three widths
+One photo per destination, from Wikimedia Commons, chosen by hand from its
+Featured and Quality images: the first 25 on 2026-10-07, the rest in batches
+from 2026-10-11. Each is served at three widths
 (`<code>-800.webp`, `-1280.webp`, `-1920.webp`), scaled down and re-encoded
 from the Commons original; nothing else is changed.
 
@@ -37,3 +38,11 @@ means adding its row here and its credit there, in the same commit.
 | `prg` | [Prague 07-2016 View from Petrinska Tower img2.jpg](https://commons.wikimedia.org/wiki/File:Prague_07-2016_View_from_Petrinska_Tower_img2.jpg) | A.Savin | [FAL](https://artlibre.org/licence/lal/en/) |
 | `bud` | [Hungarian Parliament Building 2023-9.jpg](https://commons.wikimedia.org/wiki/File:Hungarian_Parliament_Building_2023-9.jpg) | Pierre Blaché | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
 | `var` | [Varna Cathedral 04.jpg](https://commons.wikimedia.org/wiki/File:Varna_Cathedral_04.jpg) | Ad Meskens | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| `bak` | [Vista de Baku, Azerbaiyán, 2016-09-26, DD 138.jpg](https://commons.wikimedia.org/wiki/File:Vista_de_Baku,_Azerbaiy%C3%A1n,_2016-09-26,_DD_138.jpg) | Diego Delso | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| `dxb` | [Madinat Jumeirah-Dubai3303.JPG](https://commons.wikimedia.org/wiki/File:Madinat_Jumeirah-Dubai3303.JPG) | Diego Delso | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| `vno` | [Vilnius Old Town Skyline at dusk, Lithuania - Diliff.jpg](https://commons.wikimedia.org/wiki/File:Vilnius_Old_Town_Skyline_at_dusk,_Lithuania_-_Diliff.jpg) | Diliff | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) |
+| `vie` | [Schloss Schönbrunn Wien 2014 (Zuschnitt 1).jpg](https://commons.wikimedia.org/wiki/File:Schloss_Sch%C3%B6nbrunn_Wien_2014_(Zuschnitt_1).jpg) | Thomas Wolf, www.foto-tw.de | [CC BY-SA 3.0 DE](https://creativecommons.org/licenses/by-sa/3.0/de/) |
+| `buh` | [Palacio CEC, Bucarest, Rumanía, 2016-05-29, DD 91-93 HDR.jpg](https://commons.wikimedia.org/wiki/File:Palacio_CEC,_Bucarest,_Ruman%C3%ADa,_2016-05-29,_DD_91-93_HDR.jpg) | Diego Delso | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| `rmo` | [Estatua de Esteban el Grande, Chisináu, Moldavia, 2023-11-03, DD 75-77 HDR.jpg](https://commons.wikimedia.org/wiki/File:Estatua_de_Esteban_el_Grande,_Chisin%C3%A1u,_Moldavia,_2023-11-03,_DD_75-77_HDR.jpg) | Diego Delso | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| `beg` | [Temple of Saint Sava (Crkva Svetog Save, Beograd).jpg](https://commons.wikimedia.org/wiki/File:Temple_of_Saint_Sava_(Crkva_Svetog_Save,_Beograd).jpg) | Petar Milošević | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| `waw` | [Castle Square (22346p).jpg](https://commons.wikimedia.org/wiki/File:Castle_Square_(22346p).jpg) | Rhododendrites | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
