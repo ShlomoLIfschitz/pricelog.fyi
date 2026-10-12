@@ -46,6 +46,7 @@ he/privacy.html         /he/privacy         he, rtl
 he/accessibility.html   /he/accessibility   he, rtl — the accessibility statement
 he/flights/             /he/flights/        generated, see below
 _redirects              / and /privacy → /he/..., 301
+_headers                CSP and the other security headers, see Deploying
 site.css                the stylesheet of the new design, see above
 styles.css              the previous stylesheet, until no page links it
 fonts/                  Rubik and Heebo, woff2, self-hosted
@@ -123,6 +124,12 @@ Cloudflare Pages, connected to this repository:
 - Framework preset: **None**
 - Build command: **empty**
 - Output directory: **`/`**
+
+`_headers` sets a Content-Security-Policy that allows no script and nothing from another
+origin, so the "zero JavaScript, zero third-party requests" commitment above is enforced
+by the browser, not only by review. A page that needs a new kind of resource will show it
+as a CSP error in the console; widen the policy deliberately, and change the privacy page
+with it.
 
 `contact@pricelog.fyi` is a Cloudflare Email Routing address that forwards to a personal
 mailbox. There is no mail server in this repository.
