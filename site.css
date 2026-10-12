@@ -346,20 +346,40 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   content: ""; position: absolute; inset: 0; z-index: -1;
   background: linear-gradient(to bottom, rgb(11 34 54 / .15), rgb(11 34 54 / 0) 40%, rgb(11 34 54 / .8));
 }
-/* Both rows wrap: the longer status pills ("נמצא שוב במחיר דומה") and the
-   button next to a long median line are wider than a 300–350px card, and
-   .card's overflow: hidden cut them off instead of letting them move down. */
+/* The top row wraps: the longer status pills ("נמצא שוב במחיר דומה") are wider
+   than a 300–350px card next to the badge, and .card's overflow: hidden cut
+   them off instead of letting them move down. */
 .card-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
 .card-city { font: 700 30px/1.185 var(--display); }
 .card-country { font: 500 14px/1.47 var(--text); color: rgb(255 255 255 / .88); }
-.card-body { display: grid; gap: 14px; padding: 18px 20px 20px; }
-.card-dates { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font: 500 14px/1.47 var(--text); color: var(--muted); }
+/* Body layout (Figma "Card layout options — 12.10", option א): dates and price
+   share the first row, the median line and a full-width button each get their
+   own. The mock's short "לפרטים" beside the price stopped fitting once the
+   button and median line said what they mean, so the button left that row.
+   Done in CSS over the markup pages.py already writes, by dissolving the
+   price wrappers into the body grid; DOM order, and so reading order, stays
+   dates, price, median, button. Flex rather than grid so the rare row that
+   cannot hold both (a four-digit price beside "2 עצירות" and a range, in the
+   home page's 300px phone card) drops the price to its own line instead of
+   breaking the date range in the middle. */
+.card-body { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; padding: 18px 20px 20px; }
+.card-dates { flex: 1 0 auto; display: flex; align-items: center; gap: 8px; font: 500 14px/1.47 var(--text); color: var(--muted); white-space: nowrap; }
 .card-dates .stops { font-size: 13px; color: var(--sea); }
-.card-price { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px; }
-.card-price strong { display: block; font: 900 36px/1.185 var(--display); color: var(--ink); }
-.card-price small { display: block; font-size: 13px; line-height: 1.47; color: var(--muted); white-space: nowrap; }
+/* Stops, range and price on one line need about 330px of body (measured
+   ~172px + ~96px + gap). Narrower cards, i.e. the 300px phone row and the
+   ~280px four-up row on desktop, stack stops over the range instead, which
+   is about the price's own height, so the price keeps its place beside them. */
+.card { container-type: inline-size; }
+@container (max-width: 359px) {
+  .card-dates { flex-direction: column; align-items: flex-start; gap: 0; }
+  .card-dates > [aria-hidden] { display: none; }
+}
+.card-price, .card-price > div { display: contents; }
+.card-price strong { flex: none; display: block; font: 900 36px/1.185 var(--display); color: var(--ink); }
+.card-price small { flex-basis: 100%; display: block; font-size: 13px; line-height: 1.47; color: var(--muted); }
 .card-go {
-  display: inline-flex; align-items: center; gap: 6px; flex: none;
+  flex-basis: 100%; margin-block-start: 4px;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
   padding: 10px 14px; border-radius: var(--pill); background: var(--sea-light); color: var(--sea);
   font: 700 14px/1.47 var(--text);
 }
