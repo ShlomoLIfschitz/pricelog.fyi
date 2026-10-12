@@ -894,6 +894,13 @@ main:has(#f-ow:checked) .archive-row[data-trip="RT"] { display: none; }
 .credits { inline-size: 100%; border-collapse: collapse; font-size: 14px; }
 .credits th, .credits td { padding: 10px 8px; border-block-end: 1px solid var(--border); text-align: start; vertical-align: top; }
 .credits th { font-weight: 700; color: var(--muted); }
+/* A Commons filename is one word as far as line breaking goes, and
+   KeizersgrachtReguliersgrachtAmsterdam.jpg alone is 279px; a table cell
+   never goes narrower than its longest word, so at 320px with a classic
+   scrollbar the table pushed the page 13px sideways. `anywhere` (unlike
+   break-word) also lowers the cell's minimum width, which is what a table
+   sizes from; it only breaks a word that would not fit anyway. */
+.credits td { overflow-wrap: anywhere; }
 @media (max-width: 640px) { .credits thead { display: none; } .credits tr { display: grid; padding-block: 10px; border-block-end: 1px solid var(--border); } .credits td { padding: 2px 0; border: 0; } }
 
 /* ---------- motion ----------
