@@ -66,6 +66,13 @@ when, and the job reads it to decide what not to publish again, so a hand edit t
 changes what gets posted. Everything outside `he/flights/` is hand-written and the job
 never touches it.
 
+Since 2026-10-12 the job also writes one page per destination, at
+`he/flights/<slug>/` (`/he/flights/rome/`): the prices collected for it, its median, and
+the flights published to it. Every run rewrites them, the refresh every six hours included,
+so their numbers move with the collection. A slug is permanent once published; the list
+is `SLUGS` in `pricelog-scaner`'s `destinations.py`. `sitemap.xml` lists the same pages and
+is hand-written, so a destination added there needs its line here too.
+
 The one exception is the first manifest, created by hand once as `{"deals": []}`. The job
 refuses to run without one rather than treating a missing manifest as empty: that would
 make every flight look new, so a wrong clone or a deleted file would republish everything.
