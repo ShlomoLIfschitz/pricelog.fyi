@@ -768,6 +768,21 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   }
   .sticky-cta small { font: 500 12px/1.47 var(--text); color: var(--muted); }
 }
+/* 320px: two things here were wider than the 288px a deal page has inside
+   its gutters, and in RTL that scrolls the page sideways (scrollWidth 332).
+   The three mini-stats cells cannot shrink below their content plus 16px
+   padding a side (268px against the panel's 244px), and a 1fr track takes
+   its content's minimum, so the chart panel pushed the whole .deal-body
+   column out to 313px. The booking bar's nowrap button and the price beside
+   it came to 316px. Tighter padding fits the cells; the bar's button gets a
+   smaller font, and the price yields first (flex-basis 0) so the button stays
+   on one line, which can still wrap rather than overflow if a price is long. */
+@media (max-width: 360px) {
+  .mini-stats > div { padding: 12px 10px; }
+  .sticky-cta { gap: 8px; }
+  .sticky-cta .btn { gap: 8px; padding-inline: 16px; font-size: 15px; white-space: normal; }
+  .sticky-cta > div { flex: 1 1 0; }
+}
 
 /* ---------- deals index ---------- */
 
