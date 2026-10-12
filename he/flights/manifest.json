@@ -19,7 +19,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261007_VAR_RT",
@@ -40,7 +41,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261007_BUS_RT",
@@ -61,7 +63,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261007_VAR_OW",
@@ -82,7 +85,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261007_EVN_RT",
@@ -103,7 +107,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261007_LCA_RT",
@@ -124,7 +129,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261007_MAD_RT",
@@ -145,7 +151,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261007_IST_RT",
@@ -166,7 +173,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261008_PFO_RT",
@@ -187,7 +195,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261008_BUS_RT",
@@ -208,7 +217,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261008_VAR_OW",
@@ -229,7 +239,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261008_LCA_RT",
@@ -250,7 +261,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261008_IST_RT",
@@ -271,7 +283,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261008_CTA_RT",
@@ -292,7 +305,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261008_PRG_RT",
@@ -313,7 +327,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261008_IST_OW",
@@ -334,7 +349,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261008_CTA_OW",
@@ -355,7 +371,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261008_NAP_RT",
@@ -376,7 +393,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261008_TBS_OW",
@@ -397,7 +415,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261008_VCE_RT",
@@ -418,7 +437,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_LCA_RT",
@@ -439,7 +459,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_PFO_RT",
@@ -460,7 +481,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_BUS_RT",
@@ -481,7 +503,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_IST_RT",
@@ -502,7 +525,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_IST_OW",
@@ -523,7 +547,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_BUS_OW",
@@ -544,7 +569,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_PAR_RT",
@@ -565,7 +591,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_EVN_RT",
@@ -586,7 +613,8 @@
       "telegram_message_id": null,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_CTA_RT",
@@ -607,7 +635,8 @@
       "telegram_message_id": 6,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_PRG_RT",
@@ -628,7 +657,8 @@
       "telegram_message_id": 7,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_VCE_RT",
@@ -649,7 +679,8 @@
       "telegram_message_id": 8,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_TBS_OW",
@@ -670,7 +701,8 @@
       "telegram_message_id": 9,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_MAD_RT",
@@ -691,7 +723,8 @@
       "telegram_message_id": 10,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_EVN_OW",
@@ -712,7 +745,8 @@
       "telegram_message_id": 11,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261009_LCA_OW",
@@ -733,7 +767,8 @@
       "telegram_message_id": 12,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261010_BUS_RT",
@@ -754,7 +789,8 @@
       "telegram_message_id": 13,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261010_IST_OW",
@@ -775,7 +811,8 @@
       "telegram_message_id": 14,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261010_PFO_RT",
@@ -796,7 +833,8 @@
       "telegram_message_id": 15,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261010_IST_RT",
@@ -817,7 +855,8 @@
       "telegram_message_id": 16,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261010_LCA_RT",
@@ -838,7 +877,8 @@
       "telegram_message_id": 17,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261010_PRG_RT",
@@ -859,7 +899,8 @@
       "telegram_message_id": 18,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261010_TBS_OW",
@@ -880,7 +921,8 @@
       "telegram_message_id": 19,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261010_EVN_RT",
@@ -901,7 +943,8 @@
       "telegram_message_id": 20,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261011_IST_OW",
@@ -922,7 +965,8 @@
       "telegram_message_id": 21,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261011_BUS_RT",
@@ -943,7 +987,8 @@
       "telegram_message_id": 22,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261011_PRG_RT",
@@ -964,7 +1009,8 @@
       "telegram_message_id": 23,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261011_PFO_RT",
@@ -985,7 +1031,8 @@
       "telegram_message_id": 24,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261011_LCA_RT",
@@ -1006,7 +1053,8 @@
       "telegram_message_id": 25,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261011_IST_RT",
@@ -1027,7 +1075,8 @@
       "telegram_message_id": 26,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261011_BUS_OW",
@@ -1048,7 +1097,8 @@
       "telegram_message_id": 27,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261011_EVN_RT",
@@ -1069,7 +1119,8 @@
       "telegram_message_id": 28,
       "depart_at": null,
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261012_IST_RT",
@@ -1090,7 +1141,8 @@
       "telegram_message_id": 29,
       "depart_at": "2027-03-04T00:20:00+02:00",
       "return_at": "2027-03-08T11:40:00+03:00",
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261012_BUS_RT",
@@ -1111,7 +1163,8 @@
       "telegram_message_id": 30,
       "depart_at": "2026-11-17T08:10:00+02:00",
       "return_at": "2026-11-27T11:25:00+04:00",
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261012_PFO_RT",
@@ -1132,7 +1185,8 @@
       "telegram_message_id": 31,
       "depart_at": "2026-11-27T05:30:00+02:00",
       "return_at": "2026-12-01T09:20:00+02:00",
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261012_PRG_RT",
@@ -1153,7 +1207,8 @@
       "telegram_message_id": 32,
       "depart_at": "2027-03-03T00:20:00+02:00",
       "return_at": "2027-03-07T09:20:00+01:00",
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261012_CTA_RT",
@@ -1174,7 +1229,8 @@
       "telegram_message_id": 33,
       "depart_at": "2027-01-17T22:45:00+02:00",
       "return_at": "2027-01-21T17:55:00+01:00",
-      "airline": "W4"
+      "airline": "W4",
+      "dates_url": null
     },
     {
       "id": "20261012_LCA_RT",
@@ -1195,7 +1251,8 @@
       "telegram_message_id": 34,
       "depart_at": "2026-12-21T08:00:00+02:00",
       "return_at": "2026-12-24T06:00:00+02:00",
-      "airline": "W6"
+      "airline": "W6",
+      "dates_url": null
     },
     {
       "id": "20261012_IST_OW",
@@ -1216,7 +1273,8 @@
       "telegram_message_id": 35,
       "depart_at": "2026-12-01T00:20:00+02:00",
       "return_at": null,
-      "airline": null
+      "airline": null,
+      "dates_url": null
     },
     {
       "id": "20261012_DXB_RT",
@@ -1237,7 +1295,8 @@
       "telegram_message_id": 36,
       "depart_at": "2027-01-22T07:20:00+02:00",
       "return_at": "2027-01-27T17:10:00+04:00",
-      "airline": "6H"
+      "airline": "6H",
+      "dates_url": null
     }
   ]
 }
