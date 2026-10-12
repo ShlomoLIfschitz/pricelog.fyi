@@ -1,0 +1,21 @@
+# Response headers for every page, applied by Cloudflare Pages.
+#
+# The CSP enforces what the privacy page promises: no script of any kind and
+# nothing loaded from another origin. That promise was already broken once
+# without a commit here — Cloudflare's Email Address Obfuscation injected
+# email-decode.min.js into every page — and with this policy a browser refuses
+# anything injected that way. If the site ever ships its own JavaScript, change
+# script-src to 'self' and update the privacy page in the same commit.
+#
+# style-src allows 'unsafe-inline' because the generated deal pages carry style
+# attributes (chart positions, the hidden sprite SVG). Without script, an
+# inline style cannot exfiltrate anything.
+#
+# HSTS has no includeSubDomains: every subdomain would then have to serve
+# HTTPS for a year, and nothing here lists what the subdomains are.
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'none'; img-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=31536000
+  X-Frame-Options: DENY
+  Cross-Origin-Opener-Policy: same-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
