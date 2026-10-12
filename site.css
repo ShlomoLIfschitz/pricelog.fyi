@@ -741,7 +741,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .price-panel { padding: 22px; }
   .price-line strong { font-size: 56px; }
   .mini-stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .mini-stats > div:nth-child(2) { display: none; }   /* p10 stays in the price panel */
+  .mini-stats > div:nth-child(2) { display: none; }   /* the median; the price panel lists it too */
   .mini-stats dd { font-size: 19px; }
   .why-grid > div { grid-template-columns: 1fr auto; padding: 0; background: none; }
   .why-grid i { grid-column: 2; grid-row: 1 / span 2; background: var(--sand); }
