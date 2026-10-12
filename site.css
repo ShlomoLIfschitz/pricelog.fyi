@@ -302,8 +302,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   /* on a phone the copy sits on the stats, as in the mock */
   .hero-row { margin-block: auto 18px; }
 }
-.hero-lede .s { display: none; }
-@media (max-width: 640px) { .hero-lede .l { display: none; } .hero-lede .s { display: inline; } }
 .hero-card { flex: none; display: grid; place-items: center; inline-size: 358px; block-size: 362px; }
 /* The box is the tilted card's bounding box, as Figma lays it out, so the
    card sits where the mock puts it rather than overhanging by 9px. */
