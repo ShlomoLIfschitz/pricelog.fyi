@@ -867,17 +867,23 @@ main:has(#f-ow:checked) .archive-row[data-trip="RT"] { display: none; }
 .dest-panel:not(:has(> .dest-view)) { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 24px; align-items: start; }
 .dest-panel:has(> .dest-view) { display: grid; gap: 16px; }
 .dest-panel > .empty { grid-column: 1 / -1; }
-.dest-stops { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; border: 0; }
-.dest-stops input { position: absolute; opacity: 0; }
-.dest-stops label {
-  display: inline-flex; align-items: center; min-block-size: 40px; padding: 8px 14px; border-radius: var(--pill);
-  background: var(--surface); border: 1px solid var(--border); font: 500 14px/1.47 var(--text); cursor: pointer;
+/* The stops views are one native dropdown, styled as a pill. CSS reads the
+   selected option with :has(option:checked), so it needs no script either. */
+.dest-stops { justify-self: start; position: relative; display: inline-flex; }
+.dest-stops select {
+  appearance: none; min-block-size: 40px; padding-block: 8px; padding-inline: 16px 40px; border-radius: var(--pill);
+  background: var(--surface); border: 1px solid var(--border); color: var(--night);
+  font: 600 14px/1.47 var(--text); cursor: pointer;
 }
-.dest-stops input:checked + label { border-color: var(--night); color: var(--night); font-weight: 700; box-shadow: inset 0 0 0 1px var(--night); }
-.dest-stops input:focus-visible + label { outline: 3px solid var(--sea); outline-offset: 3px; }
-.dest-panel:has(.dest-stops input[value="all"]:checked) .dest-view:not([data-stops="all"]),
-.dest-panel:has(.dest-stops input[value="direct"]:checked) .dest-view:not([data-stops="direct"]),
-.dest-panel:has(.dest-stops input[value="stops"]:checked) .dest-view:not([data-stops="stops"]) { display: none; }
+.dest-stops::after {
+  content: ""; position: absolute; inset-inline-end: 16px; inset-block-start: 50%; inline-size: 8px; block-size: 8px;
+  border-right: 2px solid var(--night); border-bottom: 2px solid var(--night);
+  transform: translateY(-70%) rotate(45deg); pointer-events: none;
+}
+.dest-stops select:focus-visible { outline: 3px solid var(--sea); outline-offset: 3px; }
+.dest-panel:has(.dest-stops option[value="all"]:checked) .dest-view:not([data-stops="all"]),
+.dest-panel:has(.dest-stops option[value="direct"]:checked) .dest-view:not([data-stops="direct"]),
+.dest-panel:has(.dest-stops option[value="stops"]:checked) .dest-view:not([data-stops="stops"]) { display: none; }
 .chart-panel h3 { font: 700 26px/1.25 var(--display); color: var(--night); }
 .dest-stats { gap: 6px; }
 .dest-about { padding-block-start: 0; }
