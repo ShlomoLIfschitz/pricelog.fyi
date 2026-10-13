@@ -860,15 +860,39 @@ main:has(#f-ow:checked) .archive-row[data-trip="RT"] { display: none; }
 .dest-tabs input:focus-visible + label { outline: 3px solid var(--sea); outline-offset: 3px; }
 .dest-prices:has(#dt-rt:checked) .dest-panel[data-trip="OW"],
 .dest-prices:has(#dt-ow:checked) .dest-panel[data-trip="RT"] { display: none; }
-.dest-panel { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 24px; align-items: start; }
+/* Since the direct / with-stops views (scanner #50) a trip panel holds one or
+   more .dest-view, each a chart and its numbers. The second selector keeps a
+   page built before that laid out as it was, so this file can ship first. */
+.dest-view,
+.dest-panel:not(:has(> .dest-view)) { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 24px; align-items: start; }
+.dest-panel:has(> .dest-view) { display: grid; gap: 16px; }
 .dest-panel > .empty { grid-column: 1 / -1; }
+/* The stops views are one native dropdown, styled as a pill. CSS reads the
+   selected option with :has(option:checked), so it needs no script either. */
+.dest-stops { justify-self: start; position: relative; display: inline-flex; }
+.dest-stops select {
+  appearance: none; min-block-size: 40px; padding-block: 8px; padding-inline: 16px 40px; border-radius: var(--pill);
+  background: var(--surface); border: 1px solid var(--border); color: var(--night);
+  font: 600 14px/1.47 var(--text); cursor: pointer;
+}
+.dest-stops::after {
+  content: ""; position: absolute; inset-inline-end: 16px; inset-block-start: 50%; inline-size: 8px; block-size: 8px;
+  border-right: 2px solid var(--night); border-bottom: 2px solid var(--night);
+  transform: translateY(-70%) rotate(45deg); pointer-events: none;
+}
+.dest-stops select:focus-visible { outline: 3px solid var(--sea); outline-offset: 3px; }
+.dest-panel:has(.dest-stops option[value="all"]:checked) .dest-view:not([data-stops="all"]),
+.dest-panel:has(.dest-stops option[value="direct"]:checked) .dest-view:not([data-stops="direct"]),
+.dest-panel:has(.dest-stops option[value="stops"]:checked) .dest-view:not([data-stops="stops"]) { display: none; }
 .chart-panel h3 { font: 700 26px/1.25 var(--display); color: var(--night); }
 .dest-stats { gap: 6px; }
 .dest-about { padding-block-start: 0; }
 /* The index's day headings are a date and stay on one line; these are sentences. */
 .dest-flights .day-head h2 { white-space: normal; }
 .dest-about .about { max-inline-size: 820px; }
-@media (max-width: 1000px) { .dest-panel { grid-template-columns: 1fr; gap: 16px; } }
+@media (max-width: 1000px) {
+  .dest-view, .dest-panel:not(:has(> .dest-view)) { grid-template-columns: 1fr; gap: 16px; }
+}
 @media (max-width: 640px) {
   .dest-hero { min-block-size: 420px; padding-block-end: 40px; }
   .dest-tabs label { padding: 9px 16px; font-size: 14px; }
