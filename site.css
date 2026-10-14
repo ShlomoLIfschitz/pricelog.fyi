@@ -946,7 +946,9 @@ main:has(#f-ow:checked) .archive-row[data-trip="RT"] { display: none; }
 .hero-more { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: #fff; text-decoration: none; }
 .hero-more .icon { inline-size: 20px; block-size: 20px; }
 @media (max-width: 1100px) {
-  .hero-row:has(.hero-search) { flex-direction: column; align-items: stretch; }
+  /* Stacked, the card is the row's last thing, and without this it sits on
+     the stats: only phones (≤640px) had a bottom margin for the row. */
+  .hero-row:has(.hero-search) { flex-direction: column; align-items: stretch; margin-block: auto 24px; }
   .hero-search { inline-size: auto; }
 }
 .credits { inline-size: 100%; border-collapse: collapse; font-size: 14px; }
