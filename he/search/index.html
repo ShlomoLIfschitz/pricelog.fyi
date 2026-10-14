@@ -10,9 +10,7 @@
 <link rel="preload" href="/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/heebo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
-<script src="/js/wl-config.js"></script>
-<script type="module" src="https://tpwgts.com/wl_web/main.js?wl_id=23389"></script>
-<noscript><style>.search-form, .search-results { display: none; }</style></noscript>
+<script src="/js/search.js" defer></script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PriceLog">
 <meta property="og:locale" content="he">
@@ -66,10 +64,16 @@
       מטען כלול, עצירות ומחיר.</p>
   </header>
   <div class="search">
-    <div class="search-form" id="tpwl-search"></div>
-    <div class="search-results" id="tpwl-tickets"></div>
-    <noscript><p class="search-off">מנוע החיפוש פועל עם JavaScript, והוא כבוי כרגע בדפדפן.
-      <a href="/he/flights/">הטיסות ש־PriceLog מצא</a> מוצגות גם בלעדיו.</p></noscript>
+    <div class="search-gate" data-search-gate>
+      <p>מנוע החיפוש מגיע מ־<span dir="ltr">Travelpayouts</span>, רשת השותפים ש־<span dir="ltr">PriceLog</span>
+        עובד דרכה. כשמפעילים אותו, הדפדפן טוען קוד מהשרתים שלה, והיא מציבה בו קוקיז משלה.
+        הבחירה נשמרת בדפדפן הזה. <a href="/he/privacy#search">מה בדיוק נטען ונשמר</a></p>
+      <button class="btn btn--primary" type="button" hidden>הפעלת מנוע החיפוש</button>
+      <noscript><p>מנוע החיפוש פועל עם JavaScript, והוא כבוי כרגע בדפדפן.
+        <a href="/he/flights/">הטיסות ש־PriceLog מצא</a> מוצגות גם בלעדיו.</p></noscript>
+    </div>
+    <div class="search-form" id="tpwl-search" data-search-box tabindex="-1" hidden></div>
+    <div class="search-results" id="tpwl-tickets" data-search-box hidden></div>
   </div>
 </main>
 
