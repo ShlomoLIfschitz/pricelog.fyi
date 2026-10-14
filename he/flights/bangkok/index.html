@@ -96,13 +96,6 @@
     <input type="radio" name="dest-trip" id="dt-ow"><label for="dt-ow"><span>הלוך בלבד · <span class="num" dir="ltr">188</span> מחירים</span></label>
   </fieldset>
   <div class="dest-panel" data-trip="RT">
-    <label class="dest-stops" for="ds-rt">
-      <span class="sr-only">טיסה ישירה או עם עצירות</span>
-      <select id="ds-rt" name="dest-stops-rt">
-        <option value="all" selected>כל הטיסות · 337</option>
-        <option value="stops">עם עצירות · 335</option>
-      </select>
-    </label>
     <div class="dest-view" data-stops="all">
       <section class="panel chart-panel" aria-labelledby="chart-RT-h">
         <h3 id="chart-RT-h">כל המחירים שנאספו לבנגקוק, הלוך־חזור</h3>
@@ -126,34 +119,7 @@
           <div><dt>העשירון התחתון<small><span class="num" dir="ltr">10%</span> מהמחירים נמוכים ממנו</small></dt><dd><span class="num" dir="ltr">$713</span></dd></div>
           <div><dt>מחירים שנאספו<small>מאז <time datetime="2026-10-11"><span class="num" dir="ltr">11.10.2026</span></time></small></dt><dd><span class="num" dir="ltr">337</span></dd></div>
         </dl>
-        <p class="price-asof">עודכן ב־<time datetime="2026-10-14T08:43:10.271696+00:00"><span class="num" dir="ltr">14.10.2026, 11:43</span></time></p>
-      </div>
-    </div>
-    <div class="dest-view" data-stops="stops">
-      <section class="panel chart-panel" aria-labelledby="chart-RT-stops-h">
-        <h3 id="chart-RT-stops-h">המחירים עם עצירות שנאספו לבנגקוק, הלוך־חזור</h3>
-        <p>כל נקודה היא מחיר שנמצא לטיסה הלוך־חזור עם עצירות מתל אביב לבנגקוק, לפי תאריך
-        ההמראה. הקו המקווקו הוא חציון הטיסות עם עצירות.</p>
-        <figure>
-          <svg class="chart" viewBox="0 0 400 250" role="img" aria-labelledby="chart-RT-stops-title chart-RT-stops-desc" xmlns="http://www.w3.org/2000/svg"><title id="chart-RT-stops-title">המחירים שנאספו לבנגקוק, הלוך־חזור, עם עצירות</title><desc id="chart-RT-stops-desc">335 מחירים לפי תאריך ההמראה. הקו המקווקו הוא החציון שלהם, $845.</desc><line class="chart-grid" x1="10" x2="354" y1="210" y2="210"/><text class="chart-label" x="396" y="210" text-anchor="end" dominant-baseline="middle">$0</text><line class="chart-grid" x1="10" x2="354" y1="144.7" y2="144.7"/><text class="chart-label" x="396" y="144.7" text-anchor="end" dominant-baseline="middle">$500</text><line class="chart-grid" x1="10" x2="354" y1="79.3" y2="79.3"/><text class="chart-label" x="396" y="79.3" text-anchor="end" dominant-baseline="middle">$1,000</text><line class="chart-grid" x1="10" x2="354" y1="14" y2="14"/><text class="chart-label" x="396" y="14" text-anchor="end" dominant-baseline="middle">$1,500</text><line class="chart-tick" x1="31.4" x2="31.4" y1="210" y2="214"/><text class="chart-label" x="31.4" y="227" text-anchor="middle">נוב׳</text><text class="chart-label chart-year" x="31.4" y="245" text-anchor="middle">2026</text><line class="chart-tick" x1="93.7" x2="93.7" y1="210" y2="214"/><text class="chart-label" x="93.7" y="227" text-anchor="middle">ינו׳</text><text class="chart-label chart-year" x="93.7" y="245" text-anchor="middle">2027</text><line class="chart-tick" x1="153.9" x2="153.9" y1="210" y2="214"/><text class="chart-label" x="153.9" y="227" text-anchor="middle">מרץ</text><line class="chart-tick" x1="216.2" x2="216.2" y1="210" y2="214"/><text class="chart-label" x="216.2" y="227" text-anchor="middle">מאי</text><line class="chart-tick" x1="278.5" x2="278.5" y1="210" y2="214"/><text class="chart-label" x="278.5" y="227" text-anchor="middle">יולי</text><line class="chart-tick" x1="341.8" x2="341.8" y1="210" y2="214"/><text class="chart-label" x="341.8" y="227" text-anchor="middle">ספט׳</text><path class="chart-dots" d="M270.3 129.8h0M19.2 116.8h0M218.2 115h0M248.9 110.3h0M67.2 104.6h0M39.6 104.3h0M18.2 95.4h0M213.1 90.7h0M269.3 88.3h0M217.2 87.6h0M31.4 87h0M212.1 85.9h0M174.3 79.9h0M128.4 121h0M103.9 118.3h0M82.5 113.6h0M248.9 113.3h0M35.5 110.6h0M52.9 109.6h0M64.1 97.6h0M21.2 117.5h0M63.1 113.8h0M110 111.7h0M68.2 110.2h0M23.3 109.5h0M60 106.5h0M33.5 102.3h0M43.7 97.9h0M64.1 97.5h0M33.5 97.1h0M65.1 96.6h0M12 93.4h0M54.9 89.5h0M17.1 89.4h0M18.2 86.5h0M62.1 86h0M64.1 82.5h0M195.8 71.2h0M194.8 68.6h0M248.9 118h0M33.5 105.3h0M48.8 99.2h0M64.1 97.2h0M34.5 96.3h0M41.6 95.4h0M74.3 80.5h0M243.8 119.7h0M103.9 118.1h0M106 115.7h0M35.5 113.4h0M39.6 104.4h0M85.5 57.5h0M203.9 55.9h0M125.3 118.1h0M76.4 117.9h0M45.7 106.3h0M216.2 94.8h0M14.1 81.7h0M16.1 71.6h0M85.5 60.3h0M18.2 117.6h0M17.1 116.3h0M76.4 115.9h0M248.9 111.3h0M123.3 104.7h0M40.6 103.8h0M29.4 103.1h0M41.6 100.2h0M24.3 98.8h0M142.7 97.6h0M64.1 97h0M72.3 82.7h0M248.9 114.4h0M22.2 110.7h0M23.3 108.7h0M46.7 107.3h0M67.2 103.2h0M52.9 93.4h0M93.7 86.4h0M132.5 117.4h0M45.7 107.4h0M39.6 102.3h0M77.4 102.2h0M17.1 116.8h0M248.9 113h0M45.7 100.1h0M48.8 98.5h0M36.5 92.3h0M69.2 119.4h0M125.3 118.9h0M128.4 118.9h0M125.3 117.7h0M117.2 115.7h0M68.2 115.1h0M153.9 113.3h0M46.7 110.8h0M130.5 106.4h0M163.1 99.8h0M118.2 91.9h0M102.9 91h0M175.4 80.2h0M86.6 46.8h0M103.9 120.8h0M82.5 119.7h0M68.2 119.7h0M70.2 119.4h0M71.2 119.4h0M76.4 119.4h0M35.5 119.1h0M98.8 118.9h0M103.9 118.9h0M132.5 118.9h0M125.3 118.4h0M243.8 118.1h0M17.1 118h0M68.2 117.9h0M88.6 116.4h0M67.2 116.4h0M81.5 116.4h0M96.8 116.2h0M102.9 116.1h0M104.9 116.1h0M102.9 115.9h0M110 115.9h0M90.6 115.4h0M107 115.4h0M91.7 115.3h0M113.1 115.1h0M128.4 115.1h0M14.1 114.5h0M110 114.5h0M64.1 114.5h0M19.2 114h0M63.1 114h0M46.7 113.7h0M112.1 113.7h0M62.1 113.2h0M131.5 113.2h0M248.9 113.2h0M236.6 112.8h0M23.3 112.5h0M91.7 111.7h0M74.3 111.7h0M131.5 110.7h0M51.9 110.6h0M33.5 109.9h0M35.5 109.8h0M42.7 109.4h0M15.1 108.5h0M51.9 108.5h0M45.7 108.2h0M249.9 107.9h0M242.7 107.7h0M118.2 107.4h0M242.7 107h0M235.6 106.6h0M40.6 106.5h0M235.6 106.3h0M47.8 106.1h0M53.9 106h0M55.9 105.9h0M40.6 105.6h0M106 105.5h0M54.9 105.2h0M31.4 104.8h0M127.4 104.7h0M18.2 104.3h0M42.7 104.3h0M118.2 104h0M92.7 103.6h0M39.6 103.6h0M16.1 103.5h0M121.3 103.2h0M58 102.7h0M44.7 102.7h0M50.8 102.7h0M163.1 102.6h0M58 102.6h0M38.6 102.5h0M150.9 102.3h0M38.6 102.2h0M31.4 101.9h0M103.9 101.9h0M39.6 101.9h0M184.6 101.7h0M119.2 101.7h0M97.8 101.3h0M146.8 101.2h0M14.1 101h0M145.8 101h0M152.9 100.9h0M71.2 100.9h0M54.9 100.8h0M25.3 100.6h0M139.6 100.6h0M106 100.6h0M14.1 100.5h0M95.7 100.4h0M102.9 100h0M43.7 99.8h0M60 99.7h0M61 99.6h0M52.9 99.6h0M57 99.5h0M136.6 99.3h0M100.8 99.2h0M102.9 98.9h0M66.1 98.9h0M111.1 98.9h0M120.2 98.9h0M18.2 98.8h0M142.7 98.8h0M277.4 98.8h0M12 98.7h0M106 98.7h0M93.7 98.5h0M126.4 98.5h0M43.7 98.5h0M100.8 98.4h0M96.8 98.3h0M97.8 98.3h0M113.1 98.1h0M125.3 98h0M110 97.9h0M14.1 97.4h0M129.4 97.2h0M197.8 96.8h0M108 96.7h0M44.7 96.7h0M11 96.6h0M107 96.1h0M21.2 95.9h0M40.6 95.9h0M121.3 95.7h0M101.9 95.5h0M16.1 95.5h0M99.8 95h0M216.2 95h0M64.1 95h0M117.2 94.9h0M135.6 94.8h0M129.4 94.6h0M108 94.6h0M168.2 94.5h0M207 94.5h0M60 94.4h0M91.7 94.4h0M106 94.1h0M10 93.8h0M91.7 93.7h0M354 93.7h0M64.1 93.4h0M66.1 93.2h0M15.1 93.2h0M14.1 93.1h0M199.9 93.1h0M38.6 92.9h0M124.3 92.8h0M110 92.5h0M41.6 92.4h0M108 92.3h0M154.9 92.1h0M54.9 92h0M67.2 91.9h0M94.7 91.7h0M111.1 90.6h0M107 89.5h0M32.5 89.4h0M125.3 89h0M68.2 89h0M87.6 88.9h0M150.9 88.7h0M157 87.6h0M93.7 87.3h0M95.7 87.3h0M289.7 86.7h0M109 86.1h0M31.4 86.1h0M32.5 86h0M118.2 84.7h0M102.9 83.5h0M67.2 83.1h0M281.5 82.3h0M91.7 81.3h0M64.1 80.8h0M65.1 80.8h0M62.1 80.6h0M185.6 80.4h0M78.4 79.9h0M64.1 79.3h0M93.7 78.5h0M92.7 78.3h0M66.1 78h0M185.6 77.9h0M278.5 77.2h0M160.1 76.9h0M188.6 76.9h0M303 76.6h0M328.5 76.6h0M290.7 76.5h0M278.5 75.3h0M81.5 75.2h0M278.5 75h0M198.8 74.1h0M81.5 73.5h0M72.3 73.2h0M15.1 72.9h0M61 71.1h0M310.1 69.9h0M90.6 69.7h0M319.3 67.4h0M189.7 67.4h0M90.6 66.3h0M93.7 64h0M65.1 63.7h0M190.7 62.7h0M191.7 62.6h0M83.5 61.7h0M93.7 56.5h0M197.8 52.4h0M85.5 46.7h0M86.6 44.8h0"/><line class="chart-median" x1="10" x2="354" y1="99.6" y2="99.6"/></svg>
-          <figcaption>
-            <ul class="chart-legend">
-              <li><span class="key key--dots" aria-hidden="true"></span>מחיר שנרשם</li>
-              <li><span class="key key--median" aria-hidden="true"></span>חציון, <span class="num" dir="ltr">$845</span></li>
-            </ul>
-          </figcaption>
-        </figure>
-        <p class="chart-note"><span class="num" dir="ltr">3</span> מחירים גבוהים מ־<span class="num" dir="ltr">$1,500</span> לא מוצגים בגרף, כדי שהגרף יישאר קריא. החציון מחושב גם מהם.</p>
-        <p class="chart-note">הטיסות ש־PriceLog מפרסם נמדדות מול החציון של כל המחירים, <span class="num" dir="ltr">$844</span>, ולא מול החציון הזה. המספרים נשענים על מחירים שנאספו, ולא על כל הטיסות הקיימות.</p>
-      </section>
-      <div class="panel dest-stats">
-        <p class="eyebrow">המספרים · הלוך־חזור · עם עצירות</p>
-        <dl class="facts">
-          <div><dt>חציון הטיסות עם עצירות<small>חצי מהמחירים עם עצירות נמוכים ממנו</small></dt><dd><span class="num" dir="ltr">$845</span></dd></div>
-          <div><dt>העשירון התחתון<small><span class="num" dir="ltr">10%</span> מהמחירים עם עצירות נמוכים ממנו</small></dt><dd><span class="num" dir="ltr">$713</span></dd></div>
-          <div><dt>המחירים עם עצירות שנאספו<small>מאז <time datetime="2026-10-11"><span class="num" dir="ltr">11.10.2026</span></time></small></dt><dd><span class="num" dir="ltr">335</span></dd></div>
-        </dl>
-        <p class="price-asof">עודכן ב־<time datetime="2026-10-14T08:43:10.271696+00:00"><span class="num" dir="ltr">14.10.2026, 11:43</span></time></p>
+        <p class="price-asof">עודכן ב־<time datetime="2026-10-14T11:47:08.896526+00:00"><span class="num" dir="ltr">14.10.2026, 14:47</span></time></p>
       </div>
     </div>
     </div>
@@ -181,7 +147,7 @@
           <div><dt>העשירון התחתון<small><span class="num" dir="ltr">10%</span> מהמחירים נמוכים ממנו</small></dt><dd><span class="num" dir="ltr">$404</span></dd></div>
           <div><dt>מחירים שנאספו<small>מאז <time datetime="2026-10-11"><span class="num" dir="ltr">11.10.2026</span></time></small></dt><dd><span class="num" dir="ltr">188</span></dd></div>
         </dl>
-        <p class="price-asof">עודכן ב־<time datetime="2026-10-14T08:43:10.271696+00:00"><span class="num" dir="ltr">14.10.2026, 11:43</span></time></p>
+        <p class="price-asof">עודכן ב־<time datetime="2026-10-14T11:47:08.896526+00:00"><span class="num" dir="ltr">14.10.2026, 14:47</span></time></p>
       </div>
     </div>
     </div>
