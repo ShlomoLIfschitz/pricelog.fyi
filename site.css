@@ -677,6 +677,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .mini-stats .is-deal { background: var(--coral-tint); }
 .mini-stats .is-deal dd { color: var(--coral-ink); }
 .chart-note { font-size: 13px; color: var(--muted); }
+/* How many recorded prices were this low, in words, before the chart: not every
+   reader reads a scatter plot. Above .chart-panel p in specificity on purpose. */
+.chart-panel .chart-rank {
+  padding: 12px 16px; border-radius: 14px; background: var(--coral-tint);
+  border-inline-start: 3px solid var(--coral-ink); font-weight: 500; color: var(--night);
+}
 
 .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .why-grid > div { display: grid; align-content: start; gap: 10px; padding: 22px; border-radius: 20px; background: var(--sand); }
