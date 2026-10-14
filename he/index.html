@@ -10,6 +10,7 @@
 <link rel="preload" href="/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/heebo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
+<script src="/js/search.js" defer></script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PriceLog">
 <meta property="og:locale" content="he">
@@ -75,21 +76,17 @@
       <p class="hero-tag">PriceLog · טיסות מתל אביב</p>
       <h1><span class="w" style="--i:0">איך</span> <span class="w" style="--i:1">יודעים</span> <span class="w" style="--i:2">אם</span> <span class="w" style="--i:3">מחיר</span> <span class="w" style="--i:4">של</span> <span class="w" style="--i:5">טיסה</span> <em class="w u" style="--i:6">באמת</em> <em class="w" style="--i:7">נמוך?</em></h1>
       <p class="hero-lede">PriceLog אוסף מחירי טיסות מתל אביב כל <span class="num" dir="ltr">6</span> שעות ושומר אותם. כשנמצא מחיר נמוך במיוחד ביחס למחירים שנאספו לאותו יעד, הוא מתפרסם כאן.</p>
-      <div class="btn-row">
-        <a class="btn btn--primary" href="/he/flights/"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לטיסות שנמצאו</a>
-        <a class="btn btn--ghost" href="https://t.me/pricelog_deals" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>הצטרפו לערוץ בטלגרם<span class="sr-only"> (נפתח בלשונית חדשה)</span></a>
-      </div>
+      <a class="hero-more" href="/he/flights/">או: לטיסות שנמצאו<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
-    <div class="hero-card" aria-hidden="true"><ul class="cards"><li class="card" data-trip="RT">
-      <div class="card-media"><img src="/img/dest/lca-800.webp" srcset="/img/dest/lca-800.webp 800w, /img/dest/lca-1280.webp 1280w, /img/dest/lca-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
-        <div class="card-top"><span class="badge"><b dir="ltr">53%</b>מתחת לחציון</span><span class="pill">נמצא שוב במחיר דומה</span></div>
-        <div><p class="card-city">לרנקה</p><p class="card-country">קפריסין · הלוך־חזור</p></div>
+    <section class="hero-search" id="search" aria-labelledby="search-h">
+      <h2 id="search-h">חיפוש טיסות</h2>
+      <div class="search-gate" data-search-gate>
+        <p>מנוע החיפוש מגיע מ־<span dir="ltr">Travelpayouts</span>, רשת השותפים ש־PriceLog עובד דרכה. כשמפעילים אותו, הדפדפן טוען קוד מהשרתים שלה, והיא מציבה בו קוקיז משלה. הבחירה נשמרת בדפדפן הזה. <a href="/he/privacy#search">מה בדיוק נטען ונשמר</a></p>
+        <button class="btn btn--primary" type="button" hidden>הפעלת מנוע החיפוש</button>
+        <noscript><p>מנוע החיפוש פועל עם JavaScript, והוא כבוי כרגע בדפדפן.</p></noscript>
       </div>
-      <div class="card-body">
-        <p class="card-dates"><span class="stops">ישירה</span><span aria-hidden="true">·</span><span class="num" dir="ltr">20.12 – 25.12.2026</span></p>
-        <div class="card-price"><div><strong class="num" dir="ltr">$53</strong><small>מחיר חציוני <span class="num" dir="ltr">$112</span> · מתוך <span class="num" dir="ltr">3,316</span> מחירים</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לפרטי הטיסה וההשוואה</span></div>
-      </div>
-    </li></ul></div>
+      <div id="tpwl-search" data-search-box tabindex="-1" hidden></div>
+    </section>
   </div>
   <dl class="stats">
     <div><dt><span class="l">שעות לכל היותר מגילוי המחיר ועד הפרסום</span><span class="s">שעות לכל היותר</span></dt><dd class="num" dir="ltr">48</dd></div>
