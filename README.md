@@ -17,10 +17,22 @@ at least 200 observations, 7 days to departure, 48 hours since the fare was foun
 
 Hand-written HTML and CSS. No build step, no dependencies, no `package.json`.
 
-The site ships **zero JavaScript and makes zero third-party requests** — no analytics, no
-tag manager, no font CDN. This is a stated commitment on the privacy page, not an
+No analytics, no tag manager, no font CDN, and on every page but two, **no JavaScript and
+no third-party requests**. This is a stated commitment on the privacy page, not an
 optimisation, so keep it that way: adding a font CDN or an analytics snippet would make
-that page untrue. The two typefaces, Rubik and Heebo, are served from `fonts/` on this
+that page untrue.
+
+The two exceptions are the home page and `/he/search/`, which carry the flight search
+(Travelpayouts' White Label):
+
+- `js/search.js` (both pages) shows a gate and loads the White Label only after a click on
+  it. Until then neither page requests anything from another origin. The click is kept in
+  `localStorage` under `pricelog-search`, and nothing else is stored.
+- `js/search-median.js` (`/he/search/` only) shows PriceLog's median beside a search from
+  `/he/flights/medians.json`, which `pricelog-scaner` writes. It reads the address and that
+  file, and stores and sends nothing.
+
+The privacy page describes both, and what the White Label loads and stores once it runs. The two typefaces, Rubik and Heebo, are served from `fonts/` on this
 domain for that reason, subset to Hebrew and Latin and cut to the weights in use (about
 80KB together). Their licences (SIL OFL) sit next to them.
 
@@ -44,10 +56,12 @@ contrast, and tap targets stay at 44px where the mock draws them smaller.
 he/index.html           /he/                he, rtl
 he/privacy.html         /he/privacy         he, rtl
 he/accessibility.html   /he/accessibility   he, rtl — the accessibility statement
+he/search/index.html    /he/search/         he, rtl — the flight search, see Stack
 he/flights/             /he/flights/        generated, see below
 _redirects              / and /privacy → /he/..., 301
 _headers                CSP and the other security headers, see Deploying
 site.css                the stylesheet of the new design, see above
+js/                     the two scripts of the flight search, see Stack
 styles.css              the previous stylesheet, until no page links it
 fonts/                  Rubik and Heebo, woff2, self-hosted
 img/dest/               one photo per destination, three widths; sources in SOURCES.md
@@ -133,10 +147,15 @@ Cloudflare Pages, connected to this repository:
 - Output directory: **`/`**
 
 `_headers` sets a Content-Security-Policy that allows no script and nothing from another
-origin, so the "zero JavaScript, zero third-party requests" commitment above is enforced
-by the browser, not only by review. A page that needs a new kind of resource will show it
+origin, so the commitment above is enforced by the browser, not only by review. Only `/he/`
+and `/he/search/*` get a wider policy: script from this origin and the White Label's hosts. A page that needs a new kind of resource will show it
 as a CSP error in the console; widen the policy deliberately, and change the privacy page
 with it.
+
+`_headers` also makes browsers revalidate `site.css`, `styles.css` and `js/*` on every page
+view (`no-cache`). Their names carry no version, and with Cloudflare's default of four hours
+a returning visitor got the new HTML with the old stylesheet. Fonts and images keep the
+default.
 
 `contact@pricelog.fyi` is a Cloudflare Email Routing address that forwards to a personal
 mailbox. There is no mail server in this repository.

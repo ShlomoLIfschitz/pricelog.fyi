@@ -34,3 +34,20 @@
 /he/search/*
   ! Content-Security-Policy
   Content-Security-Policy: default-src 'none'; script-src 'self' https://tpwgts.com; connect-src 'self' https://tpwgts.com https://*.apistp.com https://avsplow.com; img-src 'self' data: https://img.avs.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+
+# Stylesheets and scripts are checked on every page view (no-cache: kept, but
+# revalidated, so an unchanged file costs a 304). Cloudflare's default was four
+# hours, and the HTML is always fresh, so for four hours after a deploy a
+# returning visitor got new markup with the old site.css: the median panel on
+# /he/search/ showed unstyled on 2026-10-14. A new script with old markup, or
+# the reverse, fails the same way. Their names carry no version, and the
+# generated pages link them too, so this is the one place it can be fixed.
+# Fonts and images keep the default: they do not change in place.
+/site.css
+  Cache-Control: no-cache
+
+/styles.css
+  Cache-Control: no-cache
+
+/js/*
+  Cache-Control: no-cache
