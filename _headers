@@ -1,11 +1,12 @@
 # Response headers for every page, applied by Cloudflare Pages.
 #
-# The CSP enforces what the privacy page promises: no script of any kind and
-# nothing loaded from another origin. That promise was already broken once
-# without a commit here — Cloudflare's Email Address Obfuscation injected
-# email-decode.min.js into every page — and with this policy a browser refuses
-# anything injected that way. If the site ever ships its own JavaScript, change
-# script-src to 'self' and update the privacy page in the same commit.
+# The CSP enforces what the privacy page promises: on every page except the two
+# with the flight search (below), no script of any kind and nothing loaded from
+# another origin. That promise was already broken once without a commit here —
+# Cloudflare's Email Address Obfuscation injected email-decode.min.js into
+# every page — and with this policy a browser refuses anything injected that
+# way. Any change to what a page may load goes with a change to the privacy page
+# in the same commit.
 #
 # style-src allows 'unsafe-inline' because the generated deal pages carry style
 # attributes (chart positions, the hidden sprite SVG). Without script, an
@@ -19,3 +20,17 @@
   X-Frame-Options: DENY
   Cross-Origin-Opener-Policy: same-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
+
+# The flight search: Travelpayouts' White Label runs on the home page (the form)
+# and on /he/search/ (form and results). Only these paths get a script policy.
+# Two CSP headers would both be enforced, so the strict one is detached (the
+# "!" line) before the wider one is set; a page outside these paths keeps
+# script-src 'none'. The hosts are the ones the White Label was seen using; a
+# host it adds later is blocked and shows up as a CSP error in the console.
+/he/
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://tpwgts.com; connect-src 'self' https://tpwgts.com https://*.apistp.com https://avsplow.com; img-src 'self' data: https://img.avs.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+
+/he/search/*
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://tpwgts.com; connect-src 'self' https://tpwgts.com https://*.apistp.com https://avsplow.com; img-src 'self' data: https://img.avs.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; upgrade-insecure-requests
