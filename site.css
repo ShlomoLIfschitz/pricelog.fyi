@@ -935,9 +935,9 @@ main:has(#f-ow:checked) .archive-row[data-trip="RT"] { display: none; }
 .search-gate { display: grid; gap: 14px; justify-items: start; line-height: 1.7; color: rgb(20 33 43 / .85); }
 .search-gate a { color: var(--sea); }
 .search > .search-gate { padding: 22px; border-radius: 24px; background: var(--surface); box-shadow: var(--shadow-card); }
-/* .btn and the boxes set their own display, which would beat the hidden
-   attribute that js/search.js toggles. */
-.search-gate [hidden], [data-search-box][hidden] { display: none; }
+/* The gate, its button and the boxes all set their own display, which would
+   beat the hidden attribute that js/search.js toggles. */
+.search-gate[hidden], .search-gate [hidden], [data-search-box][hidden] { display: none; }
 
 /* The home page's search card takes the place of the tilted deal card. */
 .hero-search { flex: none; display: grid; gap: 12px; inline-size: 440px; padding: 18px 16px; border-radius: 20px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow-lift); }
