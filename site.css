@@ -921,6 +921,15 @@ main:has(#f-ow:checked) .archive-row[data-trip="RT"] { display: none; }
 .doc li + li { margin-block-start: 6px; }
 .doc a { color: var(--sea); }
 .doc .updated { font-size: 14px; color: var(--muted); margin-block-start: 32px; }
+
+/* ---------- flight search: /he/search/ ---------- */
+
+/* The form and the results are drawn by Travelpayouts' White Label inside
+   these two boxes; the boxes are ours, what is inside them is not. */
+.search { display: grid; gap: 24px; padding: clamp(24px, calc(24px + 24 * ((100vw - 390px) / 1050)), 48px) var(--gutter) 96px; }
+.search-form { padding: clamp(14px, calc(14px + 10 * ((100vw - 390px) / 1050)), 24px); border-radius: 24px; background: var(--surface); box-shadow: var(--shadow-card); }
+.search-off { padding: 22px; border-radius: 24px; background: var(--surface); box-shadow: var(--shadow-card); line-height: 1.75; }
+.search-off a { color: var(--sea); }
 .credits { inline-size: 100%; border-collapse: collapse; font-size: 14px; }
 .credits th, .credits td { padding: 10px 8px; border-block-end: 1px solid var(--border); text-align: start; vertical-align: top; }
 .credits th { font-weight: 700; color: var(--muted); }

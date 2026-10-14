@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>פרטיות · PriceLog</title>
-<meta name="description" content="מה PriceLog אוסף (כלום), מה המארח רואה, ומה קורה כשלוחצים על הכפתור לבדיקת המחיר והזמנה.">
+<meta name="description" content="מה PriceLog אוסף (כלום), מה המארח רואה, מה קורה במנוע החיפוש, ומה קורה כשלוחצים על הכפתור לבדיקת המחיר והזמנה.">
 <link rel="canonical" href="https://pricelog.fyi/he/privacy">
 <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
 <link rel="preload" href="/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
@@ -15,7 +15,7 @@
 <meta property="og:locale" content="he">
 <meta property="og:url" content="https://pricelog.fyi/he/privacy">
 <meta property="og:title" content="פרטיות · PriceLog">
-<meta property="og:description" content="האתר הזה לא מציב קוקיז ולא מריץ קוד של צד שלישי. האירוע המשמעותי הוא הקליק החוצה.">
+<meta property="og:description" content="האתר עצמו לא אוסף כלום. מנוע החיפוש בעמוד הבית ובעמוד החיפוש מגיע מרשת השותפים, ושם יש קוד וקוקיז שלה.">
 <meta property="og:image" content="https://pricelog.fyi/og-he.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -68,9 +68,35 @@
       <a href="mailto:contact@pricelog.fyi" dir="ltr">contact@pricelog.fyi</a>.</p>
 
       <h2>מה האתר הזה אוסף</h2>
-      <p>כלום. אין כאן אנליטיקס, אין פיקסל מעקב, אין רשת פרסום, ואין ג׳אווהסקריפט מכל סוג שהוא.
-      לא מוצבים קוקיז. שום גופן, סקריפט, תמונה או גיליון סגנונות אינו נטען מהשרת של מישהו אחר,
-      ולכן אף צד שלישי לא לומד שביקרתם. אין חשבון, אין התחברות, ואין טופס למלא.</p>
+      <p>האתר עצמו לא אוסף כלום. אין כאן אנליטיקס שלי, אין פיקסל מעקב, אין רשת פרסום, אין חשבון
+      ואין התחברות.</p>
+      <p>ברוב העמודים — עמודי הטיסות, עמודי היעדים והמסמכים כמו זה — אין ג׳אווהסקריפט מכל סוג שהוא
+      ולא מוצבים קוקיז. שום גופן, סקריפט, תמונה או גיליון סגנונות אינו נטען בהם מהשרת של מישהו אחר,
+      ולכן אף צד שלישי לא לומד שביקרתם בהם. יש שני עמודים שבהם זה אחרת: עמוד הבית ועמוד החיפוש,
+      שבהם יש מנוע חיפוש טיסות. עליהם הסעיף הבא.</p>
+
+      <h2>מנוע החיפוש בעמוד הבית ובעמוד החיפוש</h2>
+      <p>טופס החיפוש ותוצאות החיפוש בשני העמודים האלה הם מנוע חיפוש שמספקת
+      <span dir="ltr">Travelpayouts</span>, רשת השותפים שדרכה אני עובד. כדי שיעבוד, הדפדפן שלכם
+      טוען את הקוד שלו מהשרתים של <span dir="ltr">Travelpayouts</span> ומדבר איתם ישירות. לכן, בשני
+      העמודים האלה בלבד:</p>
+      <ul>
+        <li>הדפדפן טוען ג׳אווהסקריפט מ־<span dir="ltr">tpwgts.com</span> ופונה לשרתים
+        ב־<span dir="ltr">apistp.com</span> וב־<span dir="ltr">avsplow.com</span>. הם מקבלים את
+        כתובת ה־<span dir="ltr">IP</span> שלכם ואת פרטי הדפדפן, כמו כל אתר שפונים אליו.</li>
+        <li>מה שאתם בוחרים בטופס — מוצא, יעד, תאריכים ומספר נוסעים — נשלח אליהם כדי לחפש מחירים.
+        החיפושים האלה לא מגיעים אליי.</li>
+        <li>המנוע שומר בדפדפן שלכם קוקיז ונתונים מקומיים: את השפה והמטבע שבחרתם, מזהה של ביקור,
+        ומזהים של כלי המדידה שבו הספק סופר שימוש במנוע
+        (<span dir="ltr">Snowplow</span>). את הנתונים של כלי המדידה הזה אני לא רואה.</li>
+        <li>המנוע טוען גופנים מ־<span dir="ltr">Google Fonts</span>, ולכן גם
+        <span dir="ltr">Google</span> מקבלת את כתובת ה־<span dir="ltr">IP</span> ואת פרטי הדפדפן.</li>
+        <li>לחיצה על תוצאה עוברת, כמו כפתורי ההזמנה בשאר האתר, דרך
+        <span dir="ltr">Travelpayouts</span> לאתר ההזמנות. על זה מפורט בסעיף ״מה קורה כשלוחצים על
+        קישור הזמנה״.</li>
+      </ul>
+      <p>מי שלא רוצה בכל זה יכול להשתמש בשאר האתר, שבו אין קוד כזה: בעמוד
+      <a href="/he/flights/">טיסות שנמצאו</a> ובעמודי היעדים.</p>
 
       <h2>מה המארח רואה בהכרח</h2>
       <p>האתר מתארח על <span dir="ltr">Cloudflare Pages</span>. כדי להגיש לכם עמוד בכלל,
@@ -134,7 +160,7 @@
       התאריך למטה. אני לא מתכוון להרחיב את המסמך הזה בשקט.</p>
 
       <p class="updated">עודכן לאחרונה:
-      <span dir="ltr">12</span> באוקטובר <span dir="ltr">2026</span></p>
+      <span dir="ltr">15</span> באוקטובר <span dir="ltr">2026</span></p>
   </div></div>
 </main>
 
