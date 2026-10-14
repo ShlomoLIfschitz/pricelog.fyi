@@ -22,7 +22,8 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
 
 # The flight search: Travelpayouts' White Label runs on the home page (the form)
-# and on /he/search/ (form and results). Only these paths get a script policy.
+# and on /he/search/ and /en/search/ (form and results). Only these paths get a
+# script policy.
 # Two CSP headers would both be enforced, so the strict one is detached (the
 # "!" line) before the wider one is set; a page outside these paths keeps
 # script-src 'none'. The hosts are the ones the White Label was seen using; a
@@ -32,6 +33,10 @@
   Content-Security-Policy: default-src 'none'; script-src 'self' https://tpwgts.com; connect-src 'self' https://tpwgts.com https://*.apistp.com https://avsplow.com; img-src 'self' data: https://img.avs.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; upgrade-insecure-requests
 
 /he/search/*
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://tpwgts.com; connect-src 'self' https://tpwgts.com https://*.apistp.com https://avsplow.com; img-src 'self' data: https://img.avs.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+
+/en/search/*
   ! Content-Security-Policy
   Content-Security-Policy: default-src 'none'; script-src 'self' https://tpwgts.com; connect-src 'self' https://tpwgts.com https://*.apistp.com https://avsplow.com; img-src 'self' data: https://img.avs.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; upgrade-insecure-requests
 

@@ -4,9 +4,12 @@ Site for [@pricelog_deals](https://t.me/pricelog_deals) — a Telegram channel t
 flight prices from Tel Aviv every six hours and publishes a fare only when it beats the
 median of its own observed history, rather than a "from" price in someone's sale.
 
-Hebrew only, under `/he/`. The `/he/` prefix is kept so another language can be added
-later without moving URLs; the English pages that used to live at `/` and `/privacy` were
-removed and `_redirects` sends both to their Hebrew counterparts with a 301.
+Hebrew under `/he/`, and since 2026-10-15 the first English pages under `/en/`: the flight
+search, privacy and accessibility, for English speakers living in Israel. Everything else
+(home, flights found, destination pages) is Hebrew only for now, and the English pages
+say so where they link to it. The older English pages that used to live at `/` and
+`/privacy` were removed and `_redirects` sends both to their Hebrew counterparts with a 301.
+Each page with a counterpart names it with `hreflang`.
 
 The prices and the selection rules come from the `pricelog-scaner` service; this
 repository is only the site. The home page states the thresholds (40% below the median,
@@ -17,17 +20,19 @@ at least 200 observations, 7 days to departure, 48 hours since the fare was foun
 
 Hand-written HTML and CSS. No build step, no dependencies, no `package.json`.
 
-No analytics, no tag manager, no font CDN, and on every page but two, **no JavaScript and
+No analytics, no tag manager, no font CDN, and on every page but three, **no JavaScript and
 no third-party requests**. This is a stated commitment on the privacy page, not an
 optimisation, so keep it that way: adding a font CDN or an analytics snippet would make
 that page untrue.
 
-The two exceptions are the home page and `/he/search/`, which carry the flight search
-(Travelpayouts' White Label):
+The exceptions are the home page, `/he/search/` and `/en/search/`, which carry the flight
+search (Travelpayouts' White Label):
 
-- `js/search.js` (both pages) shows a gate and loads the White Label only after a click on
-  it. Until then neither page requests anything from another origin. The click is kept in
-  `localStorage` under `pricelog-search`, and nothing else is stored.
+- `js/search.js` (all three) shows a gate and loads the White Label only after a click on
+  it. Until then no page requests anything from another origin. The click is kept in
+  `localStorage` under `pricelog-search`, and nothing else is stored. It opens the White
+  Label in the page's `<html lang>` (by `?language=`), and a language picked inside the
+  White Label moves to the search page in that language.
 - `js/search-median.js` (`/he/search/` only) shows PriceLog's median beside a search from
   `/he/flights/medians.json`, which `pricelog-scaner` writes. It reads the address and that
   file, and stores and sends nothing.
@@ -57,6 +62,9 @@ he/index.html           /he/                he, rtl
 he/privacy.html         /he/privacy         he, rtl
 he/accessibility.html   /he/accessibility   he, rtl — the accessibility statement
 he/search/index.html    /he/search/         he, rtl — the flight search, see Stack
+en/search/index.html    /en/search/         en, ltr — the same search, no median panel yet
+en/privacy.html         /en/privacy         en, ltr
+en/accessibility.html   /en/accessibility   en, ltr
 he/flights/             /he/flights/        generated, see below
 _redirects              / and /privacy → /he/..., 301
 _headers                CSP and the other security headers, see Deploying
@@ -148,14 +156,17 @@ Cloudflare Pages, connected to this repository:
 
 `_headers` sets a Content-Security-Policy that allows no script and nothing from another
 origin, so the commitment above is enforced by the browser, not only by review. Only `/he/`
-and `/he/search/*` get a wider policy: script from this origin and the White Label's hosts. A page that needs a new kind of resource will show it
+and the two search paths, `/he/search/*` and `/en/search/*`, get a wider policy: script from this origin and the White Label's hosts. A page that needs a new kind of resource will show it
 as a CSP error in the console; widen the policy deliberately, and change the privacy page
 with it.
 
 `_headers` also makes browsers revalidate `site.css`, `styles.css` and `js/*` on every page
 view (`no-cache`). Their names carry no version, and with Cloudflare's default of four hours
 a returning visitor got the new HTML with the old stylesheet. Fonts and images keep the
-default.
+default. On `pricelog.fyi` the header reaches the browser only through a Cloudflare Cache
+Rule ("Respect origin for CSS/JS", added 2026-10-15): the zone's Browser Cache TTL otherwise
+overrides any shorter origin value. A stylesheet or script at a new path must be added to
+that rule too; `pricelog-fyi.pages.dev` does not show the difference.
 
 `contact@pricelog.fyi` is a Cloudflare Email Routing address that forwards to a personal
 mailbox. There is no mail server in this repository.
