@@ -8,11 +8,13 @@
 <link rel="canonical" href="https://pricelog.fyi/en/search/">
 <link rel="alternate" hreflang="he" href="https://pricelog.fyi/he/search/">
 <link rel="alternate" hreflang="en" href="https://pricelog.fyi/en/search/">
+<link rel="alternate" hreflang="x-default" href="https://pricelog.fyi/en/search/">
 <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
 <link rel="preload" href="/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/heebo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
 <script src="/js/search.js" defer></script>
+<script src="/js/search-median.js" defer></script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PriceLog">
 <meta property="og:locale" content="en_US">
@@ -35,10 +37,11 @@
 
 <header class="nav-wrap">
   <nav class="nav" aria-label="Main">
-    <a class="logo" href="/en/search/" aria-label="PriceLog, flight search"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+    <a class="logo" href="/en/" aria-label="PriceLog, home"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
     <div class="nav-links">
-      <a href="/en/search/" aria-current="page">Flight search</a>
-      <a href="/en/privacy">Privacy</a>
+      <a href="/en/flights/">Flights found</a>
+      <a href="/en/#destinations">Destinations</a>
+      <a href="/en/#how">How it works</a>
       <a href="/en/accessibility">Accessibility</a>
       <a href="/he/search/" lang="he" hreflang="he">עברית</a>
     </div>
@@ -46,7 +49,9 @@
     <details class="nav-menu">
       <summary aria-label="Menu"><svg aria-hidden="true"><use href="#i-menu"/></svg></summary>
       <div>
-        <a href="/en/search/" aria-current="page">Flight search</a>
+        <a href="/en/flights/">Flights found</a>
+        <a href="/en/#destinations">Destinations</a>
+        <a href="/en/#how">How it works</a>
         <a href="https://t.me/pricelog_deals" target="_blank" rel="noopener">Telegram channel<span class="sr-only"> (opens in a new tab)</span></a>
         <a href="/en/privacy">Privacy</a>
         <a href="/en/accessibility">Accessibility</a>
@@ -74,16 +79,18 @@
         <a href="/en/flights/">The flights PriceLog found</a> are shown without it.</p></noscript>
     </div>
     <div class="search-form" id="tpwl-search" data-search-box tabindex="-1" hidden></div>
+    <section class="median" data-median aria-labelledby="median-title" hidden></section>
     <div class="search-results" id="tpwl-tickets" data-search-box hidden></div>
   </div>
 </main>
 
 <footer class="foot">
-  <a class="logo" href="/en/search/" aria-label="PriceLog, flight search"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+  <a class="logo" href="/en/" aria-label="PriceLog, home"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
   <nav aria-label="Footer">
-    <a href="/en/search/">Flight search</a>
+    <a href="/en/flights/">Flights found</a>
     <a href="/en/privacy">Privacy</a>
     <a href="/en/accessibility">Accessibility</a>
+    <a href="/en/credits">Photo credits</a>
     <a href="/he/search/" lang="he" hreflang="he">עברית</a>
     <a href="mailto:contact@pricelog.fyi">contact@pricelog.fyi</a>
   </nav>
