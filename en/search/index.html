@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flight search · PriceLog</title>
+<meta name="description" content="Search flights from Tel Aviv on the dates you choose, and filter by baggage, stops and price.">
+<link rel="canonical" href="https://pricelog.fyi/en/search/">
+<link rel="alternate" hreflang="he" href="https://pricelog.fyi/he/search/">
+<link rel="alternate" hreflang="en" href="https://pricelog.fyi/en/search/">
+<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+<link rel="preload" href="/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/heebo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/site.css">
+<script src="/js/search.js" defer></script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PriceLog">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://pricelog.fyi/en/search/">
+<meta property="og:title" content="Flight search · PriceLog">
+<meta property="og:description" content="Search flights from Tel Aviv on the dates you choose, and filter by baggage, stops and price.">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21.5 3.5 2.8 10.7c-.9.4-.9 1.6 0 1.9l4.7 1.6 1.8 5.6c.2.7 1.1.9 1.6.4l2.7-2.6 4.8 3.5c.6.4 1.4.1 1.6-.6L22.9 4.9c.2-.9-.6-1.7-1.4-1.4z" fill="currentColor"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 28 28"><rect width="28" height="28" rx="9" fill="#CF4A23"/><path d="M6 17.5 10.5 13l3.5 3 7.5-7.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21.5" cy="8.5" r="2" fill="#fff"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav-wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="/en/search/" aria-label="PriceLog, flight search"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+    <div class="nav-links">
+      <a href="/en/search/" aria-current="page">Flight search</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/en/accessibility">Accessibility</a>
+      <a href="/he/search/" lang="he" hreflang="he">עברית</a>
+    </div>
+    <a class="btn btn--primary btn--sm" href="https://t.me/pricelog_deals" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>Telegram (in Hebrew)<span class="sr-only"> (opens in a new tab)</span></a>
+    <details class="nav-menu">
+      <summary aria-label="Menu"><svg aria-hidden="true"><use href="#i-menu"/></svg></summary>
+      <div>
+        <a href="/en/search/" aria-current="page">Flight search</a>
+        <a href="https://t.me/pricelog_deals" target="_blank" rel="noopener">Telegram channel (in Hebrew)<span class="sr-only"> (opens in a new tab)</span></a>
+        <a href="/en/privacy">Privacy</a>
+        <a href="/en/accessibility">Accessibility</a>
+        <a href="/he/search/" lang="he" hreflang="he">עברית</a>
+      </div>
+    </details>
+  </nav>
+</header>
+
+<main id="main">
+  <header class="doc-head">
+    <p class="eyebrow">Flight search</p>
+    <h1>Search flights on your dates</h1>
+    <p>The results and prices come from a partner's search engine and are current as of the
+      search. You can filter them by included baggage, stops and price.</p>
+  </header>
+  <div class="search">
+    <div class="search-gate" data-search-gate>
+      <p>The search engine comes from Travelpayouts, the affiliate network PriceLog works
+        through. When you turn it on, your browser loads code from Travelpayouts' servers, and
+        it sets cookies of its own. Your choice is saved in this browser.
+        <a href="/en/privacy#search">What exactly is loaded and stored</a></p>
+      <button class="btn btn--primary" type="button" hidden>Turn on the search engine</button>
+      <noscript><p>The search engine needs JavaScript, which is turned off in this browser.
+        <a href="/he/flights/" hreflang="he">The flights PriceLog found</a> (in Hebrew) are shown
+        without it.</p></noscript>
+    </div>
+    <div class="search-form" id="tpwl-search" data-search-box tabindex="-1" hidden></div>
+    <div class="search-results" id="tpwl-tickets" data-search-box hidden></div>
+  </div>
+</main>
+
+<footer class="foot">
+  <a class="logo" href="/en/search/" aria-label="PriceLog, flight search"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+  <nav aria-label="Footer">
+    <a href="/en/search/">Flight search</a>
+    <a href="/en/privacy">Privacy</a>
+    <a href="/en/accessibility">Accessibility</a>
+    <a href="/he/search/" lang="he" hreflang="he">עברית</a>
+    <a href="mailto:contact@pricelog.fyi">contact@pricelog.fyi</a>
+  </nav>
+  <p>The booking links on this site are affiliate links. If you book through one, the booking
+  site pays a commission at no extra cost to you. The commission does not affect which flights
+  are published. PriceLog is an independent project. It is not affiliated with, endorsed by or
+  sponsored by any airline or booking site.</p>
+</footer>
+
+</body>
+</html>

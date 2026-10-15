@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessibility · PriceLog</title>
+<meta name="description" content="PriceLog's accessibility statement: the standard, what was done, what was tested and when, and what is still open.">
+<link rel="canonical" href="https://pricelog.fyi/en/accessibility">
+<link rel="alternate" hreflang="he" href="https://pricelog.fyi/he/accessibility">
+<link rel="alternate" hreflang="en" href="https://pricelog.fyi/en/accessibility">
+<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+<link rel="preload" href="/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/heebo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="PriceLog">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://pricelog.fyi/en/accessibility">
+<meta property="og:title" content="Accessibility · PriceLog">
+<meta property="og:description" content="PriceLog's accessibility statement: the standard, what was done, what was tested and when, and what is still open.">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21.5 3.5 2.8 10.7c-.9.4-.9 1.6 0 1.9l4.7 1.6 1.8 5.6c.2.7 1.1.9 1.6.4l2.7-2.6 4.8 3.5c.6.4 1.4.1 1.6-.6L22.9 4.9c.2-.9-.6-1.7-1.4-1.4z" fill="currentColor"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 28 28"><rect width="28" height="28" rx="9" fill="#CF4A23"/><path d="M6 17.5 10.5 13l3.5 3 7.5-7.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21.5" cy="8.5" r="2" fill="#fff"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav-wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="/en/search/" aria-label="PriceLog, flight search"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+    <div class="nav-links">
+      <a href="/en/search/">Flight search</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/en/accessibility" aria-current="page">Accessibility</a>
+      <a href="/he/accessibility" lang="he" hreflang="he">עברית</a>
+    </div>
+    <a class="btn btn--primary btn--sm" href="https://t.me/pricelog_deals" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>Telegram (in Hebrew)<span class="sr-only"> (opens in a new tab)</span></a>
+    <details class="nav-menu">
+      <summary aria-label="Menu"><svg aria-hidden="true"><use href="#i-menu"/></svg></summary>
+      <div>
+        <a href="/en/search/">Flight search</a>
+        <a href="https://t.me/pricelog_deals" target="_blank" rel="noopener">Telegram channel (in Hebrew)<span class="sr-only"> (opens in a new tab)</span></a>
+        <a href="/en/privacy">Privacy</a>
+        <a href="/en/accessibility" aria-current="page">Accessibility</a>
+        <a href="/he/accessibility" lang="he" hreflang="he">עברית</a>
+      </div>
+    </details>
+  </nav>
+</header>
+
+<main id="main">
+  <header class="doc-head">
+    <p class="eyebrow">Accessibility</p>
+    <h1>Accessibility statement</h1>
+    <p>I built PriceLog so it can be used with a keyboard alone and with zoom. This page lists
+      what I did, what I tested and what I have not yet.</p>
+  </header>
+  <div class="doc"><div>
+      <h2>The standard</h2>
+      <p>I built the site to the WCAG 2.2 guidelines at level AA, which include the requirements
+      of the Israeli standard IS <span class="num">5568</span>.</p>
+
+      <h2>What I did on the site</h2>
+      <ul>
+        <li>Each page is marked with its language and direction: the Hebrew pages as Hebrew and
+        right-to-left, the English pages as English and left-to-right, so a screen reader reads
+        them in the right voice. Numbers, prices and addresses inside Hebrew text are marked
+        separately, so they are not reversed. Links to a page in the other language say so.</li>
+        <li>Everything can be done from the keyboard, with a visible focus outline. A "Skip to
+        content" link is the first thing on every page.</li>
+        <li>A continuous heading structure, and marked regions for the header, navigation,
+        content and footer.</li>
+        <li>Contrast of at least <span class="num">4.5:1</span> for all regular text, and at least
+        <span class="num">3:1</span> for large text and the marks in the chart.</li>
+        <li>Zoom up to <span class="num">200%</span> and narrow screens without horizontal
+        scrolling. Links and buttons are at least <span class="num">44</span> pixels tall.</li>
+        <li>There are no pop-ups, and no JavaScript or forms, except for the search engine on
+        the search pages and the Hebrew home page. There, a regular button turns on the engine;
+        the engine itself is not mine (see "Content outside my control"). After the click,
+        keyboard focus moves to the search area. Motion on the site runs once, never in a loop,
+        and lasts no longer than a second and a half. All of it turns off when you ask your
+        operating system to reduce motion.</li>
+      </ul>
+
+      <h2>What was tested, and when</h2>
+      <p>On 6 Oct 2026 I did a self-assessment: a review of the code against the standard's
+      guidelines, and a calculation of the contrast ratios from the site's colors. I fixed the
+      two small problems I found. That review was done on the site's previous design. I have
+      not yet reviewed the current design, from 7 Oct 2026, the same way, nor the English pages,
+      from 15 Oct 2026.</p>
+
+      <h2>Known limitations</h2>
+      <ul>
+        <li>I have not yet tested the site by hand with a screen reader.</li>
+        <li>Each flight's page has a price chart. Everything the chart shows — the price, the
+        median and how many prices it is built from — also appears as text.</li>
+        <li>Most of the site — the flight pages, the destination pages and the home page — is in
+        Hebrew only.</li>
+      </ul>
+
+      <h2>Content outside my control</h2>
+      <p>The Telegram channel, and the search and booking site that a flight page's booking
+      button leads to, are other people's sites. Their accessibility is their
+      responsibility.</p>
+      <p>The search form and search results on the search pages and the Hebrew home page are a
+      search engine from Travelpayouts, shown inside the page. I chose its colors, but I do not
+      write its structure, text or behavior and cannot fix them, and I have not tested it
+      against the standard. If it is not accessible to you, write to me and I will pass the
+      problem on to the provider. The flights PriceLog found are also shown without it, on the
+      <a href="/he/flights/" hreflang="he">flights found</a> page (in Hebrew).</p>
+
+      <h2>Run into a problem?</h2>
+      <p>If something on the site is not accessible to you, write to me, Shlomo, the person
+      responsible for the site: <a href="mailto:contact@pricelog.fyi">contact@pricelog.fyi</a>.
+      Say which page, what you tried to do, and which browser or assistive technology you used.
+      I will answer within <span class="num">14</span> days.</p>
+
+      <p class="updated">Last updated: 15 Oct 2026</p>
+  </div></div>
+</main>
+
+<footer class="foot">
+  <a class="logo" href="/en/search/" aria-label="PriceLog, flight search"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+  <nav aria-label="Footer">
+    <a href="/en/search/">Flight search</a>
+    <a href="/en/privacy">Privacy</a>
+    <a href="/en/accessibility">Accessibility</a>
+    <a href="/he/accessibility" lang="he" hreflang="he">עברית</a>
+    <a href="mailto:contact@pricelog.fyi">contact@pricelog.fyi</a>
+  </nav>
+  <p>The booking links on this site are affiliate links. If you book through one, the booking
+  site pays a commission at no extra cost to you. The commission does not affect which flights
+  are published. PriceLog is an independent project. It is not affiliated with, endorsed by or
+  sponsored by any airline or booking site.</p>
+</footer>
+
+</body>
+</html>
