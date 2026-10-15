@@ -7,8 +7,8 @@ median of its own observed history, rather than a "from" price in someone's sale
 Hebrew under `/he/`, and English under `/en/` for English speakers living in Israel: since
 2026-10-15 the flight search, privacy, accessibility and photo credits, and the home page,
 the flights found and the destination pages as `pricelog-scaner` generates them in both
-languages. The Telegram channel posts in Hebrew only, so the generated English pages do not
-offer it. The older English pages that used to live at `/` and `/privacy` were removed and
+languages. Since the same day the Telegram channel posts every flight in Hebrew and English,
+and the English pages offer it too. The older English pages that used to live at `/` and `/privacy` were removed and
 `_redirects` sends both to their Hebrew counterparts with a 301. Each hand-written page with
 a counterpart names it with `hreflang`.
 
