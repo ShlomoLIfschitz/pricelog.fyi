@@ -1,14 +1,17 @@
 {
   "version": 1,
-  "checked_at": "2026-10-15T08:43:06.952407+00:00",
+  "checked_at": "2026-10-15T09:28:29.468673+00:00",
   "destinations": {
     "LCA": {
       "name": "לרנקה",
+      "name_en": "Larnaca",
       "path": "/he/flights/larnaca/",
+      "path_en": "/en/flights/larnaca/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 1587,
           "median": "60",
           "p10": "41",
@@ -17,6 +20,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 3380,
           "median": "111",
           "p10": "62",
@@ -27,11 +31,14 @@
     },
     "PFO": {
       "name": "פאפוס",
+      "name_en": "Paphos",
       "path": "/he/flights/paphos/",
+      "path_en": "/en/flights/paphos/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 397,
           "median": "87",
           "p10": "59.6",
@@ -40,6 +47,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 881,
           "median": "217",
           "p10": "106",
@@ -50,11 +58,14 @@
     },
     "ATH": {
       "name": "אתונה",
+      "name_en": "Athens",
       "path": "/he/flights/athens/",
+      "path_en": "/en/flights/athens/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 814,
           "median": "73",
           "p10": "61",
@@ -63,6 +74,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 2208,
           "median": "165",
           "p10": "126",
@@ -73,11 +85,14 @@
     },
     "SKG": {
       "name": "סלוניקי",
+      "name_en": "Thessaloniki",
       "path": "/he/flights/thessaloniki/",
+      "path_en": "/en/flights/thessaloniki/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 216,
           "median": "101",
           "p10": "65.5",
@@ -86,6 +101,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 282,
           "median": "269.5",
           "p10": "200",
@@ -96,11 +112,14 @@
     },
     "RHO": {
       "name": "רודוס",
+      "name_en": "Rhodes",
       "path": "/he/flights/rhodes/",
+      "path_en": "/en/flights/rhodes/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 202,
           "median": "102.5",
           "p10": "79",
@@ -109,6 +128,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 503,
           "median": "256",
           "p10": "152.2",
@@ -119,11 +139,14 @@
     },
     "HER": {
       "name": "הרקליון",
+      "name_en": "Heraklion",
       "path": "/he/flights/heraklion/",
+      "path_en": "/en/flights/heraklion/",
       "currency": "usd",
       "segments": {
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 389,
           "median": "255",
           "p10": "190.8",
@@ -134,11 +157,14 @@
     },
     "AYT": {
       "name": "אנטליה",
+      "name_en": "Antalya",
       "path": "/he/flights/antalya/",
+      "path_en": "/en/flights/antalya/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 725,
           "median": "159",
           "p10": "127",
@@ -147,6 +173,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 897,
           "median": "379",
           "p10": "319.6",
@@ -157,11 +184,14 @@
     },
     "IST": {
       "name": "איסטנבול",
+      "name_en": "Istanbul",
       "path": "/he/flights/istanbul/",
+      "path_en": "/en/flights/istanbul/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 1232,
           "median": "148",
           "p10": "92.1",
@@ -170,6 +200,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 1061,
           "median": "313",
           "p10": "211",
@@ -180,11 +211,14 @@
     },
     "TBS": {
       "name": "טביליסי",
+      "name_en": "Tbilisi",
       "path": "/he/flights/tbilisi/",
+      "path_en": "/en/flights/tbilisi/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 3827,
           "median": "136",
           "p10": "89",
@@ -193,6 +227,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 4316,
           "median": "225",
           "p10": "182",
@@ -203,11 +238,14 @@
     },
     "BUS": {
       "name": "בטומי",
+      "name_en": "Batumi",
       "path": "/he/flights/batumi/",
+      "path_en": "/en/flights/batumi/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 2133,
           "median": "133",
           "p10": "93.2",
@@ -216,6 +254,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 3470,
           "median": "344",
           "p10": "186",
@@ -226,11 +265,14 @@
     },
     "EVN": {
       "name": "ירוואן",
+      "name_en": "Yerevan",
       "path": "/he/flights/yerevan/",
+      "path_en": "/en/flights/yerevan/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 2887,
           "median": "121",
           "p10": "80.6",
@@ -239,6 +281,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 3251,
           "median": "246",
           "p10": "173",
@@ -249,11 +292,14 @@
     },
     "ROM": {
       "name": "רומא",
+      "name_en": "Rome",
       "path": "/he/flights/rome/",
+      "path_en": "/en/flights/rome/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 1486,
           "median": "70",
           "p10": "64",
@@ -262,6 +308,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 3649,
           "median": "150",
           "p10": "121",
@@ -272,11 +319,14 @@
     },
     "MIL": {
       "name": "מילאנו",
+      "name_en": "Milan",
       "path": "/he/flights/milan/",
+      "path_en": "/en/flights/milan/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 1367,
           "median": "71",
           "p10": "63",
@@ -285,6 +335,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 2837,
           "median": "160",
           "p10": "119",
@@ -295,11 +346,14 @@
     },
     "NAP": {
       "name": "נאפולי",
+      "name_en": "Naples",
       "path": "/he/flights/naples/",
+      "path_en": "/en/flights/naples/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 376,
           "median": "67",
           "p10": "51",
@@ -308,6 +362,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 695,
           "median": "177",
           "p10": "100",
@@ -318,11 +373,14 @@
     },
     "VCE": {
       "name": "ונציה",
+      "name_en": "Venice",
       "path": "/he/flights/venice/",
+      "path_en": "/en/flights/venice/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 680,
           "median": "95",
           "p10": "67",
@@ -331,6 +389,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 1052,
           "median": "210.5",
           "p10": "125",
@@ -341,11 +400,14 @@
     },
     "CTA": {
       "name": "קטניה",
+      "name_en": "Catania",
       "path": "/he/flights/catania/",
+      "path_en": "/en/flights/catania/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 345,
           "median": "83",
           "p10": "45",
@@ -354,6 +416,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 506,
           "median": "183.5",
           "p10": "101",
@@ -364,11 +427,14 @@
     },
     "BCN": {
       "name": "ברצלונה",
+      "name_en": "Barcelona",
       "path": "/he/flights/barcelona/",
+      "path_en": "/en/flights/barcelona/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 852,
           "median": "105",
           "p10": "84",
@@ -377,6 +443,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 1602,
           "median": "250",
           "p10": "198",
@@ -387,11 +454,14 @@
     },
     "MAD": {
       "name": "מדריד",
+      "name_en": "Madrid",
       "path": "/he/flights/madrid/",
+      "path_en": "/en/flights/madrid/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 650,
           "median": "136",
           "p10": "92",
@@ -400,6 +470,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 831,
           "median": "268",
           "p10": "186",
@@ -410,11 +481,14 @@
     },
     "PAR": {
       "name": "פריז",
+      "name_en": "Paris",
       "path": "/he/flights/paris/",
+      "path_en": "/en/flights/paris/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 1539,
           "median": "131",
           "p10": "97",
@@ -423,6 +497,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 3721,
           "median": "323",
           "p10": "219",
@@ -433,11 +508,14 @@
     },
     "LON": {
       "name": "לונדון",
+      "name_en": "London",
       "path": "/he/flights/london/",
+      "path_en": "/en/flights/london/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 1025,
           "median": "117",
           "p10": "86",
@@ -446,6 +524,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 2189,
           "median": "288",
           "p10": "206",
@@ -456,11 +535,14 @@
     },
     "AMS": {
       "name": "אמסטרדם",
+      "name_en": "Amsterdam",
       "path": "/he/flights/amsterdam/",
+      "path_en": "/en/flights/amsterdam/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 566,
           "median": "143",
           "p10": "102",
@@ -469,6 +551,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 1315,
           "median": "374",
           "p10": "270",
@@ -479,11 +562,14 @@
     },
     "BER": {
       "name": "ברלין",
+      "name_en": "Berlin",
       "path": "/he/flights/berlin/",
+      "path_en": "/en/flights/berlin/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 1062,
           "median": "123",
           "p10": "100",
@@ -492,6 +578,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 1845,
           "median": "281",
           "p10": "235.4",
@@ -502,11 +589,14 @@
     },
     "PRG": {
       "name": "פראג",
+      "name_en": "Prague",
       "path": "/he/flights/prague/",
+      "path_en": "/en/flights/prague/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 1177,
           "median": "119",
           "p10": "93",
@@ -515,6 +605,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 3723,
           "median": "297",
           "p10": "218",
@@ -525,11 +616,14 @@
     },
     "BUD": {
       "name": "בודפשט",
+      "name_en": "Budapest",
       "path": "/he/flights/budapest/",
+      "path_en": "/en/flights/budapest/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 979,
           "median": "76",
           "p10": "67",
@@ -538,6 +632,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 3172,
           "median": "170",
           "p10": "132",
@@ -548,11 +643,14 @@
     },
     "VAR": {
       "name": "ורנה",
+      "name_en": "Varna",
       "path": "/he/flights/varna/",
+      "path_en": "/en/flights/varna/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 386,
           "median": "114.5",
           "p10": "61",
@@ -561,6 +659,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 511,
           "median": "242",
           "p10": "120",
@@ -571,11 +670,14 @@
     },
     "BAK": {
       "name": "באקו",
+      "name_en": "Baku",
       "path": "/he/flights/baku/",
+      "path_en": "/en/flights/baku/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 409,
           "median": "132",
           "p10": "114",
@@ -584,6 +686,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 681,
           "median": "288",
           "p10": "217",
@@ -594,11 +697,14 @@
     },
     "DXB": {
       "name": "דובאי",
+      "name_en": "Dubai",
       "path": "/he/flights/dubai/",
+      "path_en": "/en/flights/dubai/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 234,
           "median": "203",
           "p10": "130",
@@ -607,6 +713,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 405,
           "median": "422",
           "p10": "260",
@@ -617,11 +724,14 @@
     },
     "VNO": {
       "name": "וילנה",
+      "name_en": "Vilnius",
       "path": "/he/flights/vilnius/",
+      "path_en": "/en/flights/vilnius/",
       "currency": "usd",
       "segments": {
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 328,
           "median": "233",
           "p10": "151",
@@ -632,11 +742,14 @@
     },
     "VIE": {
       "name": "וינה",
+      "name_en": "Vienna",
       "path": "/he/flights/vienna/",
+      "path_en": "/en/flights/vienna/",
       "currency": "usd",
       "segments": {
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 351,
           "median": "333",
           "p10": "272",
@@ -647,11 +760,14 @@
     },
     "BUH": {
       "name": "בוקרשט",
+      "name_en": "Bucharest",
       "path": "/he/flights/bucharest/",
+      "path_en": "/en/flights/bucharest/",
       "currency": "usd",
       "segments": {
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 384,
           "median": "144.5",
           "p10": "126",
@@ -662,11 +778,14 @@
     },
     "RMO": {
       "name": "קישינב",
+      "name_en": "Chisinau",
       "path": "/he/flights/chisinau/",
+      "path_en": "/en/flights/chisinau/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 217,
           "median": "95",
           "p10": "79",
@@ -675,6 +794,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 508,
           "median": "189",
           "p10": "140",
@@ -685,11 +805,14 @@
     },
     "BEG": {
       "name": "בלגרד",
+      "name_en": "Belgrade",
       "path": "/he/flights/belgrade/",
+      "path_en": "/en/flights/belgrade/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 276,
           "median": "133",
           "p10": "92",
@@ -698,6 +821,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 366,
           "median": "267",
           "p10": "206",
@@ -708,11 +832,14 @@
     },
     "WAW": {
       "name": "ורשה",
+      "name_en": "Warsaw",
       "path": "/he/flights/warsaw/",
+      "path_en": "/en/flights/warsaw/",
       "currency": "usd",
       "segments": {
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 272,
           "median": "183",
           "p10": "133",
@@ -723,11 +850,14 @@
     },
     "BKK": {
       "name": "בנגקוק",
+      "name_en": "Bangkok",
       "path": "/he/flights/bangkok/",
+      "path_en": "/en/flights/bangkok/",
       "currency": "usd",
       "segments": {
         "OW": {
           "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
           "observations": 217,
           "median": "440",
           "p10": "396.6",
@@ -736,6 +866,7 @@
         },
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 398,
           "median": "843.5",
           "p10": "712.7",
@@ -746,11 +877,14 @@
     },
     "HKT": {
       "name": "פוקט",
+      "name_en": "Phuket",
       "path": "/he/flights/phuket/",
+      "path_en": "/en/flights/phuket/",
       "currency": "usd",
       "segments": {
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 418,
           "median": "860",
           "p10": "697",
@@ -761,11 +895,14 @@
     },
     "KRK": {
       "name": "קרקוב",
+      "name_en": "Krakow",
       "path": "/he/flights/krakow/",
+      "path_en": "/en/flights/krakow/",
       "currency": "usd",
       "segments": {
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 340,
           "median": "198",
           "p10": "125",
@@ -776,11 +913,14 @@
     },
     "LIS": {
       "name": "ליסבון",
+      "name_en": "Lisbon",
       "path": "/he/flights/lisbon/",
+      "path_en": "/en/flights/lisbon/",
       "currency": "usd",
       "segments": {
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 309,
           "median": "348",
           "p10": "257.6",
@@ -791,11 +931,14 @@
     },
     "NYC": {
       "name": "ניו יורק",
+      "name_en": "New York",
       "path": "/he/flights/new-york/",
+      "path_en": "/en/flights/new-york/",
       "currency": "usd",
       "segments": {
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 392,
           "median": "826",
           "p10": "718.2",
@@ -806,11 +949,14 @@
     },
     "TYO": {
       "name": "טוקיו",
+      "name_en": "Tokyo",
       "path": "/he/flights/tokyo/",
+      "path_en": "/en/flights/tokyo/",
       "currency": "usd",
       "segments": {
         "RT": {
           "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
           "observations": 454,
           "median": "1104.5",
           "p10": "921.3",

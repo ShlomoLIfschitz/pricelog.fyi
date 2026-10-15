@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PriceLog · flight prices from Tel Aviv, compared with the prices collected</title>
+<meta name="description" content="PriceLog collects flight prices from Tel Aviv every 6 hours. A flight is published only when its price is at least 40% below the median of the prices collected for the destination.">
+<link rel="canonical" href="https://pricelog.fyi/en/">
+<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+<link rel="preload" href="/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/heebo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/site.css">
+<script src="/js/search.js" defer></script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PriceLog">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://pricelog.fyi/en/">
+<meta property="og:title" content="PriceLog · flight prices from Tel Aviv, compared with the prices collected">
+<meta property="og:description" content="PriceLog collects flight prices from Tel Aviv every 6 hours. A flight is published only when its price is at least 40% below the median of the prices collected for the destination.">
+<meta property="og:image" content="https://pricelog.fyi/og-he.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21.5 3.5 2.8 10.7c-.9.4-.9 1.6 0 1.9l4.7 1.6 1.8 5.6c.2.7 1.1.9 1.6.4l2.7-2.6 4.8 3.5c.6.4 1.4.1 1.6-.6L22.9 4.9c.2-.9-.6-1.7-1.4-1.4z" fill="currentColor"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-log" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-cmp" viewBox="0 0 24 24"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-ok" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h4"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M9 2h6"/></g></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M2.5 13.5 21 6l-3.5 13-5.5-4-3 3v-4.5L2.5 13.5z" fill="currentColor"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+  <symbol id="i-col" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M9.5 21V10M14.5 21V10M19 21V10M2 10l10-6 10 6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".15"/><path d="m8 12 3 3 5-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M4 6l6 6 4-4 6 7M15 15h5v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 19h16M7 16v-3M12 16V6M17 16V9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 28 28"><rect width="28" height="28" rx="9" fill="#CF4A23"/><path d="M6 17.5 10.5 13l3.5 3 7.5-7.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21.5" cy="8.5" r="2" fill="#fff"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav-wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="/en/" aria-label="PriceLog, home"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+    <div class="nav-links">
+      <a href="/en/flights/">Flights found</a>
+      <a href="/en/#destinations">Destinations</a>
+      <a href="/en/#how">How it works</a>
+      <a href="/en/accessibility">Accessibility</a>
+    </div>
+    <details class="nav-menu">
+      <summary aria-label="Menu"><svg class="" aria-hidden="true"><use href="#i-menu"/></svg></summary>
+      <div>
+        <a href="/en/flights/">Flights found</a>
+        <a href="/en/#destinations">Destinations</a>
+        <a href="/en/#how">How it works</a>
+        <a href="/en/privacy">Privacy</a>
+        <a href="/en/accessibility">Accessibility</a>
+      </div>
+    </details>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <img class="hero-img" src="/img/dest/ist-1920.webp" srcset="/img/dest/ist-800.webp 800w, /img/dest/ist-1280.webp 1280w, /img/dest/ist-1920.webp 1920w" sizes="100vw" alt="" fetchpriority="high">
+  <div class="hero-row">
+    <div class="hero-copy">
+      <p class="hero-tag">PriceLog · flights from Tel Aviv</p>
+      <h1><span class="w" style="--i:0">How</span> <span class="w" style="--i:1">do</span> <span class="w" style="--i:2">you</span> <span class="w" style="--i:3">know</span> <span class="w" style="--i:4">if</span> <span class="w" style="--i:5">a</span> <span class="w" style="--i:6">flight</span> <span class="w" style="--i:7">price</span> <span class="w" style="--i:8">is</span> <em class="w u" style="--i:9">really</em> <em class="w" style="--i:10">low?</em></h1>
+      <p class="hero-lede">PriceLog collects flight prices from Tel Aviv every <span class="num" dir="ltr">6</span> hours and keeps them. When a price is especially low compared with the prices collected for the same destination, it is published here.</p>
+      <a class="hero-more" href="/en/flights/">Or: the flights found<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <section class="hero-search" id="search" aria-labelledby="search-h">
+      <h2 id="search-h">Flight search</h2>
+      <div class="search-gate" data-search-gate>
+        <p>The search engine comes from Travelpayouts, the affiliate network PriceLog works through. When you turn it on, your browser loads code from Travelpayouts' servers, and it sets cookies of its own. Your choice is saved in this browser. <a href="/en/privacy#search">What exactly is loaded and stored</a></p>
+        <button class="btn btn--primary" type="button" hidden>Turn on the search engine</button>
+        <noscript><p>The search engine needs JavaScript, which is turned off in this browser.</p></noscript>
+      </div>
+      <div id="tpwl-search" data-search-box tabindex="-1" hidden></div>
+    </section>
+  </div>
+  <dl class="stats">
+    <div><dt><span class="l">hours at most from finding the price to publishing it</span><span class="s">hours at most</span></dt><dd class="num" dir="ltr">48</dd></div>
+    <div><dt><span class="l">times a day prices are collected, every <span class="num" dir="ltr">6</span> hours</span><span class="s">times a day</span></dt><dd class="num" dir="ltr">4×</dd></div>
+    <div><dt><span class="l">below the median at least, for a flight to be published</span><span class="s">below the median</span></dt><dd class="num" dir="ltr">40%+</dd></div>
+  </dl>
+  <p class="credit">Illustrative photo · <a href="/en/credits#ist"><span dir="ltr">Arild Vågen, CC BY-SA 3.0</span></a></p>
+</section>
+
+<section class="sec wrap" aria-labelledby="today-h">
+  <div class="sec-head">
+    <div>
+      <p class="eyebrow">Today · <time datetime="2026-10-15"><span class="num" dir="ltr">15 Oct 2026</span></time></p>
+      <h2 class="sec-title" id="today-h">Flights published today</h2>
+      <p class="sec-sub">Today 6 flights were published that meet every rule. 4 of them are shown here.</p>
+    </div>
+    <a class="sec-link" href="/en/flights/">All flights found<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+  <ul class="cards cards--row">
+    <li class="card" data-trip="OW">
+      <div class="card-media"><img src="/img/dest/ist-800.webp" srcset="/img/dest/ist-800.webp 800w, /img/dest/ist-1280.webp 1280w, /img/dest/ist-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">55%</b>below the median</span><span class="pill">No newer price</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/en/flights/20261015_IST_OW/">Istanbul</a></h3><p class="card-country">Turkey · one way</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">1 stop</span><span aria-hidden="true">·</span><span class="num" dir="ltr">26 Mar 2027</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$66</strong><small>Median price <span class="num" dir="ltr">$148</span> · from <span class="num" dir="ltr">1,228</span> prices</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>Flight details and comparison</span></div>
+      </div>
+    </li>
+    <li class="card" data-trip="RT">
+      <div class="card-media"><img src="/img/dest/lca-800.webp" srcset="/img/dest/lca-800.webp 800w, /img/dest/lca-1280.webp 1280w, /img/dest/lca-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">53%</b>below the median</span><span class="pill">Found again at a similar price</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/en/flights/20261015_LCA_RT/">Larnaca</a></h3><p class="card-country">Cyprus · round trip</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">Direct</span><span aria-hidden="true">·</span><span class="num" dir="ltr">2 Nov – 20 Nov 2026</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$52</strong><small>Median price <span class="num" dir="ltr">$111</span> · from <span class="num" dir="ltr">3,373</span> prices</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>Flight details and comparison</span></div>
+      </div>
+    </li>
+    <li class="card" data-trip="RT">
+      <div class="card-media"><img src="/img/dest/bus-800.webp" srcset="/img/dest/bus-800.webp 800w, /img/dest/bus-1280.webp 1280w, /img/dest/bus-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">52%</b>below the median</span><span class="pill">Found again at a similar price</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/en/flights/20261015_BUS_RT/">Batumi</a></h3><p class="card-country">Georgia · round trip</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">Direct</span><span aria-hidden="true">·</span><span class="num" dir="ltr">1 Dec – 4 Dec 2026</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$165</strong><small>Median price <span class="num" dir="ltr">$344</span> · from <span class="num" dir="ltr">3,465</span> prices</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>Flight details and comparison</span></div>
+      </div>
+    </li>
+    <li class="card" data-trip="RT">
+      <div class="card-media"><img src="/img/dest/ist-800.webp" srcset="/img/dest/ist-800.webp 800w, /img/dest/ist-1280.webp 1280w, /img/dest/ist-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">50%</b>below the median</span><span class="pill">No newer price</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/en/flights/20261015_IST_RT/">Istanbul</a></h3><p class="card-country">Turkey · round trip</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">1 stop</span><span aria-hidden="true">·</span><span class="num" dir="ltr">8 Nov – 26 Nov 2026</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$157</strong><small>Median price <span class="num" dir="ltr">$313</span> · from <span class="num" dir="ltr">1,061</span> prices</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>Flight details and comparison</span></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="sec how on-dark" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">How it works</p>
+        <h2 class="sec-title" id="how-h">How does PriceLog choose which flights to publish?</h2>
+        <p class="sec-sub">Not every low price is published. Every flight is held to the same rules, whatever commission the booking site pays on it.</p>
+      </div>
+    </div>
+    <ol class="how-steps">
+      <li class="how-step"><header><i><svg class="" aria-hidden="true"><use href="#i-log"/></svg></i><span aria-hidden="true">01</span></header><h3>Collecting prices</h3><p>Every <span class="num" dir="ltr">6</span> hours PriceLog collects flight prices from Tel Aviv to each destination, one way and round trip. Each price is stored as it was found and is never changed afterward.</p></li>
+      <li class="how-step"><header><i><svg class="" aria-hidden="true"><use href="#i-cmp"/></svg></i><span aria-hidden="true">02</span></header><h3>Comparing with the destination's median</h3><p>Each new price is compared with the median of all the prices collected for the same destination and trip type, across every departure date. The median is the price in the middle: half the prices are above it and half below. Comparing starts only after at least <span class="num" dir="ltr">200</span> prices have been collected.</p></li>
+      <li class="how-step"><header><i><svg class="" aria-hidden="true"><use href="#i-ok"/></svg></i><span aria-hidden="true">03</span></header><h3>Only an especially low price</h3><p>A flight is published only if its price is at least <span class="num" dir="ltr">40%</span> below the median, and also among the lowest <span class="num" dir="ltr">10%</span> of the prices collected for the destination.</p></li>
+      <li class="how-step"><header><i><svg class="" aria-hidden="true"><use href="#i-doc"/></svg></i><span aria-hidden="true">04</span></header><h3>The data beside every flight</h3><p>Each flight's page shows the price, the median it was measured against, how many prices were collected, and when the price was found.</p></li>
+    </ol>
+    <svg class="how-path" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M1190 30 C 900 -6, 300 -6, 10 30" fill="none" stroke="currentColor" stroke-opacity=".55" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round" vector-effect="non-scaling-stroke"/><circle cx="1190" cy="30" r="5" fill="currentColor"/><circle cx="10" cy="30" r="5" fill="currentColor"/></svg>
+    <div class="how-out"><b>When a flight is not published:</b>
+      <ul>
+        <li>The price was found more than <span class="num" dir="ltr">48</span> hours ago</li>
+        <li>The flight departs in less than <span class="num" dir="ltr">7</span> days</li>
+        <li>The flight, or its return, departs more than <span class="num" dir="ltr">330</span> days from now</li>
+        <li>The same flight was already published in the past week</li>
+        <li>A flight to the same destination, of the same trip type, was already published today</li>
+      </ul>
+    </div>
+    <p class="how-note">Good to know: for now the median covers all departure dates together, with no split by season. So a price in a cheap season can look exceptional even if it is common for that season. Once enough data has built up, comparing by season will be possible.</p>
+  </div>
+</section>
+
+<section class="sec wrap" aria-labelledby="cmp-h">
+  <div class="sec-head">
+    <div>
+      <p class="eyebrow">Why history matters</p>
+      <h2 class="sec-title" id="cmp-h">A flight for $150. Cheap or expensive?</h2>
+      <p class="sec-sub">Without knowing what earlier flights to the same destination cost, it is hard to say. That is why PriceLog keeps every price it collects, and compares each new price with them.</p>
+    </div>
+  </div>
+  <dl class="compare">
+    <div><dt>A regular sale</dt><dd>Shows a price chosen for promotion, and does not always show how it compares with earlier prices.</dd>
+      <svg viewBox="0 0 400 70" aria-hidden="true"><circle cx="390" cy="40" r="7" fill="#5E6B75"/></svg></div>
+    <div class="is-us"><dt>PriceLog</dt><dd>Shows the price beside the median of the prices collected for the same destination, every <span class="num" dir="ltr">6</span> hours.</dd>
+      <svg viewBox="0 0 400 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 L40 22 L80 35 L120 18 L160 28 L200 20 L240 33 L280 24 L320 30 L360 26 L400 60" fill="none" stroke="#0E6F8A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 27 H400" stroke="#0E6F8A" stroke-opacity=".35" stroke-dasharray="6 6"/><circle cx="393" cy="60" r="7" fill="#F2643A"/></svg></div>
+  </dl>
+</section>
+
+<section class="sec sec--tight-top wrap" id="destinations" aria-labelledby="dest-h">
+  <div class="sec-head">
+    <div>
+      <p class="eyebrow">Destinations</p>
+      <h2 class="sec-title" id="dest-h">The destinations with a page on the site.</h2>
+      <p class="sec-sub">PriceLog collects prices for <span class="num" dir="ltr">102</span> destinations. <span class="num" dir="ltr">39</span> of them are shown here, the ones that already have a page on the site. A flight to a destination is published only after at least <span class="num" dir="ltr">200</span> prices have been collected for it.</p>
+    </div>
+  </div>
+  <ul class="tiles" aria-label="Destinations">
+    <li class="tile"><img src="/img/dest/lca-800.webp" srcset="/img/dest/lca-800.webp 800w, /img/dest/lca-1280.webp 1280w, /img/dest/lca-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/larnaca/">Larnaca</a></b><span>Cyprus</span></li>
+    <li class="tile"><img src="/img/dest/pfo-800.webp" srcset="/img/dest/pfo-800.webp 800w, /img/dest/pfo-1280.webp 1280w, /img/dest/pfo-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/paphos/">Paphos</a></b><span>Cyprus</span></li>
+    <li class="tile"><img src="/img/dest/ath-800.webp" srcset="/img/dest/ath-800.webp 800w, /img/dest/ath-1280.webp 1280w, /img/dest/ath-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/athens/">Athens</a></b><span>Greece</span></li>
+    <li class="tile"><img src="/img/dest/skg-800.webp" srcset="/img/dest/skg-800.webp 800w, /img/dest/skg-1280.webp 1280w, /img/dest/skg-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/thessaloniki/">Thessaloniki</a></b><span>Greece</span></li>
+    <li class="tile"><img src="/img/dest/rho-800.webp" srcset="/img/dest/rho-800.webp 800w, /img/dest/rho-1280.webp 1280w, /img/dest/rho-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/rhodes/">Rhodes</a></b><span>Greece</span></li>
+    <li class="tile"><img src="/img/dest/her-800.webp" srcset="/img/dest/her-800.webp 800w, /img/dest/her-1280.webp 1280w, /img/dest/her-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/heraklion/">Heraklion</a></b><span>Crete, Greece</span></li>
+    <li class="tile"><img src="/img/dest/ayt-800.webp" srcset="/img/dest/ayt-800.webp 800w, /img/dest/ayt-1280.webp 1280w, /img/dest/ayt-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/antalya/">Antalya</a></b><span>Turkey</span></li>
+    <li class="tile"><img src="/img/dest/ist-800.webp" srcset="/img/dest/ist-800.webp 800w, /img/dest/ist-1280.webp 1280w, /img/dest/ist-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/istanbul/">Istanbul</a></b><span>Turkey</span></li>
+    <li class="tile"><img src="/img/dest/tbs-800.webp" srcset="/img/dest/tbs-800.webp 800w, /img/dest/tbs-1280.webp 1280w, /img/dest/tbs-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/tbilisi/">Tbilisi</a></b><span>Georgia</span></li>
+    <li class="tile"><img src="/img/dest/bus-800.webp" srcset="/img/dest/bus-800.webp 800w, /img/dest/bus-1280.webp 1280w, /img/dest/bus-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/batumi/">Batumi</a></b><span>Georgia</span></li>
+    <li class="tile"><img src="/img/dest/evn-800.webp" srcset="/img/dest/evn-800.webp 800w, /img/dest/evn-1280.webp 1280w, /img/dest/evn-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/yerevan/">Yerevan</a></b><span>Armenia</span></li>
+    <li class="tile"><img src="/img/dest/fco-800.webp" srcset="/img/dest/fco-800.webp 800w, /img/dest/fco-1280.webp 1280w, /img/dest/fco-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/rome/">Rome</a></b><span>Italy</span></li>
+    <li class="tile"><img src="/img/dest/mxp-800.webp" srcset="/img/dest/mxp-800.webp 800w, /img/dest/mxp-1280.webp 1280w, /img/dest/mxp-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/milan/">Milan</a></b><span>Italy</span></li>
+    <li class="tile"><img src="/img/dest/nap-800.webp" srcset="/img/dest/nap-800.webp 800w, /img/dest/nap-1280.webp 1280w, /img/dest/nap-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/naples/">Naples</a></b><span>Italy</span></li>
+    <li class="tile"><img src="/img/dest/vce-800.webp" srcset="/img/dest/vce-800.webp 800w, /img/dest/vce-1280.webp 1280w, /img/dest/vce-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/venice/">Venice</a></b><span>Italy</span></li>
+    <li class="tile"><img src="/img/dest/cta-800.webp" srcset="/img/dest/cta-800.webp 800w, /img/dest/cta-1280.webp 1280w, /img/dest/cta-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/catania/">Catania</a></b><span>Sicily, Italy</span></li>
+    <li class="tile"><img src="/img/dest/bcn-800.webp" srcset="/img/dest/bcn-800.webp 800w, /img/dest/bcn-1280.webp 1280w, /img/dest/bcn-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/barcelona/">Barcelona</a></b><span>Spain</span></li>
+    <li class="tile"><img src="/img/dest/mad-800.webp" srcset="/img/dest/mad-800.webp 800w, /img/dest/mad-1280.webp 1280w, /img/dest/mad-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/madrid/">Madrid</a></b><span>Spain</span></li>
+    <li class="tile"><img src="/img/dest/cdg-800.webp" srcset="/img/dest/cdg-800.webp 800w, /img/dest/cdg-1280.webp 1280w, /img/dest/cdg-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/paris/">Paris</a></b><span>France</span></li>
+    <li class="tile"><img src="/img/dest/lgw-800.webp" srcset="/img/dest/lgw-800.webp 800w, /img/dest/lgw-1280.webp 1280w, /img/dest/lgw-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/london/">London</a></b><span>United Kingdom</span></li>
+    <li class="tile"><img src="/img/dest/ams-800.webp" srcset="/img/dest/ams-800.webp 800w, /img/dest/ams-1280.webp 1280w, /img/dest/ams-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/amsterdam/">Amsterdam</a></b><span>Netherlands</span></li>
+    <li class="tile"><img src="/img/dest/ber-800.webp" srcset="/img/dest/ber-800.webp 800w, /img/dest/ber-1280.webp 1280w, /img/dest/ber-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/berlin/">Berlin</a></b><span>Germany</span></li>
+    <li class="tile"><img src="/img/dest/prg-800.webp" srcset="/img/dest/prg-800.webp 800w, /img/dest/prg-1280.webp 1280w, /img/dest/prg-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/prague/">Prague</a></b><span>Czech Republic</span></li>
+    <li class="tile"><img src="/img/dest/bud-800.webp" srcset="/img/dest/bud-800.webp 800w, /img/dest/bud-1280.webp 1280w, /img/dest/bud-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/budapest/">Budapest</a></b><span>Hungary</span></li>
+    <li class="tile"><img src="/img/dest/var-800.webp" srcset="/img/dest/var-800.webp 800w, /img/dest/var-1280.webp 1280w, /img/dest/var-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/varna/">Varna</a></b><span>Bulgaria</span></li>
+    <li class="tile"><img src="/img/dest/bak-800.webp" srcset="/img/dest/bak-800.webp 800w, /img/dest/bak-1280.webp 1280w, /img/dest/bak-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/baku/">Baku</a></b><span>Azerbaijan</span></li>
+    <li class="tile"><img src="/img/dest/dxb-800.webp" srcset="/img/dest/dxb-800.webp 800w, /img/dest/dxb-1280.webp 1280w, /img/dest/dxb-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/dubai/">Dubai</a></b><span>United Arab Emirates</span></li>
+    <li class="tile"><img src="/img/dest/vno-800.webp" srcset="/img/dest/vno-800.webp 800w, /img/dest/vno-1280.webp 1280w, /img/dest/vno-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/vilnius/">Vilnius</a></b><span>Lithuania</span></li>
+    <li class="tile"><img src="/img/dest/vie-800.webp" srcset="/img/dest/vie-800.webp 800w, /img/dest/vie-1280.webp 1280w, /img/dest/vie-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/vienna/">Vienna</a></b><span>Austria</span></li>
+    <li class="tile"><img src="/img/dest/buh-800.webp" srcset="/img/dest/buh-800.webp 800w, /img/dest/buh-1280.webp 1280w, /img/dest/buh-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/bucharest/">Bucharest</a></b><span>Romania</span></li>
+    <li class="tile"><img src="/img/dest/rmo-800.webp" srcset="/img/dest/rmo-800.webp 800w, /img/dest/rmo-1280.webp 1280w, /img/dest/rmo-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/chisinau/">Chisinau</a></b><span>Moldova</span></li>
+    <li class="tile"><img src="/img/dest/beg-800.webp" srcset="/img/dest/beg-800.webp 800w, /img/dest/beg-1280.webp 1280w, /img/dest/beg-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/belgrade/">Belgrade</a></b><span>Serbia</span></li>
+    <li class="tile"><img src="/img/dest/waw-800.webp" srcset="/img/dest/waw-800.webp 800w, /img/dest/waw-1280.webp 1280w, /img/dest/waw-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/warsaw/">Warsaw</a></b><span>Poland</span></li>
+    <li class="tile"><img src="/img/dest/bkk-800.webp" srcset="/img/dest/bkk-800.webp 800w, /img/dest/bkk-1280.webp 1280w, /img/dest/bkk-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/bangkok/">Bangkok</a></b><span>Thailand</span></li>
+    <li class="tile"><img src="/img/dest/hkt-800.webp" srcset="/img/dest/hkt-800.webp 800w, /img/dest/hkt-1280.webp 1280w, /img/dest/hkt-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/phuket/">Phuket</a></b><span>Thailand</span></li>
+    <li class="tile"><img src="/img/dest/krk-800.webp" srcset="/img/dest/krk-800.webp 800w, /img/dest/krk-1280.webp 1280w, /img/dest/krk-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/krakow/">Krakow</a></b><span>Poland</span></li>
+    <li class="tile"><img src="/img/dest/lis-800.webp" srcset="/img/dest/lis-800.webp 800w, /img/dest/lis-1280.webp 1280w, /img/dest/lis-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/lisbon/">Lisbon</a></b><span>Portugal</span></li>
+    <li class="tile"><img src="/img/dest/nyc-800.webp" srcset="/img/dest/nyc-800.webp 800w, /img/dest/nyc-1280.webp 1280w, /img/dest/nyc-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/new-york/">New York</a></b><span>United States</span></li>
+    <li class="tile"><img src="/img/dest/tyo-800.webp" srcset="/img/dest/tyo-800.webp 800w, /img/dest/tyo-1280.webp 1280w, /img/dest/tyo-1920.webp 1920w" sizes="240px" alt="" loading="lazy"><b><a class="tile-link" href="/en/flights/tokyo/">Tokyo</a></b><span>Japan</span></li>
+  </ul>
+</section>
+
+<section class="sec sec--no-top wrap" aria-labelledby="live-h">
+  <div class="box">
+    <i class="box-icon" aria-hidden="true"><svg class="" aria-hidden="true"><use href="#i-clock"/></svg></i>
+    <div>
+      <p class="eyebrow">Before you book</p>
+      <h2 id="live-h">The prices on this site are not updated in real time.</h2>
+      <p>Every price on the site was found in a search someone already made, so each flight shows when its price was found. Seats sell and prices rise, so confirm the price on the booking site before you decide.</p>
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+
+<footer class="foot">
+  <a class="logo" href="/en/" aria-label="PriceLog, home"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>pricelog<span>.fyi</span></span></a>
+  <nav aria-label="Footer">
+    <a href="/en/flights/">Flights found</a>
+    <a href="/en/privacy">Privacy</a>
+    <a href="/en/accessibility">Accessibility</a>
+    <a href="/en/credits">Photo credits</a>
+    <a href="mailto:contact@pricelog.fyi" dir="ltr">contact@pricelog.fyi</a>
+  </nav>
+  <p>The booking links on this site are affiliate links. If you book through one, the booking
+  site pays a commission at no extra cost to you. The commission does not affect which flights
+  are published. PriceLog is an independent project. It is not affiliated with, endorsed by or
+  sponsored by any airline or booking site.</p>
+</footer>
+
+</body>
+</html>
