@@ -132,6 +132,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
+/* The end padding is narrow for the Telegram button's pill; a bar without one
+   (an English page) would put its last link against the edge. */
+.nav:not(:has(> .btn)) { padding-inline-end: clamp(18px, calc(18px + 6 * ((100vw - 390px) / 1050)), 24px); }
 .logo {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--display); font-weight: 700;
@@ -1002,6 +1005,10 @@ main:has(#f-ow:checked) .archive-row[data-trip="RT"] { display: none; }
     animation-timeline: view();
     animation-range: entry 0% entry 35%;
   }
+  /* A panel can be taller than the screen (the price panel on an English deal
+     page is, at 900px), and then 35% of its entry never happens while it is in
+     view: it stayed half faded over the photo. A fixed distance ends on any. */
+  .panel { animation-range: entry 0% entry 120px; }
   .how-path path { stroke-dasharray: 2 10; }
   .gauge-mark { animation: slide 700ms 300ms var(--ease) both; }
   .gauge-mark--deal::before { animation: pulse 900ms 900ms var(--ease) 1 both; }
