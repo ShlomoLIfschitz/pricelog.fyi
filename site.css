@@ -966,17 +966,20 @@ main:has(#f-ow:checked) .archive-row[data-trip="RT"] { display: none; }
 .median-low small { font-size: 13px; }
 .median-link { font-weight: 700; color: var(--sea); }
 
-/* The home page's search card takes the place of the tilted deal card. */
-.hero-search { flex: none; display: grid; gap: 12px; inline-size: 440px; padding: 18px 16px; border-radius: 20px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow-lift); }
+/* The home page's search is a banner under the heading, at every width. As a
+   440px card beside the heading it pushed the heading to three lines and read
+   as an extra; given the row's full width, the White Label lays its fields out
+   in one line by itself (it sizes to its container, not to the window). */
+.hero-search { flex: none; display: grid; gap: 12px; padding: 18px 16px; border-radius: 20px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow-lift); }
 .hero-search h2 { font: 700 20px/1.3 var(--display); color: var(--ink); }
-.hero-search .search-gate .btn { inline-size: 100%; }
+.hero-search .search-gate { max-inline-size: 70ch; }
+/* Stacked, the banner is the row's last thing, and without the bottom margin
+   it sits on the stats: only phones (≤640px) had one for the row. */
+.hero-row:has(.hero-search) { flex-direction: column; align-items: stretch; gap: 32px; margin-block: auto 24px; }
 .hero-more { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: #fff; text-decoration: none; }
 .hero-more .icon { inline-size: 20px; block-size: 20px; }
-@media (max-width: 1100px) {
-  /* Stacked, the card is the row's last thing, and without this it sits on
-     the stats: only phones (≤640px) had a bottom margin for the row. */
-  .hero-row:has(.hero-search) { flex-direction: column; align-items: stretch; margin-block: auto 24px; }
-  .hero-search { inline-size: auto; }
+@media (max-width: 640px) {
+  .hero-search .search-gate .btn { inline-size: 100%; }
 }
 .credits { inline-size: 100%; border-collapse: collapse; font-size: 14px; }
 .credits th, .credits td { padding: 10px 8px; border-block-end: 1px solid var(--border); text-align: start; vertical-align: top; }
