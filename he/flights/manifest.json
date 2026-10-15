@@ -21,7 +21,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261007_VAR_RT",
@@ -44,7 +50,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261007_BUS_RT",
@@ -67,7 +79,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261007_VAR_OW",
@@ -90,7 +108,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261007_EVN_RT",
@@ -113,7 +137,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261007_LCA_RT",
@@ -136,7 +166,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261007_MAD_RT",
@@ -159,7 +195,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261007_IST_RT",
@@ -182,7 +224,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261008_PFO_RT",
@@ -205,7 +253,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261008_BUS_RT",
@@ -228,7 +282,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261008_VAR_OW",
@@ -251,7 +311,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261008_LCA_RT",
@@ -274,7 +340,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261008_IST_RT",
@@ -297,7 +369,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261008_CTA_RT",
@@ -320,7 +398,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261008_PRG_RT",
@@ -343,7 +427,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261008_IST_OW",
@@ -366,7 +456,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261008_CTA_OW",
@@ -389,7 +485,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261008_NAP_RT",
@@ -412,7 +514,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261008_TBS_OW",
@@ -435,7 +543,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261008_VCE_RT",
@@ -458,7 +572,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_LCA_RT",
@@ -481,7 +601,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_PFO_RT",
@@ -504,7 +630,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_BUS_RT",
@@ -527,7 +659,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_IST_RT",
@@ -550,7 +688,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_IST_OW",
@@ -573,7 +717,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_BUS_OW",
@@ -596,7 +746,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_PAR_RT",
@@ -619,7 +775,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_EVN_RT",
@@ -642,7 +804,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_CTA_RT",
@@ -665,7 +833,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_PRG_RT",
@@ -688,7 +862,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_VCE_RT",
@@ -711,7 +891,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_TBS_OW",
@@ -734,7 +920,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_MAD_RT",
@@ -757,7 +949,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_EVN_OW",
@@ -780,7 +978,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261009_LCA_OW",
@@ -803,7 +1007,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261010_BUS_RT",
@@ -826,7 +1036,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261010_IST_OW",
@@ -849,7 +1065,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261010_PFO_RT",
@@ -872,7 +1094,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261010_IST_RT",
@@ -895,7 +1123,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261010_LCA_RT",
@@ -918,7 +1152,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261010_PRG_RT",
@@ -941,7 +1181,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261010_TBS_OW",
@@ -964,7 +1210,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261010_EVN_RT",
@@ -987,7 +1239,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261011_IST_OW",
@@ -1010,7 +1268,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261011_BUS_RT",
@@ -1033,7 +1297,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261011_PRG_RT",
@@ -1056,7 +1326,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261011_PFO_RT",
@@ -1079,7 +1355,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261011_LCA_RT",
@@ -1102,7 +1384,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261011_IST_RT",
@@ -1125,7 +1413,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261011_BUS_OW",
@@ -1148,7 +1442,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261011_EVN_RT",
@@ -1171,7 +1471,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261012_IST_RT",
@@ -1194,7 +1500,13 @@
       "return_at": "2027-03-08T11:40:00+03:00",
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261012_BUS_RT",
@@ -1217,7 +1529,13 @@
       "return_at": "2026-11-27T11:25:00+04:00",
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261012_PFO_RT",
@@ -1240,7 +1558,13 @@
       "return_at": "2026-12-01T09:20:00+02:00",
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261012_PRG_RT",
@@ -1263,7 +1587,13 @@
       "return_at": "2027-03-07T09:20:00+01:00",
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261012_CTA_RT",
@@ -1286,7 +1616,13 @@
       "return_at": "2027-01-21T17:55:00+01:00",
       "airline": "W4",
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261012_LCA_RT",
@@ -1309,7 +1645,13 @@
       "return_at": "2026-12-24T06:00:00+02:00",
       "airline": "W6",
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261012_IST_OW",
@@ -1332,7 +1674,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261012_DXB_RT",
@@ -1355,7 +1703,13 @@
       "return_at": "2027-01-27T17:10:00+04:00",
       "airline": "6H",
       "dates_url": null,
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261012_RMO_RT",
@@ -1378,7 +1732,13 @@
       "return_at": "2027-03-07T14:15:00+02:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261012_RMO_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVRMO1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261012_VIE_RT",
@@ -1401,7 +1761,13 @@
       "return_at": "2026-10-29T15:35:00+01:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261012_VIE_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVVIE1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261012_VCE_RT",
@@ -1424,7 +1790,13 @@
       "return_at": "2026-11-23T05:30:00+01:00",
       "airline": "W4",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261012_VCE_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVVCE1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261012_NAP_RT",
@@ -1447,7 +1819,13 @@
       "return_at": "2026-10-29T06:00:00+01:00",
       "airline": "W4",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261012_NAP_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVNAP1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_IST_OW",
@@ -1470,7 +1848,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_IST_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVIST1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_LCA_RT",
@@ -1493,7 +1877,13 @@
       "return_at": "2026-11-13T06:00:00+02:00",
       "airline": "W6",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_LCA_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVLCA1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_PFO_RT",
@@ -1516,7 +1906,13 @@
       "return_at": "2026-11-24T09:20:00+02:00",
       "airline": "LY",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_PFO_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVPFO1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_BUS_RT",
@@ -1539,7 +1935,13 @@
       "return_at": "2027-03-17T13:00:00+04:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_BUS_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVBUS1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_CTA_RT",
@@ -1562,7 +1964,13 @@
       "return_at": "2026-12-03T17:55:00+01:00",
       "airline": "W4",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_CTA_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVCTA1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_PRG_RT",
@@ -1585,7 +1993,13 @@
       "return_at": "2027-01-06T12:40:00+01:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_PRG_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVPRG1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_DXB_RT",
@@ -1608,7 +2022,13 @@
       "return_at": "2027-01-26T17:10:00+04:00",
       "airline": "6H",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_DXB_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVDXB1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_IST_RT",
@@ -1631,7 +2051,13 @@
       "return_at": "2027-02-07T11:40:00+03:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_IST_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVIST1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_EVN_RT",
@@ -1654,7 +2080,13 @@
       "return_at": "2026-12-17T07:00:00+04:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_EVN_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVEVN1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_VCE_RT",
@@ -1677,7 +2109,13 @@
       "return_at": "2026-11-30T05:30:00+01:00",
       "airline": "W4",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_VCE_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVVCE1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_EVN_OW",
@@ -1700,7 +2138,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_EVN_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVEVN1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_VIE_RT",
@@ -1723,7 +2167,13 @@
       "return_at": "2026-10-28T21:10:00+01:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_VIE_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVVIE1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_PAR_RT",
@@ -1746,7 +2196,13 @@
       "return_at": "2027-03-23T12:00:00+01:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_PAR_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVPAR1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_TBS_OW",
@@ -1769,7 +2225,13 @@
       "return_at": null,
       "airline": "IZ",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_TBS_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVTBS1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_BEG_OW",
@@ -1792,7 +2254,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_BEG_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVBEG1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_KRK_RT",
@@ -1815,7 +2283,13 @@
       "return_at": "2027-01-18T05:35:00+01:00",
       "airline": "W6",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_KRK_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVKRK1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261013_MAD_RT",
@@ -1838,7 +2312,13 @@
       "return_at": "2027-03-07T12:25:00+01:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261013_MAD_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVMAD1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_LCA_RT",
@@ -1861,7 +2341,13 @@
       "return_at": "2026-12-25T06:00:00+02:00",
       "airline": "W6",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_LCA_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVLCA1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_BUS_RT",
@@ -1884,7 +2370,13 @@
       "return_at": "2027-03-18T12:15:00+04:00",
       "airline": "6H",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_BUS_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVBUS1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_EVN_RT",
@@ -1907,7 +2399,13 @@
       "return_at": "2026-12-22T06:30:00+04:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_EVN_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVEVN1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_IST_OW",
@@ -1930,7 +2428,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_IST_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVIST1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_RMO_RT",
@@ -1953,7 +2457,13 @@
       "return_at": "2027-02-17T11:50:00+02:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_RMO_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVRMO1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_DXB_RT",
@@ -1976,7 +2486,13 @@
       "return_at": "2027-01-18T14:15:00+04:00",
       "airline": "6H",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_DXB_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVDXB1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_BEG_OW",
@@ -1999,7 +2515,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_BEG_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVBEG1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_IST_RT",
@@ -2022,7 +2544,13 @@
       "return_at": "2027-01-26T11:40:00+03:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_IST_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVIST1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_VCE_RT",
@@ -2045,7 +2573,13 @@
       "return_at": "2026-12-25T05:30:00+01:00",
       "airline": "W4",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_VCE_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVVCE1",
-      "at_or_below": null
+      "at_or_below": null,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_VIE_RT",
@@ -2068,7 +2602,13 @@
       "return_at": "2026-10-29T15:35:00+01:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_VIE_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVVIE1",
-      "at_or_below": 1
+      "at_or_below": 1,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_BAK_RT",
@@ -2091,7 +2631,13 @@
       "return_at": "2026-11-17T14:15:00+04:00",
       "airline": "IZ",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_BAK_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVBAK1",
-      "at_or_below": 1
+      "at_or_below": 1,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_DXB_OW",
@@ -2114,7 +2660,13 @@
       "return_at": null,
       "airline": "6H",
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_DXB_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVDXB1",
-      "at_or_below": 3
+      "at_or_below": 3,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_PRG_RT",
@@ -2137,7 +2689,13 @@
       "return_at": "2027-01-06T12:40:00+01:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_PRG_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVPRG1",
-      "at_or_below": 47
+      "at_or_below": 47,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_PAR_RT",
@@ -2160,7 +2718,13 @@
       "return_at": "2027-03-24T12:00:00+01:00",
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_PAR_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVPAR1",
-      "at_or_below": 13
+      "at_or_below": 13,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261014_EVN_OW",
@@ -2183,7 +2747,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261014_EVN_dates&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2F%3Fparams%3DTLVEVN1",
-      "at_or_below": 12
+      "at_or_below": 12,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261015_IST_OW",
@@ -2206,7 +2776,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": 7
+      "at_or_below": 7,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261015_LCA_RT",
@@ -2229,7 +2805,13 @@
       "return_at": "2026-11-20T06:00:00+02:00",
       "airline": "W6",
       "dates_url": null,
-      "at_or_below": 32
+      "at_or_below": 32,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261015_BUS_RT",
@@ -2252,7 +2834,13 @@
       "return_at": "2026-12-04T11:25:00+04:00",
       "airline": "6H",
       "dates_url": null,
-      "at_or_below": 96
+      "at_or_below": 96,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261015_IST_RT",
@@ -2275,7 +2863,13 @@
       "return_at": "2026-11-26T11:40:00+03:00",
       "airline": null,
       "dates_url": null,
-      "at_or_below": 7
+      "at_or_below": 7,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261015_EVN_RT",
@@ -2298,7 +2892,13 @@
       "return_at": "2026-12-06T07:00:00+04:00",
       "airline": null,
       "dates_url": null,
-      "at_or_below": 11
+      "at_or_below": 11,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261015_DXB_RT",
@@ -2321,7 +2921,13 @@
       "return_at": "2027-03-18T14:15:00+04:00",
       "airline": "6H",
       "dates_url": null,
-      "at_or_below": 12
+      "at_or_below": 12,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261015_PRG_RT",
@@ -2344,7 +2950,13 @@
       "return_at": "2027-01-13T12:40:00+01:00",
       "airline": null,
       "dates_url": null,
-      "at_or_below": 23
+      "at_or_below": 23,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261015_BEG_OW",
@@ -2367,7 +2979,13 @@
       "return_at": null,
       "airline": null,
       "dates_url": null,
-      "at_or_below": 9
+      "at_or_below": 9,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
     },
     {
       "id": "20261015_VCE_RT",
@@ -2390,7 +3008,100 @@
       "return_at": "2026-12-07T05:30:00+01:00",
       "airline": "W4",
       "dates_url": null,
-      "at_or_below": 29
+      "at_or_below": 29,
+      "duration": null,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
+    },
+    {
+      "id": "20261015_KRK_RT",
+      "destination": "KRK",
+      "trip": "RT",
+      "depart_date": "2027-01-11",
+      "return_date": "2027-01-21",
+      "number_of_changes": 0,
+      "price": "111.00",
+      "currency": "usd",
+      "found_at": "2026-10-15T05:31:43+00:00",
+      "published_at": "2026-10-15T14:51:07.844807+00:00",
+      "median": "197",
+      "p10": "125",
+      "observations": 347,
+      "sub_id": "20261015_KRK_RT",
+      "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261015_KRK_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1101KRK21011",
+      "telegram_message_id": null,
+      "depart_at": "2027-01-11T11:10:00+02:00",
+      "return_at": "2027-01-21T05:35:00+01:00",
+      "airline": "W6",
+      "dates_url": null,
+      "at_or_below": 2,
+      "duration": 455,
+      "duration_to": 235,
+      "duration_back": 220,
+      "stops_to": 0,
+      "stops_back": 0,
+      "airport": "KRK"
+    },
+    {
+      "id": "20261015_PAR_RT",
+      "destination": "PAR",
+      "trip": "RT",
+      "depart_date": "2027-03-24",
+      "return_date": "2027-03-28",
+      "number_of_changes": 1,
+      "price": "183.00",
+      "currency": "usd",
+      "found_at": "2026-10-14T09:04:53+00:00",
+      "published_at": "2026-10-15T14:51:07.844807+00:00",
+      "median": "323",
+      "p10": "219",
+      "observations": 3742,
+      "sub_id": "20261015_PAR_RT",
+      "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261015_PAR_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2403PAR28031",
+      "telegram_message_id": null,
+      "depart_at": "2027-03-24T00:20:00+02:00",
+      "return_at": "2027-03-28T12:00:00+02:00",
+      "airline": null,
+      "dates_url": null,
+      "at_or_below": 25,
+      "duration": 1295,
+      "duration_to": null,
+      "duration_back": null,
+      "stops_to": null,
+      "stops_back": null,
+      "airport": null
+    },
+    {
+      "id": "20261015_EVN_OW",
+      "destination": "EVN",
+      "trip": "OW",
+      "depart_date": "2026-11-27",
+      "return_date": null,
+      "number_of_changes": 1,
+      "price": "70.00",
+      "currency": "usd",
+      "found_at": "2026-10-13T17:25:21+00:00",
+      "published_at": "2026-10-15T14:51:07.844807+00:00",
+      "median": "120",
+      "p10": "80.1",
+      "observations": 2912,
+      "sub_id": "20261015_EVN_OW",
+      "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261015_EVN_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2711EVN1",
+      "telegram_message_id": null,
+      "depart_at": "2026-11-27T08:00:00+02:00",
+      "return_at": null,
+      "airline": null,
+      "dates_url": null,
+      "at_or_below": 51,
+      "duration": 3000,
+      "duration_to": 3000,
+      "duration_back": null,
+      "stops_to": 1,
+      "stops_back": null,
+      "airport": null
     }
   ]
 }
