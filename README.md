@@ -4,17 +4,18 @@ Site for [@pricelog_deals](https://t.me/pricelog_deals) — a Telegram channel t
 flight prices from Tel Aviv every six hours and publishes a fare only when it beats the
 median of its own observed history, rather than a "from" price in someone's sale.
 
-Hebrew under `/he/`, and since 2026-10-15 the first English pages under `/en/`: the flight
-search, privacy and accessibility, for English speakers living in Israel. Everything else
-(home, flights found, destination pages) is Hebrew only for now, and the English pages
-say so where they link to it. The older English pages that used to live at `/` and
-`/privacy` were removed and `_redirects` sends both to their Hebrew counterparts with a 301.
-Each page with a counterpart names it with `hreflang`.
+Hebrew under `/he/`, and English under `/en/` for English speakers living in Israel: since
+2026-10-15 the flight search, privacy, accessibility and photo credits, and the home page,
+the flights found and the destination pages as `pricelog-scaner` generates them in both
+languages. The Telegram channel posts in Hebrew only, so the generated English pages do not
+offer it. The older English pages that used to live at `/` and `/privacy` were removed and
+`_redirects` sends both to their Hebrew counterparts with a 301. Each hand-written page with
+a counterpart names it with `hreflang`.
 
 The prices and the selection rules come from the `pricelog-scaner` service; this
 repository is only the site. The home page states the thresholds (40% below the median,
 at least 200 observations, 7 days to departure, 48 hours since the fare was found), so
-**a change to the selection rules there is also a change to `he/index.html` here.**
+**a change to the selection rules there is also a change to the home pages it writes here.**
 
 ## Stack
 
@@ -25,10 +26,10 @@ no third-party requests**. This is a stated commitment on the privacy page, not 
 optimisation, so keep it that way: adding a font CDN or an analytics snippet would make
 that page untrue.
 
-The exceptions are the home page, `/he/search/` and `/en/search/`, which carry the flight
-search (Travelpayouts' White Label):
+The exceptions are the two home pages, `/he/` and `/en/`, and `/he/search/` and
+`/en/search/`, which carry the flight search (Travelpayouts' White Label):
 
-- `js/search.js` (all three) shows a gate and loads the White Label only after a click on
+- `js/search.js` (all four) shows a gate and loads the White Label only after a click on
   it. Until then no page requests anything from another origin. The click is kept in
   `localStorage` under `pricelog-search`, and nothing else is stored. It opens the White
   Label in the page's `<html lang>` (by `?language=`), and a language picked inside the
@@ -58,14 +59,17 @@ contrast, and tap targets stay at 44px where the mock draws them smaller.
 ## Layout
 
 ```
-he/index.html           /he/                he, rtl
+he/index.html           /he/                he, rtl — generated, see below
+en/index.html           /en/                en, ltr — generated, see below
 he/privacy.html         /he/privacy         he, rtl
 he/accessibility.html   /he/accessibility   he, rtl — the accessibility statement
 he/search/index.html    /he/search/         he, rtl — the flight search, see Stack
 en/search/index.html    /en/search/         en, ltr — the same search, no median panel yet
 en/privacy.html         /en/privacy         en, ltr
 en/accessibility.html   /en/accessibility   en, ltr
+en/credits.html         /en/credits         en, ltr — built from he/credits.html, same rows
 he/flights/             /he/flights/        generated, see below
+en/flights/             /en/flights/        generated, the same pages in English
 _redirects              / and /privacy → /he/..., 301
 _headers                CSP and the other security headers, see Deploying
 site.css                the stylesheet of the new design, see above
@@ -73,20 +77,22 @@ js/                     the two scripts of the flight search, see Stack
 styles.css              the previous stylesheet, until no page links it
 fonts/                  Rubik and Heebo, woff2, self-hosted
 img/dest/               one photo per destination, three widths; sources in SOURCES.md
-og-he.jpg               1200x630 social preview image
+og-he.jpg               1200x630 social preview image, both languages (its only word is "pricelog")
 tools/                  build-time only, not served
 ```
 
 Cloudflare Pages resolves clean URLs, so `he/privacy.html` is served at `/he/privacy` with
 no configuration.
 
-### `he/flights/` is generated — do not edit it by hand
+### `he/flights/` and `en/flights/` are generated — do not edit them by hand
 
 Deal pages, the deals index and `he/flights/manifest.json` are written and pushed by the
-`publish` job in `pricelog-scaner`. The manifest is the record of what was published and
+`publish` job in `pricelog-scaner`, together with the same pages in English under
+`en/flights/` and both home pages, `he/index.html` and `en/index.html`. There is one
+manifest and one `medians.json`, under `he/flights/`, whatever the language. The manifest is the record of what was published and
 when, and the job reads it to decide what not to publish again, so a hand edit there
-changes what gets posted. Everything outside `he/flights/` is hand-written and the job
-never touches it.
+changes what gets posted. Everything outside those two directories and the two home
+pages is hand-written and the job never touches it.
 
 Since 2026-10-12 the job also writes one page per destination, at
 `he/flights/<slug>/` (`/he/flights/rome/`): the prices collected for it, its median, and

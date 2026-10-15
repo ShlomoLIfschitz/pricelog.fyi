@@ -10,7 +10,9 @@
    between them (see --fl below), so both frames match to the pixel and the
    widths in between are interpolated rather than guessed.
 
-   Logical properties only, as in styles.css: no left/right anywhere.
+   Logical properties only, as in styles.css: no left/right, except where
+   CSS has no logical form (the scroll buttons' anchors, and the section for
+   left-to-right pages at the end).
    No script and no third-party request: the fonts are served from /fonts/.
    ========================================================================= */
 
@@ -1025,4 +1027,27 @@ main:has(#f-ow:checked) .archive-row[data-trip="RT"] { display: none; }
 /* The bars and dots that only an animation would hide. */
 @supports not (animation-timeline: view()) {
   .card, .tile, .how-step, .panel, .compare > div, .box, .tg { animation: none; }
+}
+
+/* ============================================================================
+   English pages, left to right (/en/, html dir="ltr"). The sheet is logical
+   throughout, but four things cannot be: a gradient's direction, a translate
+   that centers a gauge mark, the arrow's drawing, and the scroll buttons' own
+   arrows and labels. Each is turned here, and nothing else changes.
+   ========================================================================= */
+[dir="ltr"] .hero::before { background: linear-gradient(to right, rgb(11 34 54 / .85), rgb(11 34 54 / .15)); }
+[dir="ltr"] .list-head::after { background: linear-gradient(to right, rgb(11 34 54 / 1), rgb(11 34 54 / .92) 40%, rgb(11 34 54 / .2)); }
+/* The cheap end is the start edge: the left in English. */
+[dir="ltr"] .gauge-track { background: linear-gradient(to right, var(--mint), #BFE7D6 28%, var(--border) 45%, var(--border)); }
+[dir="ltr"] .gauge-mark { translate: -50% -50%; }
+[dir="ltr"] .gauge-mark span { translate: -50% 0; }
+/* The arrow is drawn pointing left, which is "forward" in Hebrew. Mirrored with
+   `scale`, which applies outside `transform`, so the hover nudge of
+   translateX(-4px) moves it forward here too. */
+[dir="ltr"] svg:has(> use[href="#i-arrow"]) { scale: -1 1; }
+@supports selector(::scroll-button(*)) {
+  @media (hover: hover) and (pointer: fine) {
+    [dir="ltr"] .tiles::scroll-button(inline-start) { content: "←" / "Previous destinations"; right: auto; left: calc(anchor(left) + 12px); }
+    [dir="ltr"] .tiles::scroll-button(inline-end) { content: "→" / "Next destinations"; left: auto; right: calc(anchor(right) + 12px); }
+  }
 }
