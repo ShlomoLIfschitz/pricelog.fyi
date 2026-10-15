@@ -49,6 +49,42 @@
     s.type = "module";
     s.src = WL;
     document.head.appendChild(s);
+    if (LANG === "he") boxes.forEach(hintEnglish);
+  }
+
+  // The White Label finds places by their English names only: "רומא" finds
+  // nothing, and says nothing either (checked 2026-10-15, ours and another
+  // site's). So on the Hebrew pages its two place fields say so in their
+  // placeholders. It draws inside an open shadow root and may redraw at any
+  // time, so this watches and puts the text back. Only a field still showing
+  // the White Label's own words is touched: if they change them, this does
+  // nothing and the search works as before, just without the hint.
+  // Short on purpose: in the one-line banner the field leaves about 14
+  // characters for it, and "לאן? באנגלית, למשל Rome" was cut after "באנגלי".
+  var HINTS = {
+    "יציאה מ": "מאיפה? באנגלית",
+    "הגעה אל": "לאן? באנגלית",
+  };
+  function hintEnglish(box) {
+    function apply(root) {
+      root.querySelectorAll("input[placeholder]").forEach(function (input) {
+        var hint = HINTS[input.placeholder];
+        if (hint) input.placeholder = hint;
+      });
+    }
+    function watch(root) {
+      apply(root);
+      new MutationObserver(function () { apply(root); })
+        .observe(root, { subtree: true, childList: true, attributes: true, attributeFilter: ["placeholder"] });
+    }
+    // The White Label attaches its shadow root to the box itself, once its
+    // code has arrived; nothing in the page announces that, so this looks
+    // again on each frame until it is there, for at most half a minute.
+    var tries = 0;
+    (function find() {
+      if (box.shadowRoot) { watch(box.shadowRoot); return; }
+      if (++tries < 1800) requestAnimationFrame(find);
+    })();
   }
 
   if (remembered()) { load(); return; }
