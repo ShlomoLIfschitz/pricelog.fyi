@@ -77,7 +77,7 @@ js/                     the two scripts of the flight search, see Stack
 styles.css              the previous stylesheet, until no page links it
 fonts/                  Rubik and Heebo, woff2, self-hosted
 img/dest/               one photo per destination, three widths; sources in SOURCES.md
-og-he.jpg               1200x630 social preview image
+og-he.jpg               1200x630 social preview image, both languages (its only word is "pricelog")
 tools/                  build-time only, not served
 ```
 
