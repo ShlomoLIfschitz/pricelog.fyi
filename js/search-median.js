@@ -1,5 +1,5 @@
-// The median panel on /he/search/: beside a search from Tel Aviv, the numbers
-// PriceLog collected for that destination and trip type. They come from
+// The median panel on /he/search/ and /en/search/: beside a search from Tel
+// Aviv, the numbers PriceLog collected for that destination and trip type. They come from
 // /he/flights/medians.json, which pricelog-scaner writes with the destination
 // pages, from the same baselines, so the panel and the page it links to agree.
 //
@@ -14,6 +14,15 @@
 
   var FILE = "/he/flights/medians.json";
   var VERSION = 1;
+  // One file for both pages: the numbers once, the words in each language
+  // (name/name_en, path/path_en, trip_name/trip_name_en). The page's own
+  // <html lang> picks them.
+  var EN = document.documentElement.lang === "en";
+  var KEY = EN ? { name: "name_en", path: "path_en", trip: "trip_name_en" }
+               : { name: "name", path: "path", trip: "trip_name" };
+  var PATH = EN ? /^\/en\/flights\/[a-z-]+\/$/ : /^\/he\/flights\/[a-z-]+\/$/;
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   var ORIGIN = "TLV";
   // The compact form only: TLV2012LCA25121 (back on 25.12, one passenger) or
   // TLV2012LCA1 (one way). The White Label also writes other shapes, such as
@@ -68,10 +77,11 @@
     var ok = Number.isInteger(n) && n >= 200 &&
       isFinite(median) && isFinite(p10) && p10 > 0 && p10 <= median &&
       money(seg.median_text, median) && money(seg.p10_text, p10) &&
-      typeof d.name === "string" && d.name !== "" &&
-      typeof seg.trip_name === "string" && seg.trip_name !== "" &&
-      /^\/he\/flights\/[a-z-]+\/$/.test(d.path) && !isNaN(at);
-    return ok ? { d: d, seg: seg, at: at } : null;
+      typeof d[KEY.name] === "string" && d[KEY.name] !== "" &&
+      typeof seg[KEY.trip] === "string" && seg[KEY.trip] !== "" &&
+      PATH.test(d[KEY.path]) && !isNaN(at);
+    return ok ? { d: d, seg: seg, at: at, name: d[KEY.name], path: d[KEY.path],
+                  trip: seg[KEY.trip] } : null;
   }
 
   function el(tag, cls, text) {
@@ -90,44 +100,72 @@
   function moment(at) {
     var p = {};
     TIME.formatToParts(at).forEach(function (x) { p[x.type] = x.value; });
+    if (EN) {
+      // "15 Oct 2026": 15.10 reads one way in Israel and another in America.
+      return Number(p.day) + " " + MONTHS[Number(p.month) - 1] + " " + p.year + ", " +
+        p.hour + ":" + p.minute;
+    }
     return Number(p.day) + "." + Number(p.month) + "." + p.year + ", " + p.hour + ":" + p.minute;
   }
 
+  // The words, by the page's language. The English follow the English pages:
+  // "collected", "lowest 10%", and nothing about a price being current.
+  var W = EN ? {
+    tag: "From PriceLog's data",
+    median: ["Median price of ", " prices collected"],
+    note: function (name, trip) {
+      return "The median of all the prices PriceLog collected for " + name + ", " + trip +
+        ", across every departure date, not only the dates of this search. Half the" +
+        " prices are below it.";
+    },
+    low: ["Lowest 10%: ", " of the prices collected are below it"],
+    link: "Destination page: ",
+    updated: "Updated on ",
+  } : {
+    tag: "מהנתונים של PriceLog",
+    median: ["מחיר חציוני של ", " מחירים שנאספו"],
+    note: function (name, trip) {
+      return "החציון של כל המחירים ש־PriceLog אסף ל" + name + ", " + trip +
+        ", בכל תאריכי ההמראה, ולא רק בתאריכים שבחיפוש. חצי מהמחירים נמוכים ממנו.";
+    },
+    low: ["העשירון התחתון: ", " מהמחירים שנאספו נמוכים ממנו"],
+    link: "לעמוד היעד: ",
+    updated: "עודכן ב־",
+  };
+
   function draw(x) {
-    var d = x.d, seg = x.seg;
+    var seg = x.seg;
     var count = seg.observations.toLocaleString("en-US");
     panel.replaceChildren();
 
-    panel.append(el("p", "median-tag", "מהנתונים של PriceLog"));
-    var h = el("h2", null, d.name + " · " + seg.trip_name);
+    panel.append(el("p", "median-tag", W.tag));
+    var h = el("h2", null, x.name + " · " + x.trip);
     h.id = "median-title";
     panel.append(h);
 
     var line = el("p", "median-line");
     var big = el("strong");
     big.append(num(seg.median_text));
-    var label = el("span", null, "מחיר חציוני של ");
-    label.append(num(count), " מחירים שנאספו");
+    var label = el("span", null, W.median[0]);
+    label.append(num(count), W.median[1]);
     line.append(big, label);
     panel.append(line);
 
-    panel.append(el("p", "median-note",
-      "החציון של כל המחירים ש־PriceLog אסף ל" + d.name + ", " + seg.trip_name +
-      ", בכל תאריכי ההמראה, ולא רק בתאריכים שבחיפוש. חצי מהמחירים נמוכים ממנו."));
+    panel.append(el("p", "median-note", W.note(x.name, x.trip)));
 
     var low = el("p", "median-low");
-    var lowTitle = el("b", null, "העשירון התחתון: ");
+    var lowTitle = el("b", null, W.low[0]);
     lowTitle.append(num(seg.p10_text));
     var lowNote = el("small");
-    lowNote.append(num("10%"), " מהמחירים שנאספו נמוכים ממנו");
+    lowNote.append(num("10%"), W.low[1]);
     low.append(lowTitle, lowNote);
     panel.append(low);
 
-    var link = el("a", "median-link", "לעמוד היעד: " + d.name);
-    link.href = d.path;
+    var link = el("a", "median-link", W.link + x.name);
+    link.href = x.path;
     panel.append(link);
 
-    var asof = el("p", "price-asof", "עודכן ב־");
+    var asof = el("p", "price-asof", W.updated);
     var t = el("time");
     t.dateTime = x.at.toISOString();
     t.append(num(moment(x.at)));

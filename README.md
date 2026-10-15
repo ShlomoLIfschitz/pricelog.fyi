@@ -34,7 +34,7 @@ The exceptions are the two home pages, `/he/` and `/en/`, and `/he/search/` and
   `localStorage` under `pricelog-search`, and nothing else is stored. It opens the White
   Label in the page's `<html lang>` (by `?language=`), and a language picked inside the
   White Label moves to the search page in that language.
-- `js/search-median.js` (`/he/search/` only) shows PriceLog's median beside a search from
+- `js/search-median.js` (both search pages, in the page's `<html lang>`) shows PriceLog's median beside a search from
   `/he/flights/medians.json`, which `pricelog-scaner` writes. It reads the address and that
   file, and stores and sends nothing.
 
@@ -64,7 +64,7 @@ en/index.html           /en/                en, ltr — generated, see below
 he/privacy.html         /he/privacy         he, rtl
 he/accessibility.html   /he/accessibility   he, rtl — the accessibility statement
 he/search/index.html    /he/search/         he, rtl — the flight search, see Stack
-en/search/index.html    /en/search/         en, ltr — the same search, no median panel yet
+en/search/index.html    /en/search/         en, ltr — the same search, with the median panel
 en/privacy.html         /en/privacy         en, ltr
 en/accessibility.html   /en/accessibility   en, ltr
 en/credits.html         /en/credits         en, ltr — built from he/credits.html, same rows
@@ -98,8 +98,8 @@ Since 2026-10-12 the job also writes one page per destination, at
 `he/flights/<slug>/` (`/he/flights/rome/`): the prices collected for it, its median, and
 the flights published to it. Every run rewrites them, the refresh every six hours included,
 so their numbers move with the collection. A slug is permanent once published; the list
-is `SLUGS` in `pricelog-scaner`'s `destinations.py`. `sitemap.xml` lists the same pages and
-is hand-written, so a destination added there needs its line here too.
+is `SLUGS` in `pricelog-scaner`'s `destinations.py`. `sitemap.xml` lists the same pages, in both
+languages, and is hand-written, so a destination added there needs its two lines here too.
 
 The one exception is the first manifest, created by hand once as `{"deals": []}`. The job
 refuses to run without one rather than treating a missing manifest as empty: that would
