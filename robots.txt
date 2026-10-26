@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+# The search page opened on a route and dates: one URL per deal, each folded
+# into /search/'s canonical. Google crawled 84 of them by 20.10 for nothing.
+Disallow: /*?flightSearch=
 
 Sitemap: https://pricelog.fyi/sitemap.xml
