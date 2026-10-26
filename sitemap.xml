@@ -182,6 +182,45 @@
   <url>
     <loc>https://pricelog.fyi/he/flights/tokyo/</loc>
   </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/abu-dhabi/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/beijing/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/frankfurt/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/munich/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/sharjah/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/sofia/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/bratislava/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/palermo/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/riga/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/shanghai/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/tirana/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/toronto/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/zurich/</loc>
+  </url>
 
   <url>
     <loc>https://pricelog.fyi/en/</loc>
@@ -353,6 +392,58 @@
 
   <url>
     <loc>https://pricelog.fyi/en/flights/tokyo/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/abu-dhabi/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/beijing/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/frankfurt/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/munich/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/sharjah/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/sofia/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/bratislava/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/palermo/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/riga/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/shanghai/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/tirana/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/toronto/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/zurich/</loc>
   </url>
 
 </urlset>
