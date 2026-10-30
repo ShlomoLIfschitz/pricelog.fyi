@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-10-30T00:30:08.442824+00:00",
+  "checked_at": "2026-10-30T06:13:05.013008+00:00",
   "destinations": {
     "LCA": {
       "name": "לרנקה",
@@ -12,7 +12,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 2095,
+          "observations": 2097,
           "median": "58",
           "p10": "41",
           "median_text": "$58",
@@ -21,7 +21,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 4968,
+          "observations": 4975,
           "median": "106",
           "p10": "63",
           "median_text": "$106",
@@ -48,10 +48,10 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 1247,
-          "median": "194",
+          "observations": 1255,
+          "median": "193",
           "p10": "104",
-          "median_text": "$194",
+          "median_text": "$193",
           "p10_text": "$104"
         }
       }
@@ -66,7 +66,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 1017,
+          "observations": 1020,
           "median": "72",
           "p10": "61",
           "median_text": "$72",
@@ -75,10 +75,10 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 3612,
-          "median": "150",
+          "observations": 3652,
+          "median": "149",
           "p10": "119",
-          "median_text": "$150",
+          "median_text": "$149",
           "p10_text": "$119"
         }
       }
@@ -192,7 +192,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 1651,
+          "observations": 1656,
           "median": "148",
           "p10": "92",
           "median_text": "$148",
@@ -201,7 +201,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 1358,
+          "observations": 1359,
           "median": "311",
           "p10": "210",
           "median_text": "$311",
@@ -219,7 +219,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 5397,
+          "observations": 5411,
           "median": "125",
           "p10": "86",
           "median_text": "$125",
@@ -228,7 +228,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 6183,
+          "observations": 6199,
           "median": "223",
           "p10": "180",
           "median_text": "$223",
@@ -246,7 +246,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 2785,
+          "observations": 2790,
           "median": "132",
           "p10": "99",
           "median_text": "$132",
@@ -255,7 +255,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 4413,
+          "observations": 4422,
           "median": "334",
           "p10": "185",
           "median_text": "$334",
@@ -273,8 +273,8 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 4326,
-          "median": "119",
+          "observations": 4330,
+          "median": "118.5",
           "p10": "77",
           "median_text": "$119",
           "p10_text": "$77"
@@ -282,7 +282,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 4452,
+          "observations": 4454,
           "median": "244",
           "p10": "170",
           "median_text": "$244",
@@ -309,10 +309,10 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 5222,
-          "median": "138",
+          "observations": 5273,
+          "median": "137",
           "p10": "118",
-          "median_text": "$138",
+          "median_text": "$137",
           "p10_text": "$118"
         }
       }
@@ -327,7 +327,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 1773,
+          "observations": 1774,
           "median": "72",
           "p10": "63",
           "median_text": "$72",
@@ -336,7 +336,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 3977,
+          "observations": 3980,
           "median": "146",
           "p10": "119",
           "median_text": "$146",
@@ -363,7 +363,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 1046,
+          "observations": 1077,
           "median": "150",
           "p10": "100",
           "median_text": "$150",
@@ -381,7 +381,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 816,
+          "observations": 817,
           "median": "93",
           "p10": "66",
           "median_text": "$93",
@@ -390,7 +390,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 1504,
+          "observations": 1513,
           "median": "195",
           "p10": "121",
           "median_text": "$195",
@@ -417,9 +417,9 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 828,
+          "observations": 830,
           "median": "159",
-          "p10": "93",
+          "p10": "92.9",
           "median_text": "$159",
           "p10_text": "$93"
         }
@@ -435,7 +435,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 1175,
+          "observations": 1176,
           "median": "105",
           "p10": "81",
           "median_text": "$105",
@@ -444,7 +444,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 2094,
+          "observations": 2098,
           "median": "243",
           "p10": "198",
           "median_text": "$243",
@@ -462,7 +462,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 836,
+          "observations": 840,
           "median": "131",
           "p10": "92",
           "median_text": "$131",
@@ -471,7 +471,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 1187,
+          "observations": 1189,
           "median": "247",
           "p10": "183",
           "median_text": "$247",
@@ -498,7 +498,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 4654,
+          "observations": 4658,
           "median": "318",
           "p10": "217",
           "median_text": "$318",
@@ -516,7 +516,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 1337,
+          "observations": 1338,
           "median": "118",
           "p10": "86",
           "median_text": "$118",
@@ -525,10 +525,10 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 2990,
-          "median": "283",
+          "observations": 2992,
+          "median": "283.5",
           "p10": "207",
-          "median_text": "$283",
+          "median_text": "$284",
           "p10_text": "$207"
         }
       }
@@ -543,10 +543,10 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 795,
-          "median": "141",
+          "observations": 798,
+          "median": "141.5",
           "p10": "99",
-          "median_text": "$141",
+          "median_text": "$142",
           "p10_text": "$99"
         },
         "RT": {
@@ -579,7 +579,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 2527,
+          "observations": 2529,
           "median": "284",
           "p10": "235",
           "median_text": "$284",
@@ -597,7 +597,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 1673,
+          "observations": 1674,
           "median": "116",
           "p10": "94",
           "median_text": "$116",
@@ -606,7 +606,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 4987,
+          "observations": 4998,
           "median": "294",
           "p10": "216",
           "median_text": "$294",
@@ -624,7 +624,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 1293,
+          "observations": 1295,
           "median": "78",
           "p10": "67",
           "median_text": "$78",
@@ -633,7 +633,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 4432,
+          "observations": 4459,
           "median": "172",
           "p10": "131",
           "median_text": "$172",
@@ -678,7 +678,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 1442,
+          "observations": 1451,
           "median": "134",
           "p10": "114",
           "median_text": "$134",
@@ -687,7 +687,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 1922,
+          "observations": 1928,
           "median": "286",
           "p10": "219",
           "median_text": "$286",
@@ -705,16 +705,16 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 746,
+          "observations": 749,
           "median": "245",
-          "p10": "131.5",
+          "p10": "131.8",
           "median_text": "$245",
           "p10_text": "$132"
         },
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 984,
+          "observations": 985,
           "median": "468",
           "p10": "270",
           "median_text": "$468",
@@ -732,7 +732,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 545,
+          "observations": 546,
           "median": "111",
           "p10": "76",
           "median_text": "$111",
@@ -741,7 +741,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 845,
+          "observations": 846,
           "median": "219",
           "p10": "143",
           "median_text": "$219",
@@ -759,18 +759,18 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 400,
+          "observations": 402,
           "median": "132",
-          "p10": "96.9",
+          "p10": "97",
           "median_text": "$132",
           "p10_text": "$97"
         },
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 1006,
+          "observations": 1008,
           "median": "346",
-          "p10": "268.5",
+          "p10": "268.7",
           "median_text": "$346",
           "p10_text": "$269"
         }
@@ -795,7 +795,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 1254,
+          "observations": 1273,
           "median": "147",
           "p10": "133",
           "median_text": "$147",
@@ -813,7 +813,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 686,
+          "observations": 688,
           "median": "98",
           "p10": "81",
           "median_text": "$98",
@@ -840,7 +840,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 784,
+          "observations": 790,
           "median": "132",
           "p10": "93",
           "median_text": "$132",
@@ -867,7 +867,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 423,
+          "observations": 426,
           "median": "94",
           "p10": "70",
           "median_text": "$94",
@@ -876,7 +876,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 935,
+          "observations": 936,
           "median": "186",
           "p10": "137",
           "median_text": "$186",
@@ -894,16 +894,16 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 637,
-          "median": "455",
-          "p10": "403",
-          "median_text": "$455",
-          "p10_text": "$403"
+          "observations": 651,
+          "median": "454",
+          "p10": "404",
+          "median_text": "$454",
+          "p10_text": "$404"
         },
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 1173,
+          "observations": 1176,
           "median": "845",
           "p10": "718",
           "median_text": "$845",
@@ -921,16 +921,16 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 582,
+          "observations": 589,
           "median": "486",
-          "p10": "415.1",
+          "p10": "415",
           "median_text": "$486",
           "p10_text": "$415"
         },
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 1034,
+          "observations": 1037,
           "median": "858",
           "p10": "720",
           "median_text": "$858",
@@ -948,7 +948,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 330,
+          "observations": 331,
           "median": "99",
           "p10": "63",
           "median_text": "$99",
@@ -957,10 +957,10 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 1065,
-          "median": "188",
+          "observations": 1073,
+          "median": "189",
           "p10": "125",
-          "median_text": "$188",
+          "median_text": "$189",
           "p10_text": "$125"
         }
       }
@@ -975,7 +975,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 391,
+          "observations": 392,
           "median": "144",
           "p10": "104",
           "median_text": "$144",
@@ -984,7 +984,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 612,
+          "observations": 613,
           "median": "346",
           "p10": "255",
           "median_text": "$346",
@@ -1002,18 +1002,18 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 503,
+          "observations": 504,
           "median": "473",
-          "p10": "406.2",
+          "p10": "406.3",
           "median_text": "$473",
           "p10_text": "$406"
         },
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 1105,
+          "observations": 1110,
           "median": "817",
-          "p10": "707.4",
+          "p10": "707",
           "median_text": "$817",
           "p10_text": "$707"
         }
@@ -1038,7 +1038,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 1277,
+          "observations": 1283,
           "median": "1072",
           "p10": "879",
           "median_text": "$1,072",
@@ -1056,7 +1056,7 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 485,
+          "observations": 488,
           "median": "298",
           "p10": "218",
           "median_text": "$298",
@@ -1083,20 +1083,20 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 260,
-          "median": "496.5",
-          "p10": "363.9",
-          "median_text": "$497",
+          "observations": 263,
+          "median": "496",
+          "p10": "364",
+          "median_text": "$496",
           "p10_text": "$364"
         },
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 334,
+          "observations": 336,
           "median": "991",
-          "p10": "796.9",
+          "p10": "797.5",
           "median_text": "$991",
-          "p10_text": "$797"
+          "p10_text": "$798"
         }
       }
     },
@@ -1137,9 +1137,9 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 324,
+          "observations": 325,
           "median": "157",
-          "p10": "123.3",
+          "p10": "123.4",
           "median_text": "$157",
           "p10_text": "$123"
         },
@@ -1164,11 +1164,11 @@
         "OW": {
           "trip_name": "הלוך בלבד",
           "trip_name_en": "one way",
-          "observations": 363,
+          "observations": 366,
           "median": "298",
-          "p10": "246.2",
+          "p10": "246.5",
           "median_text": "$298",
-          "p10_text": "$246"
+          "p10_text": "$247"
         },
         "RT": {
           "trip_name": "הלוך־חזור",
@@ -1200,7 +1200,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 806,
+          "observations": 808,
           "median": "197",
           "p10": "165",
           "median_text": "$197",
@@ -1227,7 +1227,7 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 453,
+          "observations": 454,
           "median": "172",
           "p10": "141",
           "median_text": "$172",
@@ -1245,10 +1245,10 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 402,
-          "median": "138",
+          "observations": 408,
+          "median": "136.5",
           "p10": "89",
-          "median_text": "$138",
+          "median_text": "$137",
           "p10_text": "$89"
         }
       }
@@ -1263,11 +1263,11 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 295,
-          "median": "390",
-          "p10": "294.4",
+          "observations": 296,
+          "median": "389.5",
+          "p10": "294.5",
           "median_text": "$390",
-          "p10_text": "$294"
+          "p10_text": "$295"
         }
       }
     },
@@ -1335,9 +1335,9 @@
         "RT": {
           "trip_name": "הלוך־חזור",
           "trip_name_en": "round trip",
-          "observations": 304,
+          "observations": 306,
           "median": "324",
-          "p10": "263",
+          "p10": "262.5",
           "median_text": "$324",
           "p10_text": "$263"
         }
