@@ -221,6 +221,30 @@
   <url>
     <loc>https://pricelog.fyi/he/flights/zurich/</loc>
   </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/colombo/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/zanzibar/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/helsinki/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/tivat/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/buenos-aires/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/bali/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/goa/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/tallinn/</loc>
+  </url>
 
   <url>
     <loc>https://pricelog.fyi/en/</loc>
@@ -444,6 +468,38 @@
 
   <url>
     <loc>https://pricelog.fyi/en/flights/zurich/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/colombo/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/zanzibar/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/helsinki/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/tivat/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/buenos-aires/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/bali/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/goa/</loc>
+  </url>
+
+  <url>
+    <loc>https://pricelog.fyi/en/flights/tallinn/</loc>
   </url>
 
 </urlset>
