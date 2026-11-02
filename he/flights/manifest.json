@@ -9917,6 +9917,35 @@
       "stops_to": 1,
       "stops_back": null,
       "airport": null
+    },
+    {
+      "id": "20261102_AUH_OW",
+      "destination": "AUH",
+      "trip": "OW",
+      "depart_date": "2027-01-06",
+      "return_date": null,
+      "number_of_changes": 2,
+      "price": "174.00",
+      "currency": "usd",
+      "found_at": "2026-11-02T15:48:47+00:00",
+      "published_at": "2026-11-02T19:07:06.532774+00:00",
+      "median": "297",
+      "p10": "218",
+      "observations": 549,
+      "sub_id": "20261102_AUH_OW",
+      "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261102_AUH_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV0601AUH1",
+      "telegram_message_id": null,
+      "depart_at": "2027-01-06T18:55:00+02:00",
+      "return_at": null,
+      "airline": null,
+      "dates_url": null,
+      "at_or_below": 14,
+      "duration": 1795,
+      "duration_to": 1795,
+      "duration_back": null,
+      "stops_to": 2,
+      "stops_back": null,
+      "airport": null
     }
   ]
 }
