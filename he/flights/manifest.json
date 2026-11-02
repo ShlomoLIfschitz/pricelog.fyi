@@ -9772,6 +9772,35 @@
       "stops_to": null,
       "stops_back": null,
       "airport": null
+    },
+    {
+      "id": "20261102_PFO_RT",
+      "destination": "PFO",
+      "trip": "RT",
+      "depart_date": "2026-11-17",
+      "return_date": "2026-11-20",
+      "number_of_changes": 0,
+      "price": "102.00",
+      "currency": "usd",
+      "found_at": "2026-11-01T20:16:30+00:00",
+      "published_at": "2026-11-02T09:43:07.452182+00:00",
+      "median": "191",
+      "p10": "104",
+      "observations": 1346,
+      "sub_id": "20261102_PFO_RT",
+      "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261102_PFO_RT&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV1711PFO20111",
+      "telegram_message_id": null,
+      "depart_at": "2026-11-17T07:00:00+02:00",
+      "return_at": "2026-11-20T07:50:00+02:00",
+      "airline": "LY",
+      "dates_url": null,
+      "at_or_below": 92,
+      "duration": 145,
+      "duration_to": 75,
+      "duration_back": 70,
+      "stops_to": 0,
+      "stops_back": 0,
+      "airport": "PFO"
     }
   ]
 }
