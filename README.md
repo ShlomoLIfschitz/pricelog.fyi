@@ -68,6 +68,8 @@ en/search/index.html    /en/search/         en, ltr — the same search, with th
 en/privacy.html         /en/privacy         en, ltr
 en/accessibility.html   /en/accessibility   en, ltr
 en/credits.html         /en/credits         en, ltr — built from he/credits.html, same rows
+he/luchot/privacy.html  /he/luchot/privacy  he, rtl — privacy policy of the Luchot Android app (Play Store URL)
+en/luchot/privacy.html  /en/luchot/privacy  en, ltr — the same policy in English
 he/flights/             /he/flights/        generated, see below
 en/flights/             /en/flights/        generated, the same pages in English
 _redirects              / and /privacy → /he/..., 301
