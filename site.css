@@ -265,8 +265,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   position: relative; isolation: isolate; overflow: hidden;
   display: flex; flex-direction: column; justify-content: space-between;
   min-block-size: clamp(780px, calc(780px + 80 * ((100vw - 390px) / 1050)), 860px);
-  /* the nav floats over the top: its offset plus its height */
-  padding-block: clamp(74px, calc(74px + 10 * ((100vw - 390px) / 1050)), 84px) clamp(28px, calc(28px + 36 * ((100vw - 390px) / 1050)), 64px);
+  /* the nav floats over the top: its offset plus its height, plus a gap. Without
+     the gap, a hero taller than its min-height (the home page with the search
+     box) loses the auto margin and its first line sits against the nav. */
+  padding-block: clamp(94px, calc(94px + 18 * ((100vw - 390px) / 1050)), 112px) clamp(28px, calc(28px + 36 * ((100vw - 390px) / 1050)), 64px);
   padding-inline: var(--gutter);
   color: #fff; background: var(--night);
 }
