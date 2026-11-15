@@ -245,6 +245,24 @@
   <url>
     <loc>https://pricelog.fyi/he/flights/tallinn/</loc>
   </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/brussels/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/porto/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/dusseldorf/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/geneva/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/reykjavik/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/podgorica/</loc>
+  </url>
 
   <url>
     <loc>https://pricelog.fyi/en/</loc>
@@ -500,6 +518,24 @@
 
   <url>
     <loc>https://pricelog.fyi/en/flights/tallinn/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/en/flights/brussels/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/en/flights/porto/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/en/flights/dusseldorf/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/en/flights/geneva/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/en/flights/reykjavik/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/en/flights/podgorica/</loc>
   </url>
 
 </urlset>
