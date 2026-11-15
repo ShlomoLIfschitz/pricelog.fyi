@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-11-15T06:30:08.698011+00:00",
+  "checked_at": "2026-11-15T09:43:04.648836+00:00",
   "destinations": {
     "LCA": {
       "name": "לרנקה",
@@ -1601,6 +1601,141 @@
           "p10": "241.6",
           "median_text": "$299",
           "p10_text": "$242"
+        }
+      }
+    },
+    "BRU": {
+      "name": "בריסל",
+      "name_en": "Brussels",
+      "path": "/he/flights/brussels/",
+      "path_en": "/en/flights/brussels/",
+      "currency": "usd",
+      "segments": {
+        "OW": {
+          "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
+          "observations": 212,
+          "median": "136.5",
+          "p10": "101.1",
+          "median_text": "$137",
+          "p10_text": "$101"
+        },
+        "RT": {
+          "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
+          "observations": 328,
+          "median": "306",
+          "p10": "230",
+          "median_text": "$306",
+          "p10_text": "$230"
+        }
+      }
+    },
+    "OPO": {
+      "name": "פורטו",
+      "name_en": "Porto",
+      "path": "/he/flights/porto/",
+      "path_en": "/en/flights/porto/",
+      "currency": "usd",
+      "segments": {
+        "OW": {
+          "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
+          "observations": 217,
+          "median": "115",
+          "p10": "93",
+          "median_text": "$115",
+          "p10_text": "$93"
+        },
+        "RT": {
+          "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
+          "observations": 318,
+          "median": "284",
+          "p10": "210.7",
+          "median_text": "$284",
+          "p10_text": "$211"
+        }
+      }
+    },
+    "DUS": {
+      "name": "דיסלדורף",
+      "name_en": "Dusseldorf",
+      "path": "/he/flights/dusseldorf/",
+      "path_en": "/en/flights/dusseldorf/",
+      "currency": "usd",
+      "segments": {
+        "OW": {
+          "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
+          "observations": 307,
+          "median": "119",
+          "p10": "98",
+          "median_text": "$119",
+          "p10_text": "$98"
+        },
+        "RT": {
+          "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
+          "observations": 368,
+          "median": "312",
+          "p10": "239",
+          "median_text": "$312",
+          "p10_text": "$239"
+        }
+      }
+    },
+    "GVA": {
+      "name": "ז׳נבה",
+      "name_en": "Geneva",
+      "path": "/he/flights/geneva/",
+      "path_en": "/en/flights/geneva/",
+      "currency": "usd",
+      "segments": {
+        "RT": {
+          "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
+          "observations": 292,
+          "median": "322",
+          "p10": "248",
+          "median_text": "$322",
+          "p10_text": "$248"
+        }
+      }
+    },
+    "REK": {
+      "name": "רייקיאוויק",
+      "name_en": "Reykjavik",
+      "path": "/he/flights/reykjavik/",
+      "path_en": "/en/flights/reykjavik/",
+      "currency": "usd",
+      "segments": {
+        "RT": {
+          "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
+          "observations": 243,
+          "median": "414",
+          "p10": "303.2",
+          "median_text": "$414",
+          "p10_text": "$303"
+        }
+      }
+    },
+    "TGD": {
+      "name": "פודגוריצה",
+      "name_en": "Podgorica",
+      "path": "/he/flights/podgorica/",
+      "path_en": "/en/flights/podgorica/",
+      "currency": "usd",
+      "segments": {
+        "OW": {
+          "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
+          "observations": 229,
+          "median": "116",
+          "p10": "91.8",
+          "median_text": "$116",
+          "p10_text": "$92"
         }
       }
     }
