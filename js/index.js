@@ -198,13 +198,16 @@
 
     // Drawn at the plot's own width, so a phone gets 11px ticks, not 5px ones.
     var width = Math.max(280, Math.round(plot.clientWidth || 716));
-    var X0 = 48, X1 = width - 8, Y1 = narrow.matches ? 260 : 380;
+    // The y labels sit on the page's start side, as on the site's price charts
+    // (chart.py): the right in Hebrew, the left in English.
+    var X0 = rtl ? 8 : 48, X1 = rtl ? width - 48 : width - 8, Y1 = narrow.matches ? 260 : 380;
     var maxKm = Math.max.apply(null, pts.map(function (p) { return p.km; }));
     var maxV = Math.max.apply(null, pts.map(function (p) { return p.c.median; }));
     var xStep = niceStep(maxKm, 4), xMax = Math.max(xStep, Math.ceil(maxKm / xStep) * xStep);
     var yStep = niceStep(maxV, 4), yMax = Math.max(yStep, Math.ceil(maxV / yStep) * yStep);
-    // 0 km sits at the reading start: the right in Hebrew, as in the design.
-    function sx(km) { var f = km / xMax * (X1 - X0); return rtl ? X1 - f : X0 + f; }
+    // Distance grows to the right in both languages, as a chart's axis is read
+    // in Hebrew too, and as the site's price charts run their dates.
+    function sx(km) { return X0 + km / xMax * (X1 - X0); }
     function sy(v) { return Y1 - v / yMax * Y1; }
     var ns = pts.map(function (p) { return p.c.n; });
     var nMin = Math.min.apply(null, ns), nMax = Math.max.apply(null, ns);
@@ -214,7 +217,7 @@
                          "aria-label": W.view_scatter + ". " + W.keys });
     for (var v = 0; v <= yMax; v += yStep) {
       svg.appendChild(s("rect", { x: X0, y: sy(v), width: X1 - X0, height: 1, class: "ix-gridline" }));
-      var yl = s("text", { x: 0, y: sy(v) + 4, class: "ix-tick", "text-anchor": "start" });
+      var yl = s("text", { x: rtl ? width : 0, y: sy(v) + 4, class: "ix-tick", "text-anchor": rtl ? "end" : "start" });
       yl.textContent = "$" + nf.format(v);
       svg.appendChild(yl);
     }
@@ -274,7 +277,7 @@
       var w = p.d.name.length * 6.6, x = sx(p.km), y = sy(p.c.median) - r(p.c.n) - 4;
       var box = [x - w / 2 - 2, y - 13, x + w / 2 + 2, y + 3];
       var hit = boxes.some(function (o) { return !(box[2] < o[0] || box[0] > o[2] || box[3] < o[1] || box[1] > o[3]); });
-      if (hit || box[1] < -12 || box[0] < 30 || box[2] > width + 12) return;
+      if (hit || box[1] < -12 || box[0] < X0 - 18 || box[2] > X1 + 18) return;
       boxes.push(box);
       named++;
       var t = s("text", { x: x, y: y, class: "ix-name", "text-anchor": "middle", "aria-hidden": "true" });
@@ -316,7 +319,7 @@
       c.addEventListener("click", function () { openRow(c.__p.d.code); });
       c.addEventListener("keydown", function (ev) {
         var i = walk.indexOf(c), to = null;
-        var fwd = rtl ? "ArrowLeft" : "ArrowRight", back = rtl ? "ArrowRight" : "ArrowLeft";
+        var fwd = "ArrowRight", back = "ArrowLeft";
         if (ev.key === fwd || ev.key === "ArrowDown") to = walk[Math.min(i + 1, walk.length - 1)];
         else if (ev.key === back || ev.key === "ArrowUp") to = walk[Math.max(i - 1, 0)];
         else if (ev.key === "Home") to = walk[0];
