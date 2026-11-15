@@ -1163,3 +1163,269 @@ main:has(#f-ow:checked) .archive-row[data-trip="RT"] { display: none; }
     [dir="ltr"] .tiles::scroll-button(inline-end) { content: "→" / "Next destinations"; left: auto; right: calc(anchor(right) + 12px); }
   }
 }
+
+/* ============================================================================
+   The monthly price index, /he/index/<yyyy-mm>/ and /en/index/<yyyy-mm>/
+   (Figma: "מדד חודשי אינטראקטיבי (v2)", desktop 103:1006, mobile 105:1558,
+   filter sheet 105:1817). Its own block, prefixed ix-, so nothing above
+   changes for any other page. js/index.js draws the bar, the chart and the
+   table rows; without it the bar and chart stay hidden and the table is the
+   page.
+   ========================================================================= */
+
+.ix-hero {
+  padding: clamp(96px, calc(96px + 12 * ((100vw - 390px) / 1050)), 108px) 0 clamp(32px, calc(32px + 24 * ((100vw - 390px) / 1050)), 56px);
+  background: var(--night); color: #fff;
+}
+.ix-hero-in { display: grid; gap: 24px; }
+.ix-title-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+.ix-title { display: grid; gap: 10px; }
+.ix-hero h1 { font: 900 clamp(34px, calc(34px + 22 * ((100vw - 390px) / 1050)), 56px)/1.15 var(--display); }
+.ix-lede { max-inline-size: 640px; font-size: clamp(16px, calc(16px + 2 * ((100vw - 390px) / 1050)), 18px); line-height: 1.55; color: rgb(255 255 255 / .85); }
+.ix-month {
+  display: inline-flex; align-items: center; gap: 14px; flex: none;
+  min-block-size: 48px; padding-inline: 18px; border: 1px solid rgb(255 255 255 / .45); border-radius: var(--pill);
+  font: 700 16px/1 var(--text);
+}
+.ix-month-arrow { display: inline-grid; place-items: center; min-inline-size: 24px; min-block-size: 44px; color: #fff; text-decoration: none; font-size: 20px; }
+span.ix-month-arrow { opacity: .35; }
+.ix-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.ix-kpis > div { display: grid; padding: 18px 22px; border-radius: 16px; background: rgb(255 255 255 / .08); }
+.ix-kpis dd { order: -1; font: 900 clamp(22px, calc(22px + 10 * ((100vw - 390px) / 1050)), 32px)/1.2 var(--display); }
+.ix-kpis dt { font: 500 14px/1.5 var(--text); color: rgb(255 255 255 / .75); }
+@media (max-width: 760px) {
+  .ix-title-row { flex-direction: column; align-items: stretch; }
+  .ix-month { align-self: flex-start; }
+  .ix-kpis { gap: 8px; }
+  .ix-kpis > div { padding: 12px 10px; }
+  .ix-kpis dt { font-size: 12px; }
+}
+
+.ix-body { display: grid; gap: 28px; padding-block: 0 clamp(56px, calc(56px + 54 * ((100vw - 390px) / 1050)), 110px); }
+.ix-card { border-radius: 20px; background: var(--surface); box-shadow: var(--shadow-card); }
+
+/* The filter bar: every filter on a wide screen, a row of chips that opens
+   the sheet on a narrow one. Sticky, so a filter is never a scroll away. */
+.ix-bar {
+  position: sticky; inset-block-start: 12px; z-index: 5;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 14px 28px;
+  padding: 18px 24px;
+}
+.ix-bar[hidden], .ix-chart-card[hidden], .ix-sort[hidden], .ix-more[hidden] { display: none; }
+.ix-filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 14px 28px; }
+.ix-bar > .ix-filters { grid-column: 1; grid-row: 1; }
+.ix-bar > .ix-result { grid-column: 2; grid-row: 1; }
+.ix-group { display: grid; gap: 6px; justify-items: start; }
+.ix-group.is-off { opacity: .45; }
+.ix-label { font: 700 12px/1.5 var(--text); color: var(--muted); }
+.ix-result { display: grid; gap: 2px; font: 400 12px/1.5 var(--text); color: var(--muted); white-space: nowrap; }
+.ix-result strong { font: 900 28px/1.2 var(--display); color: var(--sea); }
+.ix-seg { display: flex; flex-wrap: wrap; gap: 2px; padding: 3px; border-radius: var(--pill); background: var(--sand); }
+.ix-seg button {
+  position: relative; padding: 8px 14px; border: 0; border-radius: var(--pill); background: none;
+  font: 500 14px/1.5 var(--text); color: var(--ink); cursor: pointer; white-space: nowrap;
+}
+/* 37px drawn, 44px to the finger, as the site's other small buttons. */
+.ix-seg button::after { content: ""; position: absolute; inset: -4px 0; }
+.ix-seg button[aria-pressed="true"] { background: var(--night); color: #fff; font-weight: 700; }
+.ix-seg button:disabled { cursor: default; }
+@media (hover: hover) and (pointer: fine) { .ix-seg button:not([aria-pressed="true"]):not(:disabled):hover { background: rgb(11 34 54 / .07); } }
+.ix-chips { display: none; }
+
+@media (max-width: 760px) {
+  .ix-bar { display: block; inset-block-start: 0; padding: 10px 12px; margin-inline: calc(8px - var(--gutter)); border-radius: 0 0 16px 16px; }
+  .ix-bar .ix-filters, .ix-bar .ix-result { display: none; }
+  .ix-chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+  .ix-chip-btn {
+    display: inline-flex; align-items: center; gap: 6px; flex: none; min-block-size: 40px; padding: 8px 14px;
+    border: 1px solid var(--border); border-radius: var(--pill); background: var(--surface);
+    font: 500 14px/1.4 var(--text); color: var(--ink); cursor: pointer;
+  }
+  .ix-chip-btn--main { border-color: var(--night); background: var(--night); color: #fff; font-weight: 700; }
+  .ix-chip-ico { inline-size: 12px; block-size: 12px; border: 2px solid currentColor; border-radius: 50%; }
+  .ix-caret { font-size: 11px; }
+}
+
+.ix-sheet {
+  inline-size: 100%; max-inline-size: 100%; max-block-size: 85vh; margin: auto 0 0; padding: 18px 16px 24px;
+  border: 0; border-radius: 24px 24px 0 0; background: var(--surface); color: var(--ink);
+}
+.ix-sheet::before { content: ""; display: block; inline-size: 40px; block-size: 4px; margin: 0 auto 18px; border-radius: 2px; background: var(--border); }
+.ix-sheet::backdrop { background: rgb(11 34 54 / .6); }
+.ix-sheet-head { display: flex; align-items: center; justify-content: space-between; margin-block-end: 16px; }
+.ix-sheet-head h2 { font: 900 24px/1.2 var(--display); }
+.ix-reset { min-block-size: 44px; border: 0; background: none; font: 700 15px var(--text); color: var(--sea); cursor: pointer; }
+.ix-sheet .ix-filters { display: grid; gap: 18px; margin-block-end: 24px; }
+.ix-sheet .ix-label { font-size: 14px; }
+.ix-sheet .ix-seg { gap: 8px; padding: 0; background: none; }
+.ix-sheet .ix-seg button { min-block-size: 40px; padding: 8px 14px; border: 1px solid var(--border); }
+.ix-sheet .ix-seg button[aria-pressed="true"] { border-color: var(--night); }
+.ix-apply { min-block-size: 52px; }
+
+/* The chart and the insights */
+.ix-grid { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 24px; align-items: start; }
+.ix-chart-card { display: grid; gap: 16px; padding: 28px 28px 24px; }
+.ix-views { justify-self: start; }
+.ix-chart-card h2 { font: 700 26px/1.2 var(--display); }
+.ix-view-sub { font-size: 15px; line-height: 1.5; color: var(--muted); }
+.ix-plot-in { position: relative; }
+.ix-scatter { display: block; inline-size: 100%; block-size: auto; overflow: visible; font-family: var(--text); }
+.ix-gridline { fill: var(--border); }
+.ix-tick { font-size: 11px; fill: var(--muted); }
+.ix-name { font-size: 12px; font-weight: 700; fill: var(--ink); paint-order: stroke; stroke: #fff; stroke-width: 3px; }
+.ix-trend { stroke: var(--muted); stroke-opacity: .6; stroke-width: 1.5; stroke-dasharray: 4 4; }
+.ix-dot-mark { stroke: #fff; stroke-width: 1.5; fill-opacity: .9; cursor: pointer; }
+.ix-dot-mark:focus { outline: none; }
+.ix-dot-mark:focus-visible, .ix-dot-mark:hover { stroke: var(--ink); stroke-width: 3; }
+.ix-tip {
+  position: absolute; z-index: 2; display: grid; gap: 2px; padding: 8px 12px; border-radius: 10px;
+  background: var(--night); color: #fff; pointer-events: none; white-space: nowrap;
+}
+.ix-tip[hidden] { display: none; }
+.ix-tip strong { font: 700 13px/1.4 var(--text); }
+.ix-tip span { font-size: 12px; color: rgb(255 255 255 / .8); }
+.ix-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; }
+.ix-legend[hidden] { display: none; }
+.ix-legend li { display: inline-flex; align-items: center; gap: 6px; }
+.ix-dot { inline-size: 10px; block-size: 10px; border-radius: 50%; }
+.ix-r-europe { background: #0E6F8A; }
+.ix-r-caucasus { background: #CF4A23; }
+.ix-r-gulf { background: #FFB547; }
+.ix-r-asia { background: #13A574; }
+.ix-r-north_america { background: #0B2236; }
+.ix-r-africa { background: #7A5AA6; }
+.ix-r-south_america { background: #8A6D3B; }
+.ix-empty { padding: 40px 0; color: var(--muted); text-align: center; }
+
+.ix-rank, .ix-dvs { display: grid; gap: 8px; }
+.ix-rank li, .ix-dvs li { display: grid; grid-template-columns: 110px minmax(0, 1fr) auto; align-items: center; gap: 12px; font-size: 14px; }
+.ix-rank-name { font-weight: 700; }
+.ix-rank-v { font: 700 15px var(--display); }
+.ix-track { display: block; block-size: 8px; border-radius: var(--pill); background: var(--sea-light); overflow: hidden; }
+.ix-track > span { display: block; block-size: 100%; inline-size: calc(var(--w) * 100%); border-radius: var(--pill); background: var(--sea); }
+.ix-dvs-key { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.ix-dvs-track { position: relative; block-size: 14px; }
+.ix-dvs-track::before { content: ""; position: absolute; inset-inline: 0; inset-block-start: 6px; block-size: 2px; background: var(--border); }
+.ix-dvs-span { position: absolute; inset-block-start: 5px; block-size: 4px; inset-inline-start: calc(var(--a) * 100%); inline-size: calc((var(--b) - var(--a)) * 100%); background: var(--muted); opacity: .4; }
+.ix-dvs-dot { display: inline-block; inline-size: 12px; block-size: 12px; border-radius: 50%; }
+.ix-dvs-track .ix-dvs-dot { position: absolute; inset-block-start: 1px; inset-inline-start: calc(var(--p) * 100% - 6px); }
+.ix-dvs-dot--direct { background: var(--mint); }
+.ix-dvs-dot--stops { background: var(--coral); }
+.ix-dvs-v { font-size: 13px; color: var(--muted); white-space: nowrap; }
+
+.ix-insights { display: grid; gap: 14px; }
+.ix-insights h2 { font: 700 22px/1.2 var(--display); }
+.ix-insights ul { display: grid; gap: 14px; }
+.ix-ins { display: grid; gap: 6px; padding: 20px 22px; border-radius: 18px; background: var(--surface); box-shadow: var(--shadow-card); }
+.ix-ins-big { font: 900 30px/1.2 var(--display); }
+/* Mint text at 30px would pass at 3.2:1, but the darker mint is 4.5:1. */
+.ix-ins--mint .ix-ins-big { color: var(--mint-ink); }
+.ix-ins--sea .ix-ins-big { color: var(--sea); }
+.ix-ins--coral .ix-ins-big { color: var(--coral); }
+.ix-ins-text { font-weight: 500; font-size: 15px; line-height: 1.5; }
+.ix-ins-foot { font-size: 12px; line-height: 1.4; color: var(--muted); }
+@media (max-width: 1100px) { .ix-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 760px) {
+  .ix-chart-card { padding: 20px 16px; }
+  .ix-chart-card h2 { font-size: 22px; }
+  .ix-views { justify-self: stretch; flex-wrap: nowrap; }
+  .ix-views button { flex: 1; padding-inline: 8px; }
+  .ix-rank li { grid-template-columns: 84px minmax(0, 1fr) auto; gap: 8px; }
+  .ix-dvs li { grid-template-columns: 84px minmax(0, 1fr); gap: 4px 8px; }
+  .ix-dvs-v { grid-column: 1 / -1; }
+  /* Side by side and swiped, as the design draws them. */
+  .ix-insights ul {
+    grid-auto-flow: column; grid-auto-columns: 82%; overflow-x: auto; scroll-snap-type: x mandatory;
+    margin-inline: calc(-1 * var(--gutter)); padding: 4px var(--gutter) 12px;
+  }
+  .ix-ins { scroll-snap-align: start; }
+}
+
+/* The table */
+.ix-table-card { display: grid; gap: 16px; padding: 32px 40px 28px; }
+.ix-table-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.ix-table-head h2 { font: 700 28px/1.2 var(--display); }
+.ix-hint { font-size: 14px; color: var(--muted); }
+.ix-csv {
+  display: inline-flex; align-items: center; gap: 6px; min-block-size: 40px; padding: 8px 14px;
+  border: 1px solid var(--sea); border-radius: var(--pill); font: 700 14px/1.4 var(--text); color: var(--sea); text-decoration: none;
+}
+.ix-sort { display: none; }
+.ix-table { inline-size: 100%; border-collapse: collapse; font-size: 15px; }
+.ix-table th, .ix-table td { padding: 12px 8px; text-align: start; vertical-align: middle; font-weight: 400; }
+.ix-table thead th { padding-block: 0 8px; border-block-end: 1px solid var(--ink); font: 700 12px/1.5 var(--text); color: var(--muted); white-space: nowrap; }
+.ix-table thead th[aria-sort] { color: var(--sea); }
+.ix-table thead button { position: relative; padding: 0; border: 0; background: none; font: inherit; color: inherit; cursor: pointer; }
+.ix-table thead button::after { content: ""; position: absolute; inset: -12px -4px; }
+.ix-table thead th[aria-sort="ascending"] .ix-arrow::after { content: " ▲"; }
+.ix-table thead th[aria-sort="descending"] .ix-arrow::after { content: " ▼"; }
+.ix-table tbody tr { border-block-end: 1px solid var(--border); }
+.ix-table tbody th { font-weight: 700; font-size: 16px; }
+.ix-table tbody th a { color: inherit; }
+.ix-name-btn { padding: 0; border: 0; background: none; font: 700 16px/1.5 var(--text); color: var(--ink); text-align: start; cursor: pointer; }
+@media (hover: hover) and (pointer: fine) { .ix-name-btn:hover { text-decoration: underline; } }
+.ix-table tr > :nth-child(2) { inline-size: 70px; }
+.ix-table tr > :nth-child(3) { inline-size: 210px; }
+.ix-table tr > :nth-child(n+4) { inline-size: 84px; }
+.ix-table tr > :nth-child(8) { inline-size: 80px; }
+.ix-table tbody td:nth-child(8) { font-size: 14px; color: var(--muted); }
+.ix-table.ix-ow tr > :nth-child(6), .ix-table.ix-ow tr > :nth-child(7) { display: none; }
+.ix-chip { display: inline-block; padding: 3px 10px; border-radius: var(--pill); background: rgb(14 111 138 / .12); font: 500 12px/1.5 var(--text); color: var(--sea); white-space: nowrap; }
+.ix-med-v { display: inline-block; min-inline-size: 60px; margin-inline-end: 10px; font: 700 17px/1.4 var(--display); vertical-align: middle; }
+.ix-med .ix-track { display: inline-block; inline-size: calc(100% - 74px); vertical-align: middle; }
+.ix-table tr.is-open, .ix-drill { background: rgb(227 241 244 / .5); }
+.ix-table tbody tr.is-open { border-block-end: 0; }
+.ix-table .ix-drill td { padding: 16px; }
+.ix-drill-in { display: flex; align-items: center; gap: 12px; }
+.ix-stat { flex: 1; display: grid; gap: 2px; padding: 12px 16px; border-radius: 12px; background: var(--surface); white-space: nowrap; }
+.ix-stat-l { font: 500 13px/1.4 var(--text); color: var(--muted); }
+.ix-stat strong { font: 700 22px/1.3 var(--display); }
+.ix-stat-n { font-size: 12px; color: var(--muted); }
+.ix-drill-link { flex: none; font: 700 14px var(--text); color: var(--coral-ink); }
+.ix-more { justify-self: center; min-block-size: 44px; border: 0; background: none; font: 700 15px var(--text); color: var(--sea); cursor: pointer; }
+.ix-more::after { content: " ▾"; }
+.ix-more[aria-expanded="true"]::after { content: " ▴"; }
+
+@media (max-width: 760px) {
+  .ix-table-card { padding: 20px 16px; }
+  .ix-table-head h2 { font-size: 24px; }
+  /* The design puts the download under the list on a phone. */
+  .ix-table-head { display: contents; }
+  .ix-table-head > div { order: 0; }
+  .ix-sort { order: 1; }
+  .ix-table { order: 2; }
+  .ix-more { order: 3; }
+  .ix-csv { order: 4; justify-content: center; }
+  .ix-hint-js { display: none; }
+  .ix-sort { display: flex; align-items: center; gap: 4px; justify-self: start; font: 700 14px var(--text); color: var(--sea); }
+  .ix-sort select { min-block-size: 40px; border: 0; background: none; font: inherit; color: inherit; }
+  /* A list, not a table, at this width: table layout would size the rows
+     from the hidden columns and push them past the card. */
+  .ix-table, .ix-table tbody { display: block; inline-size: 100%; }
+  .ix-table thead { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip-path: inset(50%); }
+  .ix-table tbody tr:not(.ix-drill) {
+    display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "name chip val" "bar bar bar";
+    align-items: center; gap: 6px 10px; padding: 14px 4px;
+  }
+  .ix-table tbody tr > :nth-child(n) { padding: 0; inline-size: auto; }
+  .ix-table tbody tr > th { grid-area: name; }
+  .ix-table tbody tr > td:nth-child(2) { grid-area: chip; }
+  .ix-table tbody td.ix-med { display: contents; }
+  .ix-med-v { grid-area: val; min-inline-size: 0; margin: 0; }
+  .ix-med .ix-track { grid-area: bar; inline-size: auto; display: block; }
+  .ix-table tbody tr:not(.ix-drill) > td:nth-child(n+4) { display: none; }
+  .ix-table tbody .ix-drill { display: block; border-radius: 0 0 12px 12px; }
+  .ix-table tbody .ix-drill td { display: block; padding: 12px; }
+  .ix-drill-in { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .ix-drill-link { grid-column: 1 / -1; order: 9; padding-block: 8px; }
+}
+
+.ix-method { display: grid; gap: 12px; padding: 28px clamp(20px, calc(20px + 20 * ((100vw - 390px) / 1050)), 40px); border-radius: 20px; background: var(--sea-light); }
+.ix-method h2 { font: 700 22px/1.2 var(--display); }
+.ix-method ul { display: grid; gap: 8px; padding-inline-start: 1.2em; list-style: disc; font-size: 15px; line-height: 1.6; }
+
+/* /he/index/ and /en/index/: the months */
+.ix-months { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; padding-block-start: 28px; }
+.ix-month-link { display: grid; gap: 4px; padding: 24px; text-decoration: none; }
+.ix-month-link-name { font: 900 26px/1.2 var(--display); color: var(--night); }
+.ix-month-link-meta { font-size: 14px; color: var(--muted); }
