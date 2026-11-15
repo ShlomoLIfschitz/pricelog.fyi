@@ -29,9 +29,12 @@ that page untrue.
 The exceptions are the two home pages, `/he/` and `/en/`, and `/he/search/` and
 `/en/search/`, which carry the flight search (Travelpayouts' White Label):
 
-- `js/search.js` (all four) shows a gate and loads the White Label only after a click on
-  it. Until then no page requests anything from another origin. The click is kept in
-  `localStorage` under `pricelog-search`, and nothing else is stored. It opens the White
+- `js/search.js` (all four) shows a consent banner ("accept" / "no cookies", the same
+  size, not a wall) and loads the White Label only after "accept"; the search's box
+  explains the wait, or after "no cookies" offers a button that is the same accept. All
+  of its words live in the script, so the generated home pages and the static search
+  pages carry only the box and its `<noscript>` line. Until then no page requests anything from another origin. The choice (`on` /
+  `off`) is kept in `localStorage` under `pricelog-search`, and nothing else is stored. It opens the White
   Label in the page's `<html lang>` (by `?language=`), and a language picked inside the
   White Label moves to the search page in that language.
 - `js/search-median.js` (both search pages, in the page's `<html lang>`) shows PriceLog's median beside a search from
