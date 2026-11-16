@@ -41,7 +41,16 @@ The exceptions are the two home pages, `/he/` and `/en/`, and `/he/search/` and
   `/he/flights/medians.json`, which `pricelog-scaner` writes. It reads the address and that
   file, and stores and sends nothing.
 
-The privacy page describes both, and what the White Label loads and stores once it runs. The two typefaces, Rubik and Heebo, are served from `fonts/` on this
+The monthly price index pages, `/he/index/<yyyy-mm>/` and `/en/index/<yyyy-mm>/`, are the
+other exception, with no third party in it:
+
+- `js/index.js` draws the filters, the chart and the sortable table from the numbers the
+  page carries in a `<script type="application/json">` block, which `pricelog-scaner`
+  writes. It fetches nothing, stores nothing and sends nothing. Without it the page is the
+  round-trip table, the insights and the CSV. `_headers` gives `/he/index/*` and
+  `/en/index/*` `script-src 'self'` and nothing more.
+
+The privacy page describes all three, and what the White Label loads and stores once it runs. The two typefaces, Rubik and Heebo, are served from `fonts/` on this
 domain for that reason, subset to Hebrew and Latin and cut to the weights in use (about
 80KB together). Their licences (SIL OFL) sit next to them.
 
@@ -78,7 +87,9 @@ en/flights/             /en/flights/        generated, the same pages in English
 _redirects              / and /privacy → /he/..., 301
 _headers                CSP and the other security headers, see Deploying
 site.css                the stylesheet of the new design, see above
-js/                     the two scripts of the flight search, see Stack
+js/                     the two scripts of the flight search and the index's, see Stack
+he/index/               /he/index/          generated: the monthly price index, see below
+en/index/               /en/index/          generated, the same pages in English
 styles.css              the previous stylesheet, until no page links it
 fonts/                  Rubik and Heebo, woff2, self-hosted
 img/dest/               one photo per destination, three widths; sources in SOURCES.md
@@ -105,6 +116,14 @@ the flights published to it. Every run rewrites them, the refresh every six hour
 so their numbers move with the collection. A slug is permanent once published; the list
 is `SLUGS` in `pricelog-scaner`'s `destinations.py`. `sitemap.xml` lists the same pages, in both
 languages, and is hand-written, so a destination added there needs its two lines here too.
+
+Since 2026-12-01 it also writes the monthly price index: for every calendar month that
+has closed (from November 2026), `he/index/<yyyy-mm>/index.html` and `data.csv`, the same
+in English under `en/index/`, and `he/index/index.html` and `en/index/index.html` listing
+the months. A closed month's numbers do not change, so rewriting it commits nothing. The
+styles are the `ix-` section at the end of `site.css`, a contract with `index_pages.py` in
+`pricelog-scaner`, and the script is `js/index.js`. `sitemap.xml` needs the two lines of
+each new month by hand.
 
 The one exception is the first manifest, created by hand once as `{"deals": []}`. The job
 refuses to run without one rather than treating a missing manifest as empty: that would
