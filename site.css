@@ -1036,12 +1036,48 @@ main:has(#f-ow:checked) .archive-row[data-trip="RT"] { display: none; }
 .search { display: grid; gap: 24px; padding: clamp(24px, calc(24px + 24 * ((100vw - 390px) / 1050)), 48px) var(--gutter) 96px; }
 .search-form { padding: clamp(14px, calc(14px + 10 * ((100vw - 390px) / 1050)), 24px); border-radius: 24px; background: var(--surface); box-shadow: var(--shadow-card); }
 .search-form:focus { outline: none; }
-/* Until a click, the search is this gate: what loading it means, and the
-   button that loads it (js/search.js). Without JavaScript the button stays
-   hidden and the <noscript> line says why. */
-.search-gate { display: grid; gap: 14px; justify-items: start; line-height: 1.7; color: rgb(20 33 43 / .85); }
+/* Until "accept" in the consent banner, the search is this box: waiting for a
+   choice, or off after "no cookies" with a button that turns it on
+   (js/search.js draws both). Without JavaScript only its <noscript> line
+   shows. */
+.search-gate {
+  display: grid; gap: 10px; justify-items: center; padding: 24px 20px; border-radius: 16px;
+  background: var(--sand); color: var(--ink); text-align: center; line-height: 1.6;
+}
 .search-gate a { color: var(--sea); }
-.search > .search-gate { padding: 22px; border-radius: 24px; background: var(--surface); box-shadow: var(--shadow-card); }
+.gate-icon { inline-size: 36px; block-size: 36px; fill: var(--sea); }
+.gate-title { font: 700 19px/1.3 var(--display); color: var(--ink); }
+.gate-body { max-inline-size: 52ch; font-size: 15px; color: var(--muted); }
+.gate-note { font-size: 13px; color: var(--muted); }
+.search-gate:focus { outline: none; }
+.search > .search-gate { padding: 28px 22px; border-radius: 24px; background: var(--surface); box-shadow: var(--shadow-card); }
+
+/* The consent banner (js/search.js), only on the four pages with the search.
+   Not a dialog: fixed to the bottom, the page scrolls and works under it, and
+   html.consent-open leaves room at the end so it never covers the footer.
+   No motion: it is there when the page is. */
+.consent {
+  position: fixed; inset-inline: 0; inset-block-end: 0; z-index: 30;
+  background: var(--surface); color: var(--ink);
+  border-block-start: 1px solid var(--border); box-shadow: 0 -8px 28px rgb(11 34 54 / .14);
+}
+.consent-in { display: flex; align-items: center; gap: 32px; padding: 20px var(--gutter); }
+.consent-text { flex: 1; display: grid; gap: 4px; justify-items: start; }
+.consent-title { font: 700 18px/1.35 var(--display); }
+.consent-body { font-size: 15px; line-height: 1.6; color: var(--muted); }
+.consent-link { font-size: 14px; font-weight: 700; color: var(--sea); }
+/* Two equal columns: saying no is exactly as big as saying yes. */
+.consent-buttons { flex: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; inline-size: 312px; }
+.btn--line { background: var(--surface); color: var(--night); border-color: var(--night); }
+html.consent-open body { padding-block-end: 140px; }
+@media (max-width: 767px) {
+  .consent { border-block-start: 0; border-start-start-radius: 20px; border-start-end-radius: 20px; }
+  .consent-in { flex-direction: column; align-items: stretch; gap: 12px; padding: 16px 16px 20px; }
+  .consent-title { font-size: 16px; }
+  .consent-body { font-size: 13px; }
+  .consent-buttons { inline-size: auto; }
+  html.consent-open body { padding-block-end: 260px; }
+}
 /* The gate, its button and the boxes all set their own display, which would
    beat the hidden attribute that js/search.js toggles. */
 .search-gate[hidden], .search-gate [hidden], [data-search-box][hidden] { display: none; }
@@ -1074,7 +1110,6 @@ main:has(#f-ow:checked) .archive-row[data-trip="RT"] { display: none; }
    in one line by itself (it sizes to its container, not to the window). */
 .hero-search { flex: none; display: grid; gap: 12px; padding: 18px 16px; border-radius: 20px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow-lift); }
 .hero-search h2 { font: 700 20px/1.3 var(--display); color: var(--ink); }
-.hero-search .search-gate { max-inline-size: 70ch; }
 /* Stacked, the banner is the row's last thing, and without the bottom margin
    it sits on the stats: only phones (≤640px) had one for the row. */
 .hero-row:has(.hero-search) { flex-direction: column; align-items: stretch; gap: 32px; margin-block: auto 24px; }
