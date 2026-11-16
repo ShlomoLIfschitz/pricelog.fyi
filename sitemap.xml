@@ -537,5 +537,17 @@
   <url>
     <loc>https://pricelog.fyi/en/flights/podgorica/</loc>
   </url>
+  <url>
+    <loc>https://pricelog.fyi/he/index/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/index/2026-11/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/en/index/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/en/index/2026-11/</loc>
+  </url>
 
 </urlset>
