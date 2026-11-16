@@ -616,7 +616,21 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   margin-block-start: -150px; padding-inline: var(--gutter); padding-block-end: 96px;
 }
 .deal-main { display: grid; gap: 24px; }
-.deal-side { position: sticky; inset-block-start: 24px; display: grid; gap: 16px; }
+/* Sticky only where the whole panel fits on screen. A sticky box taller than
+   the viewport keeps its bottom out of reach until the main column ends: at
+   1280x900 the eSIM line (a 1005px panel) sat below the fold for the whole
+   page, and the plain 875-895px panel already lost its last line there.
+   CSS cannot read the panel's height, so the thresholds are measured ones
+   plus 24px above and below: up to 895px without the eSIM line, up to
+   1045px (English) with it. Below them the panel scrolls with the page,
+   and its button is at its top, so it is on screen when the page opens. */
+.deal-side { display: grid; gap: 16px; }
+@media (min-height: 960px) {
+  .deal-side { position: sticky; inset-block-start: 24px; }
+}
+@media (max-height: 1119px) {
+  .deal-side:has(#esim-note) { position: static; }
+}
 .panel {
   display: grid; gap: 20px; padding: 36px; border-radius: 28px;
   background: var(--surface); box-shadow: 0 16px 40px -12px rgb(11 34 54 / .08);
