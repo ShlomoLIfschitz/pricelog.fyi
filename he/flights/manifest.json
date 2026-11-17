@@ -15840,6 +15840,37 @@
       "airport": null,
       "esim_url": null,
       "esim_url_en": null
+    },
+    {
+      "id": "20261117_VIE_OW",
+      "destination": "VIE",
+      "trip": "OW",
+      "depart_date": "2027-01-28",
+      "return_date": null,
+      "number_of_changes": 1,
+      "price": "78.00",
+      "currency": "usd",
+      "found_at": "2026-11-17T06:15:47+00:00",
+      "published_at": "2026-11-17T12:47:04.339497+00:00",
+      "median": "133",
+      "p10": "98",
+      "observations": 781,
+      "sub_id": "20261117_VIE_OW",
+      "affiliate_url": "https://tp.media/r?campaign_id=100&marker=775295&p=4114&sub_id=20261117_VIE_OW&trs=581757&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTLV2801VIE1",
+      "telegram_message_id": null,
+      "depart_at": "2027-01-28T22:45:00+02:00",
+      "return_at": null,
+      "airline": null,
+      "dates_url": null,
+      "at_or_below": 2,
+      "duration": 2325,
+      "duration_to": 2325,
+      "duration_back": null,
+      "stops_to": 1,
+      "stops_back": null,
+      "airport": null,
+      "esim_url": "https://tp.media/r?campaign_id=224&marker=775295&p=5998&sub_id=20261117_esim_AT_he&trs=581757&u=https%3A%2F%2Fyesim.app%2Fhe%2Fcountry%2Faustria%2F",
+      "esim_url_en": "https://tp.media/r?campaign_id=224&marker=775295&p=5998&sub_id=20261117_esim_AT_en&trs=581757&u=https%3A%2F%2Fyesim.app%2Fcountry%2Faustria%2F"
     }
   ]
 }
