@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-11-17T12:47:04.339497+00:00",
+  "checked_at": "2026-11-17T15:51:06.825164+00:00",
   "destinations": {
     "LCA": {
       "name": "לרנקה",
@@ -1736,6 +1736,123 @@
           "p10": "93",
           "median_text": "$118",
           "p10_text": "$93"
+        }
+      }
+    },
+    "RAK": {
+      "name": "מרקש",
+      "name_en": "Marrakesh",
+      "path": "/he/flights/marrakesh/",
+      "path_en": "/en/flights/marrakesh/",
+      "currency": "usd",
+      "segments": {
+        "OW": {
+          "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
+          "observations": 239,
+          "median": "118",
+          "p10": "89",
+          "median_text": "$118",
+          "p10_text": "$89"
+        },
+        "RT": {
+          "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
+          "observations": 236,
+          "median": "252.5",
+          "p10": "199",
+          "median_text": "$253",
+          "p10_text": "$199"
+        }
+      }
+    },
+    "NCE": {
+      "name": "ניס",
+      "name_en": "Nice",
+      "path": "/he/flights/nice/",
+      "path_en": "/en/flights/nice/",
+      "currency": "usd",
+      "segments": {
+        "OW": {
+          "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
+          "observations": 211,
+          "median": "126",
+          "p10": "107",
+          "median_text": "$126",
+          "p10_text": "$107"
+        },
+        "RT": {
+          "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
+          "observations": 225,
+          "median": "318",
+          "p10": "245",
+          "median_text": "$318",
+          "p10_text": "$245"
+        }
+      }
+    },
+    "DEL": {
+      "name": "דלהי",
+      "name_en": "Delhi",
+      "path": "/he/flights/delhi/",
+      "path_en": "/en/flights/delhi/",
+      "currency": "usd",
+      "segments": {
+        "OW": {
+          "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
+          "observations": 204,
+          "median": "425",
+          "p10": "354",
+          "median_text": "$425",
+          "p10_text": "$354"
+        },
+        "RT": {
+          "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
+          "observations": 210,
+          "median": "689",
+          "p10": "562.3",
+          "median_text": "$689",
+          "p10_text": "$562"
+        }
+      }
+    },
+    "LYS": {
+      "name": "ליון",
+      "name_en": "Lyon",
+      "path": "/he/flights/lyon/",
+      "path_en": "/en/flights/lyon/",
+      "currency": "usd",
+      "segments": {
+        "RT": {
+          "trip_name": "הלוך־חזור",
+          "trip_name_en": "round trip",
+          "observations": 217,
+          "median": "264",
+          "p10": "174.6",
+          "median_text": "$264",
+          "p10_text": "$175"
+        }
+      }
+    },
+    "HKG": {
+      "name": "הונג קונג",
+      "name_en": "Hong Kong",
+      "path": "/he/flights/hong-kong/",
+      "path_en": "/en/flights/hong-kong/",
+      "currency": "usd",
+      "segments": {
+        "OW": {
+          "trip_name": "הלוך בלבד",
+          "trip_name_en": "one way",
+          "observations": 239,
+          "median": "493",
+          "p10": "429.4",
+          "median_text": "$493",
+          "p10_text": "$429"
         }
       }
     }
