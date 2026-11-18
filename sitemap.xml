@@ -263,6 +263,21 @@
   <url>
     <loc>https://pricelog.fyi/he/flights/podgorica/</loc>
   </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/marrakesh/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/nice/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/delhi/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/lyon/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/he/flights/hong-kong/</loc>
+  </url>
 
   <url>
     <loc>https://pricelog.fyi/en/</loc>
@@ -536,6 +551,21 @@
   </url>
   <url>
     <loc>https://pricelog.fyi/en/flights/podgorica/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/en/flights/marrakesh/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/en/flights/nice/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/en/flights/delhi/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/en/flights/lyon/</loc>
+  </url>
+  <url>
+    <loc>https://pricelog.fyi/en/flights/hong-kong/</loc>
   </url>
   <url>
     <loc>https://pricelog.fyi/he/flights/pesach-2027/</loc>
