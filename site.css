@@ -143,14 +143,26 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .logo svg { --s: clamp(28px, calc(28px + 2 * ((100vw - 390px) / 1050)), 30px); inline-size: var(--s); block-size: var(--s); flex: none; order: 2; }
 .logo span span { font-weight: 500; color: var(--muted); font-size: .9em; }
-.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-links { display: flex; align-items: center; gap: clamp(20px, calc(20px + 12 * ((100vw - 1100px) / 340)), 32px); }
 .nav-links a {
   /* 44px to tap, laid out as 40 so the bar keeps the mock's 60px height */
   display: inline-flex; align-items: center; min-block-size: 44px; margin-block: -2px;
-  font-weight: 500; font-size: 15px; color: var(--muted); text-decoration: none;
+  font-weight: 500; font-size: 15px; color: var(--muted); text-decoration: none; white-space: nowrap;
 }
 .nav-links a[aria-current] { font-weight: 700; color: var(--night); }
 @media (hover: hover) and (pointer: fine) { .nav-links a:hover { color: var(--night); } }
+/* The open holiday's page (pages.py _holiday_link): a tinted pill with a dot,
+   so a page nothing else links to is seen from every page (Figma 168:1920).
+   36px tall, not 44: a 44px pill would fill the 60px bar; 36 is still above
+   WCAG 2.5.8's 24. */
+.nav-links a.nav-holiday {
+  gap: 6px; min-block-size: 36px; margin-block: 0; padding-inline: 12px;
+  border-radius: var(--pill); background: var(--coral-tint); color: var(--coral-ink); font-weight: 700;
+}
+@media (hover: hover) and (pointer: fine) { .nav-links a.nav-holiday:hover { color: var(--coral-ink); } }
+.nav-holiday::after {
+  content: ""; flex: none; inline-size: 7px; block-size: 7px; border-radius: 50%; background: var(--coral);
+}
 
 /* The phone menu is a <details>: it opens without a line of script. */
 .nav-menu { display: none; position: relative; }
@@ -171,7 +183,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   border-radius: 12px; font-weight: 500; color: var(--night); text-decoration: none;
 }
 .nav-menu a[aria-current] { font-weight: 700; background: var(--sand); }
-@media (max-width: 860px) {
+.nav-menu a.nav-holiday { gap: 8px; font-weight: 700; color: var(--coral-ink); background: var(--coral-tint); }
+/* 1100, not 860, since the holiday link: the English bar needs about 1080px
+   in one line, and below that its links wrapped to two. */
+@media (max-width: 1100px) {
   .nav-links, .nav > .btn { display: none; }
   .nav-menu { display: block; }
   /* The logo leads on a phone, the menu trails: same order as the mock. */
