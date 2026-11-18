@@ -76,7 +76,7 @@
 <main id="main">
 
 <header class="list-head">
-  <div class="collage" aria-hidden="true"><img src="/img/dest/vie-800.webp" srcset="/img/dest/vie-800.webp 800w, /img/dest/vie-1280.webp 1280w, /img/dest/vie-1920.webp 1920w" sizes="300px" alt="" loading="lazy"><img src="/img/dest/bcn-800.webp" srcset="/img/dest/bcn-800.webp 800w, /img/dest/bcn-1280.webp 1280w, /img/dest/bcn-1920.webp 1920w" sizes="300px" alt="" loading="lazy"><img src="/img/dest/lys-800.webp" srcset="/img/dest/lys-800.webp 800w, /img/dest/lys-1280.webp 1280w, /img/dest/lys-1920.webp 1920w" sizes="300px" alt="" loading="lazy"><img src="/img/dest/evn-800.webp" srcset="/img/dest/evn-800.webp 800w, /img/dest/evn-1280.webp 1280w, /img/dest/evn-1920.webp 1920w" sizes="300px" alt="" loading="lazy"><img src="/img/dest/rix-800.webp" srcset="/img/dest/rix-800.webp 800w, /img/dest/rix-1280.webp 1280w, /img/dest/rix-1920.webp 1920w" sizes="300px" alt="" loading="lazy"></div>
+  <div class="collage" aria-hidden="true"><img src="/img/dest/cta-800.webp" srcset="/img/dest/cta-800.webp 800w, /img/dest/cta-1280.webp 1280w, /img/dest/cta-1920.webp 1920w" sizes="300px" alt="" loading="lazy"><img src="/img/dest/bus-800.webp" srcset="/img/dest/bus-800.webp 800w, /img/dest/bus-1280.webp 1280w, /img/dest/bus-1920.webp 1920w" sizes="300px" alt="" loading="lazy"><img src="/img/dest/bcn-800.webp" srcset="/img/dest/bcn-800.webp 800w, /img/dest/bcn-1280.webp 1280w, /img/dest/bcn-1920.webp 1920w" sizes="300px" alt="" loading="lazy"><img src="/img/dest/vie-800.webp" srcset="/img/dest/vie-800.webp 800w, /img/dest/vie-1280.webp 1280w, /img/dest/vie-1920.webp 1920w" sizes="300px" alt="" loading="lazy"><img src="/img/dest/lys-800.webp" srcset="/img/dest/lys-800.webp 800w, /img/dest/lys-1280.webp 1280w, /img/dest/lys-1920.webp 1920w" sizes="300px" alt="" loading="lazy"></div>
   <p class="eyebrow">טיסות שנמצאו · מתל אביב</p>
   <h1>כל הטיסות שנמצאו</h1>
   <p>טיסות מתל אביב שהמחיר שלהן נמוך לפחות ב־<span class="num" dir="ltr">40%</span> מהחציון של
@@ -87,15 +87,46 @@
 <form class="filters wrap" aria-label="סינון">
   <fieldset>
     <legend>סוג הטיסה</legend>
-    <input type="radio" name="trip" id="f-all" checked><label for="f-all">הכול · <span class="num" dir="ltr">516</span></label>
-    <input type="radio" name="trip" id="f-rt"><label for="f-rt">הלוך־חזור · <span class="num" dir="ltr">355</span></label>
-    <input type="radio" name="trip" id="f-ow"><label for="f-ow">הלוך בלבד · <span class="num" dir="ltr">161</span></label>
+    <input type="radio" name="trip" id="f-all" checked><label for="f-all">הכול · <span class="num" dir="ltr">519</span></label>
+    <input type="radio" name="trip" id="f-rt"><label for="f-rt">הלוך־חזור · <span class="num" dir="ltr">357</span></label>
+    <input type="radio" name="trip" id="f-ow"><label for="f-ow">הלוך בלבד · <span class="num" dir="ltr">162</span></label>
   </fieldset>
 </form>
 
 <section class="day wrap" aria-labelledby="today-h">
-  <div class="day-head"><h2 id="today-h">היום, <time datetime="2026-11-18"><span class="num" dir="ltr">18.11.2026</span></time></h2></div>
-  <p class="empty">היום עוד לא פורסמה טיסה.</p>
+  <div class="day-head"><h2 id="today-h">היום, <time datetime="2026-11-18"><span class="num" dir="ltr">18.11.2026</span></time></h2><span><span class="num" dir="ltr">3</span> טיסות</span></div>
+  <ul class="cards cards--index">
+    <li class="card" data-trip="OW">
+      <div class="card-media"><img src="/img/dest/cta-800.webp" srcset="/img/dest/cta-800.webp 800w, /img/dest/cta-1280.webp 1280w, /img/dest/cta-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">55%</b>מתחת לחציון</span><span class="pill">אין מחיר חדש יותר</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/he/flights/20261118_CTA_OW/">קטניה</a></h3><p class="card-country">סיציליה, איטליה · הלוך בלבד</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">ישירה</span><span aria-hidden="true">·</span><span class="num" dir="ltr">24.1.2027</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$39</strong><small>מחיר חציוני <span class="num" dir="ltr">$87</span> · מתוך <span class="num" dir="ltr">575</span> מחירים</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לפרטי הטיסה וההשוואה</span></div>
+      </div>
+    </li>
+    <li class="card" data-trip="RT">
+      <div class="card-media"><img src="/img/dest/bus-800.webp" srcset="/img/dest/bus-800.webp 800w, /img/dest/bus-1280.webp 1280w, /img/dest/bus-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">52%</b>מתחת לחציון</span><span class="pill">אין מחיר חדש יותר</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/he/flights/20261118_BUS_RT/">בטומי</a></h3><p class="card-country">גאורגיה · הלוך־חזור</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">ישירה</span><span aria-hidden="true">·</span><span class="num" dir="ltr">1.3 – 10.3.2027</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$157</strong><small>מחיר חציוני <span class="num" dir="ltr">$326</span> · מתוך <span class="num" dir="ltr">5,750</span> מחירים</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לפרטי הטיסה וההשוואה</span></div>
+      </div>
+    </li>
+    <li class="card" data-trip="RT">
+      <div class="card-media"><img src="/img/dest/bcn-800.webp" srcset="/img/dest/bcn-800.webp 800w, /img/dest/bcn-1280.webp 1280w, /img/dest/bcn-1920.webp 1920w" sizes="(max-width: 640px) 300px, 384px" alt="" loading="lazy">
+        <div class="card-top"><span class="badge"><b dir="ltr">80%</b>מתחת לחציון</span><span class="pill">אין מחיר חדש יותר</span></div>
+        <div><h3 class="card-city"><a class="card-link" href="/he/flights/20261118_BCN_RT/">ברצלונה</a></h3><p class="card-country">ספרד · הלוך־חזור</p></div>
+      </div>
+      <div class="card-body">
+        <p class="card-dates"><span class="stops">ישירה</span><span aria-hidden="true">·</span><span class="num" dir="ltr">20.12 – 27.12.2026</span></p>
+        <div class="card-price"><div><strong class="num" dir="ltr">$49</strong><small>מחיר חציוני <span class="num" dir="ltr">$245</span> · מתוך <span class="num" dir="ltr">2,891</span> מחירים</small></div><span class="card-go" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>לפרטי הטיסה וההשוואה</span></div>
+      </div>
+    </li>
+  </ul>
 </section>
 
 <section class="day wrap deal-archive" aria-labelledby="archive-h">
@@ -105,13 +136,13 @@
       <li class="archive-row" data-trip="RT">
         <strong class="num" dir="ltr">$204</strong>
         <div><b><a href="/he/flights/20261117_VIE_RT/">וינה, הלוך־חזור</a></b><small><time datetime="2027-01-02"><span class="num" dir="ltr">2.1.2027</span></time> – <time datetime="2027-01-08"><span class="num" dir="ltr">8.1.2027</span></time> · <span class="num" dir="ltr">41%</span> מתחת לחציון</small></div>
-        <span class="pill">נמצא שוב במחיר דומה</span>
+        <span class="pill pill--rose">המחיר עלה מאז</span>
         <img src="/img/dest/vie-800.webp" srcset="/img/dest/vie-800.webp 800w, /img/dest/vie-1280.webp 1280w, /img/dest/vie-1920.webp 1920w" sizes="72px" alt="" loading="lazy">
       </li>
       <li class="archive-row" data-trip="RT">
         <strong class="num" dir="ltr">$137</strong>
         <div><b><a href="/he/flights/20261117_BCN_RT/">ברצלונה, הלוך־חזור</a></b><small><time datetime="2027-01-11"><span class="num" dir="ltr">11.1.2027</span></time> – <time datetime="2027-01-14"><span class="num" dir="ltr">14.1.2027</span></time> · <span class="num" dir="ltr">44%</span> מתחת לחציון</small></div>
-        <span class="pill">אין מחיר חדש יותר</span>
+        <span class="pill">נמצא שוב במחיר דומה</span>
         <img src="/img/dest/bcn-800.webp" srcset="/img/dest/bcn-800.webp 800w, /img/dest/bcn-1280.webp 1280w, /img/dest/bcn-1920.webp 1920w" sizes="72px" alt="" loading="lazy">
       </li>
       <li class="archive-row" data-trip="RT">
@@ -393,7 +424,7 @@
       <li class="archive-row" data-trip="RT">
         <strong class="num" dir="ltr">$164</strong>
         <div><b><a href="/he/flights/20261113_PRG_RT/">פראג, הלוך־חזור</a></b><small><time datetime="2027-03-14"><span class="num" dir="ltr">14.3.2027</span></time> – <time datetime="2027-03-17"><span class="num" dir="ltr">17.3.2027</span></time> · <span class="num" dir="ltr">44%</span> מתחת לחציון</small></div>
-        <span class="pill">אין מחיר חדש יותר</span>
+        <span class="pill pill--rose">המחיר עלה מאז</span>
         <img src="/img/dest/prg-800.webp" srcset="/img/dest/prg-800.webp 800w, /img/dest/prg-1280.webp 1280w, /img/dest/prg-1920.webp 1920w" sizes="72px" alt="" loading="lazy">
       </li>
       <li class="archive-row" data-trip="RT">
@@ -555,7 +586,7 @@
       <li class="archive-row" data-trip="OW">
         <strong class="num" dir="ltr">$162</strong>
         <div><b><a href="/he/flights/20261111_AUH_OW/">אבו דאבי, הלוך בלבד</a></b><small><time datetime="2026-11-23"><span class="num" dir="ltr">23.11.2026</span></time> · <span class="num" dir="ltr">42%</span> מתחת לחציון</small></div>
-        <span class="pill">נמצא שוב במחיר דומה</span>
+        <span class="pill pill--rose">המחיר עלה מאז</span>
         <img src="/img/dest/auh-800.webp" srcset="/img/dest/auh-800.webp 800w, /img/dest/auh-1280.webp 1280w, /img/dest/auh-1920.webp 1920w" sizes="72px" alt="" loading="lazy">
       </li>
       <li class="archive-row" data-trip="RT">
@@ -729,7 +760,7 @@
       <li class="archive-row" data-trip="OW">
         <strong class="num" dir="ltr">$44</strong>
         <div><b><a href="/he/flights/20261109_CTA_OW/">קטניה, הלוך בלבד</a></b><small><time datetime="2027-01-03"><span class="num" dir="ltr">3.1.2027</span></time> · <span class="num" dir="ltr">46%</span> מתחת לחציון</small></div>
-        <span class="pill pill--rose">המחיר עלה מאז</span>
+        <span class="pill">נמצא שוב במחיר דומה</span>
         <img src="/img/dest/cta-800.webp" srcset="/img/dest/cta-800.webp 800w, /img/dest/cta-1280.webp 1280w, /img/dest/cta-1920.webp 1920w" sizes="72px" alt="" loading="lazy">
       </li>
       <li class="archive-row" data-trip="RT">
@@ -873,7 +904,7 @@
       <li class="archive-row" data-trip="OW">
         <strong class="num" dir="ltr">$64</strong>
         <div><b><a href="/he/flights/20261107_IST_OW/">איסטנבול, הלוך בלבד</a></b><small><time datetime="2027-03-07"><span class="num" dir="ltr">7.3.2027</span></time> · <span class="num" dir="ltr">57%</span> מתחת לחציון</small></div>
-        <span class="pill">אין מחיר חדש יותר</span>
+        <span class="pill pill--rose">המחיר עלה מאז</span>
         <img src="/img/dest/ist-800.webp" srcset="/img/dest/ist-800.webp 800w, /img/dest/ist-1280.webp 1280w, /img/dest/ist-1920.webp 1920w" sizes="72px" alt="" loading="lazy">
       </li>
       <li class="archive-row" data-trip="RT">
@@ -1380,7 +1411,7 @@
       <li class="archive-row" data-trip="OW">
         <strong class="num" dir="ltr">$63</strong>
         <div><b><a href="/he/flights/20261031_IST_OW/">איסטנבול, הלוך בלבד</a></b><small><time datetime="2027-03-07"><span class="num" dir="ltr">7.3.2027</span></time> · <span class="num" dir="ltr">57%</span> מתחת לחציון</small></div>
-        <span class="pill">נמצא שוב במחיר דומה</span>
+        <span class="pill pill--rose">המחיר עלה מאז</span>
         <img src="/img/dest/ist-800.webp" srcset="/img/dest/ist-800.webp 800w, /img/dest/ist-1280.webp 1280w, /img/dest/ist-1920.webp 1920w" sizes="72px" alt="" loading="lazy">
       </li>
       <li class="archive-row" data-trip="RT">
@@ -1461,7 +1492,7 @@
       <li class="archive-row" data-trip="OW">
         <strong class="num" dir="ltr">$63</strong>
         <div><b><a href="/he/flights/20261030_IST_OW/">איסטנבול, הלוך בלבד</a></b><small><time datetime="2027-03-05"><span class="num" dir="ltr">5.3.2027</span></time> · <span class="num" dir="ltr">57%</span> מתחת לחציון</small></div>
-        <span class="pill">אין מחיר חדש יותר</span>
+        <span class="pill pill--rose">המחיר עלה מאז</span>
         <img src="/img/dest/ist-800.webp" srcset="/img/dest/ist-800.webp 800w, /img/dest/ist-1280.webp 1280w, /img/dest/ist-1920.webp 1920w" sizes="72px" alt="" loading="lazy">
       </li>
     </ul>
