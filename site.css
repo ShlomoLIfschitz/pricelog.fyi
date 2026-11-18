@@ -616,20 +616,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   margin-block-start: -150px; padding-inline: var(--gutter); padding-block-end: 96px;
 }
 .deal-main { display: grid; gap: 24px; }
-/* Sticky only where the whole panel fits on screen. A sticky box taller than
-   the viewport keeps its bottom out of reach until the main column ends: at
-   1280x900 the eSIM line (a 1005px panel) sat below the fold for the whole
-   page, and the plain 875-895px panel already lost its last line there.
-   CSS cannot read the panel's height, so the thresholds are measured ones
-   plus 24px above and below: up to 895px without the eSIM line, up to
-   1045px (English) with it. Below them the panel scrolls with the page,
-   and its button is at its top, so it is on screen when the page opens. */
-.deal-side { display: grid; gap: 16px; }
-@media (min-height: 960px) {
-  .deal-side { position: sticky; inset-block-start: 24px; }
-}
-@media (max-height: 1119px) {
-  .deal-side:has(#esim-note) { position: static; }
+/* Sticky at every height, and never taller than the screen. On 16.11 the
+   panel stopped being sticky below 960px of height, because a sticky box
+   taller than the viewport keeps its bottom (the eSIM line) out of reach
+   until the main column ends; that took the booking button off screen on
+   most laptops (1536x791: a 1064px panel, static). Capping the height and
+   letting the panel scroll on its own keeps both: the button stays in view,
+   and every line of the panel can be reached. The padding, cancelled by an
+   equal negative margin, gives the panel's shadow room inside the clip. */
+.deal-side {
+  display: grid; gap: 16px;
+  position: sticky; inset-block-start: 0;
+  max-block-size: 100vh; overflow-y: auto; scrollbar-width: thin;
+  padding: 24px 16px; margin: -24px -16px;
 }
 .panel {
   display: grid; gap: 20px; padding: 36px; border-radius: 28px;
@@ -796,7 +795,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* phone: one column, and the booking button follows the reader down */
 @media (max-width: 1000px) {
   .deal-body { grid-template-columns: 1fr; margin-block-start: -64px; gap: 16px; }
-  .deal-side { position: static; order: -1; }
+  .deal-side { position: static; order: -1; max-block-size: none; overflow: visible; padding: 0; margin: 0; }
   .why-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
