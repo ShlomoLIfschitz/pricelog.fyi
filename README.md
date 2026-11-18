@@ -54,6 +54,11 @@ The privacy page describes all three, and what the White Label loads and stores 
 domain for that reason, subset to Hebrew and Latin and cut to the weights in use (about
 80KB together). Their licences (SIL OFL) sit next to them.
 
+`fonts/dejavu-sans.ttf` (DejaVu Sans 2.37, full, licence in `LICENSE-DejaVu.txt`) is not
+used by any page. The scanner draws the credit line of each deal's share card with it,
+because the subset Heebo lacks letters some photographers' names need (Armenian, ć, š, ł),
+and a browser falls back to a system font where an image cannot.
+
 ## The 2026-10 design, and two stylesheets for a while
 
 The site is moving to the design in the Figma file "pricelog.fyi — עיצוב מחדש". Its
@@ -91,7 +96,7 @@ js/                     the two scripts of the flight search and the index's, se
 he/index/               /he/index/          generated: the monthly price index, see below
 en/index/               /en/index/          generated, the same pages in English
 styles.css              the previous stylesheet, until no page links it
-fonts/                  Rubik and Heebo, woff2, self-hosted
+fonts/                  Rubik and Heebo, woff2, self-hosted; DejaVu Sans for the share cards
 img/dest/               one photo per destination, three widths; sources in SOURCES.md
 og-he.jpg               1200x630 social preview image, both languages (its only word is "pricelog")
 tools/                  build-time only, not served
