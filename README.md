@@ -130,6 +130,13 @@ styles are the `ix-` section at the end of `site.css`, a contract with `index_pa
 `pricelog-scaner`, and the script is `js/index.js`. `sitemap.xml` needs the two lines of
 each new month by hand.
 
+Every page's nav links to the open holiday's page (`pricelog-scaner`'s `holidays.py`),
+second after "טיסות שנמצאו", with the class `nav-holiday`. The generated pages move the
+link on by themselves the day after a holiday ends. The hand-written pages here
+(`he/` and `en/`: privacy, accessibility, credits, search) carry the same link by hand,
+so when a holiday ends the two copies on each of those eight pages (bar and phone menu) need the next holiday's address and name. The
+old address keeps working in the meantime, since it redirects to the open holiday.
+
 The one exception is the first manifest, created by hand once as `{"deals": []}`. The job
 refuses to run without one rather than treating a missing manifest as empty: that would
 make every flight look new, so a wrong clone or a deleted file would republish everything.
