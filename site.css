@@ -1525,6 +1525,12 @@ span.ix-month-arrow { opacity: .35; }
 .hd-slots i { display: block; block-size: 10px; border-radius: 5px; background: var(--sea-light); }
 .hd-slots i.on { background: var(--sea); }
 .hd-slots--days i.on { background: rgb(207 74 35 / .35); }
+.hd-slots--days i.eve { background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--coral); }
+/* Tishrei's strip is 32 days: no room for the month in each day, so the days
+   show their number only, under a row naming the months. Each month spans its
+   days (--n), on the same columns and gap as the strip. */
+.hd-months { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 4px; margin-block-end: -8px; font: 700 13px/1.5 var(--text); color: var(--muted); }
+.hd-months li { grid-column: span var(--n); padding-block-end: 4px; border-block-end: 1px solid var(--border); }
 .hd-range--days, .hd-ends { display: none; }
 .hd-ends { justify-content: space-between; font-size: 12px; color: var(--muted); }
 .hd-legend { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 14px; color: var(--muted); }
@@ -1560,8 +1566,9 @@ span.ix-month-arrow { opacity: .35; }
 .hd-m { display: none; }
 @media (max-width: 1000px) {
   /* 17 or 18 days across a tablet: a day at 17px no longer fits its cell. */
-  .hd-strip { gap: 3px; }
+  .hd-strip, .hd-months { gap: 3px; }
   .hd-strip li { padding-block: 8px; }
+  .hd-strip--compact li { border-radius: 6px; }
   .hd-day { font-size: 13px; }
   .hd-wd { font-size: 11px; }
   .hd-tables { grid-template-columns: minmax(0, 1fr); }
@@ -1569,7 +1576,7 @@ span.ix-month-arrow { opacity: .35; }
   .hd-table + .hd-table thead { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip-path: inset(50%); }
 }
 @media (max-width: 760px) {
-  .hd-strip, .hd-legend { display: none; }
+  .hd-strip, .hd-months, .hd-legend { display: none; }
   .hd-facts { position: static; inline-size: auto; block-size: auto; overflow: visible; clip-path: none; display: grid; gap: 6px; }
   .hd-facts li { display: flex; justify-content: space-between; gap: 12px; font: 500 15px/1.5 var(--text); }
   .hd-facts time { font: 700 15px/1.5 var(--display); color: var(--coral-ink); }
