@@ -591,7 +591,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .tg h2 { font: 900 clamp(28px, calc(28px + 12 * ((100vw - 390px) / 1050)), 40px)/1.185 var(--display); }
 .tg p { max-inline-size: 560px; font-size: clamp(16px, calc(16px + 2 * ((100vw - 390px) / 1050)), 18px); line-height: 1.6; }
 .tg-deco { position: absolute; inset-inline-end: 40px; inset-block-start: 10px; inline-size: 420px; block-size: 220px; color: #fff; opacity: .9; pointer-events: none; }
-@media (max-width: 760px) { .tg { flex-direction: column; align-items: flex-start; gap: 18px; } .tg-deco { display: none; } }
+/* Above the deco line, which runs through where the WhatsApp link sits. */
+.tg > .tg-act { position: relative; z-index: 1; justify-items: center; gap: 14px; flex: none; }
+.tg-wa { font: 500 15px/1.4 var(--text); color: var(--night); text-decoration: underline; text-underline-offset: 3px; }
+.tg-wa:hover { text-decoration-thickness: 2px; }
+@media (max-width: 760px) { .tg { flex-direction: column; align-items: flex-start; gap: 18px; } .tg-deco { display: none; } .tg > .tg-act { justify-items: start; } }
 
 /* ---------- footer ---------- */
 
